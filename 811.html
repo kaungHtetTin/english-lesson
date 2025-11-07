@@ -4,56 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
     <title>You’re in great shape</title>
 
-
-    <style>
-        .image{
-            width: 100%;
-            height: auto;
-           
-            align-self: center;
-        }
-        .warnPara{
-          
-            text-align: justify;
-            background-color: bisque;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        body{
-            padding: 20px;
-        }
-
-        button{
-            float: 1;
-            margin: 5px;
-        }
-        .answer{
-            color: white;
-            background-color: rgb(0, 201, 27);
-            padding: 5px;
-            border-radius: 2px;
-            margin-right: 10px;
-            
-        }
-    </style>
-
+    <link rel="stylesheet" href="theme.css">
 </head>
 
   
-<body>
+<body class="lesson-theme">
     <br>
     <h3 class="h3 text-primary" align="center">You’re in great shape.</h3>
-
 
     <br/>
 
@@ -132,7 +92,6 @@ Steph: Once or twice a year? I’m just lucky today I guess.
             "5.	Mick said to Steph, “Congratulations on the win. _______.”"
         ];
 
-
         var choice=[
 
             ["freak","geek","pro"],
@@ -142,7 +101,6 @@ Steph: Once or twice a year? I’m just lucky today I guess.
             ["See you tomorrow","Let's play again","You played pretty well"]
            
         ];
-
 
         var ansChecker=['11','21','33','41','53'];
 
@@ -165,8 +123,8 @@ Steph: Once or twice a year? I’m just lucky today I guess.
                     "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
                     "<label class='form-check-label' for=ans"+no+ansNo+">"+
                     "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
-                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
-                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "<i id=correct"+no+ansNo+ "  class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;' data-icon='check_circle'></i>"+
+                    "<i id=error"+no+ansNo+ "  class='material-icons' style='font-size:18px;color:red;display:none;' data-icon='cancel'></i>"+                   
                     "</label>"+
                 "</div>";
 
@@ -174,8 +132,6 @@ Steph: Once or twice a year? I’m just lucky today I guess.
 
             return res;
         }
-
-
 
         function checkAnswer(){
 
@@ -214,8 +170,6 @@ Steph: Once or twice a year? I’m just lucky today I guess.
                 resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
             }
 
-
-
         }
 
         function showHelp(){
@@ -225,9 +179,5 @@ Steph: Once or twice a year? I’m just lucky today I guess.
     </script>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
 </html>
 

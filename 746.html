@@ -4,50 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <title>Olly the Octopus and Freda the Fish </title>
 
-
-    <style>
-        .image{
-            width: 100%;
-            height: auto;
-           
-            align-self: center;
-        }
-        .warnPara{
-          
-            text-align: justify;
-            background-color: bisque;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        body{
-            padding: 20px;
-        }
-
-        button{
-            float: 1;
-            margin: 5px;
-        }
-        .answer{
-            color: white;
-            background-color: rgb(0, 201, 27);
-            padding: 5px;
-            border-radius: 2px;
-            margin-right: 10px;
-            
-        }
-    </style>
-
+    <link rel="stylesheet" href="theme.css">
 </head>
 
   
-<body>
+<body class="lesson-theme">
     <br>
     <h3 class="h3 text-primary" align="center">Olly the Octopus and Freda the Fish </h3>
 
@@ -66,8 +30,8 @@
         <label for="q1" class="form-label">1. Why was Freda sad?</label>
         <div style="display: flex;">
             <input value="" class="form-control" id="q1" placeholder="Enter your answer" style="margin-right: 10px;">
-            <i id="correct1" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0);display: none;">check_circle</i>
-            <i id="error1" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+            <i id="correct1" class='material-icons' style="font-size:30px;color:rgb(0, 255, 0);display: none;" data-icon='check_circle'></i>
+            <i id="error1" class='material-icons' style="font-size:30px;color:red; display: none;" data-icon='cancel'></i>
         </div>
         <p class="answer" style="display: none;"></p>
     </div>
@@ -76,8 +40,8 @@
         <label for="q2" class="form-label">2. What can Freda do well with her fins and tail?</label>
         <div style="display: flex;">
             <input type="email" class="form-control" id="q2" placeholder="Enter your answer"  style="margin-right: 10px;">
-            <i id="correct2" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
-            <i id="error2" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+            <i id="correct2" class='material-icons' style="font-size:30px;color:rgb(0, 255, 0); display: none;" data-icon='check_circle'></i>
+            <i id="error2" class='material-icons' style="font-size:30px;color:red; display: none;" data-icon='cancel'></i>
         </div>
         <p class="answer" style="display: none;"></p>
     </div>
@@ -86,8 +50,8 @@
         <label for="q3" class="form-label">3. What chased after Freda?</label>
         <div style="display: flex;">
             <input type="email" class="form-control" id="q3" placeholder="Enter your answer"  style="margin-right: 10px;">
-            <i id="correct3" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
-            <i id="error3" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+            <i id="correct3" class='material-icons' style="font-size:30px;color:rgb(0, 255, 0); display: none;" data-icon='check_circle'></i>
+            <i id="error3" class='material-icons' style="font-size:30px;color:red; display: none;" data-icon='cancel'></i>
         </div>
         <p class="answer" style="display: none;"></p>
     </div>
@@ -163,6 +127,5 @@
     </script>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
 

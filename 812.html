@@ -4,56 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
     <title>What did you do last weekend?</title>
 
-
-    <style>
-        .image{
-            width: 100%;
-            height: auto;
-           
-            align-self: center;
-        }
-        .warnPara{
-          
-            text-align: justify;
-            background-color: bisque;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        body{
-            padding: 20px;
-        }
-
-        button{
-            float: 1;
-            margin: 5px;
-        }
-        .answer{
-            color: white;
-            background-color: rgb(0, 201, 27);
-            padding: 5px;
-            border-radius: 2px;
-            margin-right: 10px;
-            
-        }
-    </style>
-
+    <link rel="stylesheet" href="theme.css">
 </head>
 
   
-<body>
+<body class="lesson-theme">
     <br>
     <h3 class="h3 text-primary" align="center">What did you do last weekend?</h3>
-
 
     <br/>
 
@@ -130,7 +90,6 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
             "5.	Neil said, “________. You’ll always get an A.”",
         ];
 
-
         var choice=[
 
             ["She had pizza and went dancing.","She slept the whole day.","She went to the cinema."],
@@ -140,7 +99,6 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
             ["No way","Don't worry","You're kidding me"]
            
         ];
-
 
         var ansChecker=['11','23','32','41','52'];
 
@@ -163,8 +121,8 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
                     "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
                     "<label class='form-check-label' for=ans"+no+ansNo+">"+
                     "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
-                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
-                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "<i id=correct"+no+ansNo+ "  class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;' data-icon='check_circle'></i>"+
+                    "<i id=error"+no+ansNo+ "  class='material-icons' style='font-size:18px;color:red;display:none;' data-icon='cancel'></i>"+                   
                     "</label>"+
                 "</div>";
 
@@ -172,8 +130,6 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
 
             return res;
         }
-
-
 
         function checkAnswer(){
 
@@ -212,8 +168,6 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
                 resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
             }
 
-
-
         }
 
         function showHelp(){
@@ -223,9 +177,5 @@ Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
     </script>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
 </html>
 
