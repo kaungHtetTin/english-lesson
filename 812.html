@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>What did you do last weekend?</title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">What did you do last weekend?</h3>
+
+
+    <br/>
+
+    <div align="center" id="teacherVoice">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/elementary-listening-7-a.mp3" type="audio/mpeg"></audio>
+        <p >Listen to the audio and answer the following question</p>
+        <br>
+    </div>
+
+    <h5><u>Question</u></h5>
+
+    <div id="questionPaper">
+        <!-- this is question container -->
+    </div>
+
+    <br>
+    <div id="result" style="text-align: center;">
+        <!-- this is result -->
+    </div>
+    <br>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="helpbtn" type="button" class="btn btn-danger" onclick="showHelp();" style="display: none;">Help</button>
+    </div>
+
+<div id="helpDiv" style="display: none;" >
+    <div style="margin: 5px; padding: 5px; background-color: aquamarine;">
+
+        <b>Listen to the audio reading the following conversation  carefully and then answer the above questions.</b>
+        <br>
+        <pre>
+
+Neil: So, what did you do last weekend, Cara?
+နီးလ်: ဒါနဲ့ မင်း ပြီးခဲ့တဲ့အပတ်စနေတနင်္ဂနွေက ဘာတွေလုပ်ခဲ့တာလဲ ကာရာ။
+Cara: Oh, I had a great time. My friends and I had pizza on Saturday and then we all went dancing.
+ကာရာ: အော်… ငါအရမ်းကောင်းတဲ့အချိန်တစ်ခုကိုပိုင်ဆိုင်ခဲ့တယ်။ ငါနဲ့ ငါ့သူငယ်ချင်းတွေက စနေနေ့မှာ ပီဇာသွားစားခဲ့တယ်။ ပြီးတော့ ငါတို့အားလုံး သွားကခဲ့ကြတယ်။
+Neil: How fun! Did you go to The Treadmill?
+နီးလ်: ပျော်စရာကြီးပေါ့။ မင်း ထရပ်ဒ်မေးကို သွားခဲ့သေးလား။
+Cara: No, we didn’t. We went to that new place downtown. How about you? Did you go anywhere?
+ကာရာ: ဟင့်အင်း ငါတို့မသွားခဲ့ဘူး။ ငါတို့က မြို့ထဲက နေရာအသစ်တစ်ခုကိုသွားခဲ့တာပါ။ မင်းကရော။ မင်းဘယ်မှမသွားဘူးလား။
+Neil: No, I didn’t go anywhere all weekend. I just stayed home and studied for today’s Spanish test. 
+နီးလ်: ဟင့်အင်း။ ငါစနေတနင်္ဂနွေနှစ်ရက်လုံးဘယ်မှမသွားခဲ့ပါဘူး။ ငါ အိမ်မှာပဲနေပြီး ဒီနေ့ စပိန်ဘာသာစာမေးပွဲအတွက် စာကျက်ခဲ့တယ်။
+Cara: Our test is today? I forgot about that! 
+ကာရာ: ငါတို့စာမေးပွဲက ဒီနေ့လား။ ငါအဲ့ဒါကိုမေ့နေတယ်။
+Neil: Don’t worry. You always get an A. 
+နီးလ်: စိတ်မပူပါနဲ့။ မင်းက အမြဲတမ်း အေ ရနေကျပဲ။
+Neil: So, Cara. What did you do on Sunday?
+နီးလ်: ဒါနဲ့ ကာရာ။ တနင်္ဂနွေနေ့မှာရော မင်းဘာလုပ်ခဲ့လဲ။
+Cara: I stayed home in the morning. I just watched TV and read.
+ကာရာ: ငါမနက်ပိုင်းတော့ အိမ်မှာနေတယ်။ တီဗီကြည့်ပြီး စာဖတ်တယ်။
+Neil: How about in the afternoon?
+နီးလ်: နေ့ခင်းပိုင်းကျတော့ရော။
+Cara: Oh, I worked. I have a part-time job at the university bookstore.
+ကာရာ: အော် ငါအလုပ်လုပ်ခဲ့တယ်။ တက္ကသိုလ်စာအုပ်ဆိုင်မှာ ငါကအချိန်ပိုင်းအလုပ်လုပ်တာလေ။
+Neil: I didn’t know you have a job. 
+နီးလ်: နင့်မှာ အလုပ်ရှိမှန်း ငါမသိခဲ့ဘူး။
+Cara: Yeah, I’m a cashier there. I work every Sunday from 1 to 6.
+ကာရာ: ဟုတ်တယ်။ ငါက အဲ့ဒီမှာ ငွေကိုင်ပါ။ တနင်္ဂနွေနေ့တိုင်း ၁နာရီကနေ ၆နာရီအထိ ငါလုပ်ရတယ်။ 
+            
+                     
+        </pre>
+    </div>
+</div>
+
+    <script>
+
+        var question =[
+            "1.	What did Cara do last weekend?",
+            "2.	Neil said, “_____! Did you go to the Treadmill?”",
+            "3.	Where did Neil go?",
+            "4.	Cara forgot about the ______.",
+            "5.	Neil said, “________. You’ll always get an A.”",
+        ];
+
+
+        var choice=[
+
+            ["She had pizza and went dancing.","She slept the whole day.","She went to the cinema."],
+            ["Are you sure","Really","How fun"],
+            ["He went camping.","He stayed at home and studied.","He went to eat pizza."],
+            ["exam","party","Neil's birthday"],
+            ["No way","Don't worry","You're kidding me"]
+           
+        ];
+
+
+        var ansChecker=['11','23','32','41','52'];
+
+    
+
+        var questionPaper=document.getElementById("questionPaper");
+      
+        var mypaper="";
+        for(var i=0;i<question.length;i++){
+           mypaper+=makeMultipleChoiceQuestion(question[i],choice[i],(i+1));
+        }
+
+        questionPaper.innerHTML=mypaper;
+        
+        function makeMultipleChoiceQuestion(question,answer,no){
+            var res =question;
+            for(var i=0;i<answer.length;i++){
+            var ansNo=i+1;
+            res=res+ "<div class='form-check' style='flex:1'>" +
+                    "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
+                    "<label class='form-check-label' for=ans"+no+ansNo+">"+
+                    "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
+                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
+                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "</label>"+
+                "</div>";
+
+            }
+
+            return res;
+        }
+
+
+
+        function checkAnswer(){
+
+     
+            document.getElementById("helpbtn").setAttribute('Style','');
+            var resultDiv=document.getElementById("result");
+           
+
+            var totalMark=0;
+
+            for(var i=0,j=ansChecker.length;i<j;i++){
+                var ansSpan =document.getElementById("right"+ansChecker[i]);
+                ansSpan.setAttribute('style','');
+            }  
+
+            for(var i=0;i<question.length;i++){
+                var no=i+1;
+                for(var j=1;j<4;j++){
+                    var ansInput=document.getElementById("ans"+no+j);
+                    var isChecked=ansInput.checked;
+                    if(isChecked){
+                        var inputId=ansInput.getAttribute("id");
+                        if(inputId=="ans"+ansChecker[i]){
+                            totalMark++;
+                            document.getElementById('correct'+no+j).setAttribute('style','font-size:18px;color:rgb(0, 255, 0);');
+                        }else{
+                            document.getElementById('error'+no+j).setAttribute('style','font-size:18px;color:red;');
+                        }
+                    }
+                }
+            }
+
+            if(totalMark!=question.length){
+                resultDiv.innerHTML="Please listen to the audio again and answer all questions correctly."
+            }else{
+                resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
+            }
+
+
+
+        }
+
+        function showHelp(){
+            document.getElementById("helpDiv").setAttribute('Style','');
+        }
+      
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
+

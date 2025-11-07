@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>What an interesting family!</title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">What an interesting family!</h3>
+
+
+    <br/>
+
+    <div align="center" id="teacherVoice">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/elementary-listening-5.mp3" type="audio/mpeg"></audio>
+        <p >Listen to the audio and answer the following question</p>
+        <br>
+    </div>
+
+    <h5><u>Question</u></h5>
+
+    <div id="questionPaper">
+        <!-- this is question container -->
+    </div>
+
+    <br>
+    <div id="result" style="text-align: center;">
+        <!-- this is result -->
+    </div>
+    <br>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="helpbtn" type="button" class="btn btn-danger" onclick="showHelp();" style="display: none;">Help</button>
+    </div>
+
+<div id="helpDiv" style="display: none;" >
+    <div style="margin: 5px; padding: 5px; background-color: aquamarine;">
+
+        <b>Listen to the audio reading the following conversation  carefully and then answer the above questions.</b>
+        <br>
+        <pre>
+Max: Do you have brothers and sisters, Tina?
+မက်စ်: မင်းဆီမှာ မောင်နှမတွေရှိလား တီနာ။
+Tina: Yes, I have a brother and a sister.
+တီနာ: အင်း။ ငါ့မှာ အကိုတစ်ယောက်နဲ့ အမတစ်ယောက်ရှိတယ်။
+Max: Oh, what does your sister do?
+မက်စ်: အိုး… မင်းအမက ဘာအလုပ်လုပ်လဲ။
+Tina: She’s a surgeon. She works for a medical aid organisation.
+တီနာ: သူမက ခွဲစိတ်ဆရာဝန်တစ်ယောက်ပါ။ သူမက ဆေးအကူအဖွဲ့အစည်းတစ်ခုအတွက် အလုပ်လုပ်တယ်။
+Max: Wow! And what about your brother? 
+မက်စ်: ဟုတ်လား။ ပြီးတော့ မင်းအကိုကရော။
+Tina: He’s a writer. He travels and write about his experiences for a magazine.
+တီနာ: သူက စာရေးဆရာတစ်ယောက်ပါ။ သူက ခရီးတွေထွက်ပြီးတော့ သူ့အတွေ့အကြုံတွေအကြောင်းကို မဂ္ဂဇင်းတစ်ခုအတွက် ရေးပေးတယ်။
+Max: What an interesting family! Can I meet them?
+မက်စ်: ဘယ်လောက်တောင်စိတ်ဝင်စားဖို့ကောင်းလိုက်တဲ့ မိသားစုလဲ။ ငါသူတို့ကိုတွေ့လို့ရမလား။
+Tina: Sure, but my sister’s not here right now. She’s treating patients in Cameroon. 
+တီနာ: ရတာပေါ့။ ဒါပေမယ့် ငါ့အမက လောလောဆယ် ဒီမှာမရှိဘူး။ သူမက ကမ်မရွန်းနိုင်ငံမှာ လူနာတွေကို ဆေးကုနေတယ်။
+Max: And your brother? 
+မက်စ်: ဒါဆို မင်းအကိုကရော။
+Tina: He’s travelling in Thailand, and then he wants to visit my sister. I miss them! 
+တီနာ: သူက ထိုင်းနိုင်ငံမှာ ခရီးထွက်နေတယ်။ ပြီးရင်တော့ သူက အမဆီ သွားလည်ချင်နေတယ်။ ငါသူတို့ကို သတိရလိုက်တာ။
+Tina: So what about your parents, Max? Where do they live? 
+တီနာ: ဒါဆိုရင် မင်းမိဘတွေကရော မက်စ်။ သူတို့ဘယ်မှာနေကြတာလဲ။
+Max: They live in California.
+မက်စ်: သူတို့က ကယ်လီဖိုးနီးယားပြည်နယ်မှာ နေပါတယ်။
+Tina: Oh, where in California?
+တီနာ: အိုး…ကယ်လီဖိုးနီးယား ဘယ်နားလဲ။
+Max: In Sausalito. It’s a small city. But it’s very nice.
+မက်စ်: စောစလီတိုမြို့မှာပါ။ အဲ့ဒါကမြို့ငယ်လေးတစ်မြို့ပါပဲ။ ဒါပေမယ့်အရမ်းကောင်းပါတယ်။ 
+Tina: Are they still working?
+တီနာ: သူတို့အလုပ်လုပ်နေကြပဲတုန်းလား။ 
+Max: Oh, yes. My mother is teaching at a university in San Francisco. And my father has a book store.
+မက်စ်: ဟုတ်တယ်။ ငါ့အမေက ဆန်ဖရန်စစ္စကိုက တက္ကသိုလ်တစ်ခုမှာ စာသင်နေဆဲပဲ။ ပြီးတော့ ငါ့အဖေမှာစာအုပ်ဆိုင်တစ်ဆိုင်ရှိတယ်။           
+        </pre>
+    </div>
+</div>
+
+    <script>
+
+        var question =[
+            "1.	Tina has a brother and a ______.",
+            "2.	Tina’s sister is a ______.",
+            "3.	Tina’s brother is a ______.",
+            "4.	Where is Tina’s brother now?",
+            "5.	Max’s parents live in _______."
+        ];
+
+
+        var choice=[
+
+            ["sister","cousin","twin"],
+            ["engineer","teacher","surgeon"],
+            ["doctor","writer","banker"],
+            ["He is in Thailand.","He is in Myanmar.","He is in Vietnam."],
+            ["Cameroon","California","Texas"]
+           
+        ];
+
+
+        var ansChecker=['11','23','32','41','52'];
+
+    
+
+        var questionPaper=document.getElementById("questionPaper");
+      
+        var mypaper="";
+        for(var i=0;i<question.length;i++){
+           mypaper+=makeMultipleChoiceQuestion(question[i],choice[i],(i+1));
+        }
+
+        questionPaper.innerHTML=mypaper;
+        
+        function makeMultipleChoiceQuestion(question,answer,no){
+            var res =question;
+            for(var i=0;i<answer.length;i++){
+            var ansNo=i+1;
+            res=res+ "<div class='form-check' style='flex:1'>" +
+                    "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
+                    "<label class='form-check-label' for=ans"+no+ansNo+">"+
+                    "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
+                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
+                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "</label>"+
+                "</div>";
+
+            }
+
+            return res;
+        }
+
+
+
+        function checkAnswer(){
+
+     
+            document.getElementById("helpbtn").setAttribute('Style','');
+            var resultDiv=document.getElementById("result");
+           
+
+            var totalMark=0;
+
+            for(var i=0,j=ansChecker.length;i<j;i++){
+                var ansSpan =document.getElementById("right"+ansChecker[i]);
+                ansSpan.setAttribute('style','');
+            }  
+
+            for(var i=0;i<question.length;i++){
+                var no=i+1;
+                for(var j=1;j<4;j++){
+                    var ansInput=document.getElementById("ans"+no+j);
+                    var isChecked=ansInput.checked;
+                    if(isChecked){
+                        var inputId=ansInput.getAttribute("id");
+                        if(inputId=="ans"+ansChecker[i]){
+                            totalMark++;
+                            document.getElementById('correct'+no+j).setAttribute('style','font-size:18px;color:rgb(0, 255, 0);');
+                        }else{
+                            document.getElementById('error'+no+j).setAttribute('style','font-size:18px;color:red;');
+                        }
+                    }
+                }
+            }
+
+            if(totalMark!=question.length){
+                resultDiv.innerHTML="Please listen to the audio again and answer all questions correctly."
+            }else{
+                resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
+            }
+
+
+
+        }
+
+        function showHelp(){
+            document.getElementById("helpDiv").setAttribute('Style','');
+        }
+      
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
+

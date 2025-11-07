@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+        .proverb{
+            border: 1px solid white;
+            margin: 5px;
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+        .proverb:active{
+            background-color: lightblue;
+            color: white;
+        }
+        .exp {
+            padding: 10px;
+            box-shadow: 2px 2px 3px gray;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        var proverbs = [
+            '(1) Laughter is the best medicine.',
+            '(2) Learn to walk before you run.',
+            '(3) Let sleeping dogs lie.',
+            '(4) Life begins at forty.',
+            '(5) Lightning never strikes twice in the same place.'
+        
+        ];
+        var explanations = [
+            'တိုက်ရိုက်ဘာသာပြန်ရင်တော့ ရယ်မောခြင်းက အကောင်းဆုံးဆေးလို့ အဓိပ္ပာယ်ရပါတယ်။ ဆိုလိုခြင်တာကတော့ တစ်ခုခုအခက်အခဲကြုံရတဲ့အခါ  အကောင်းဘက်ကပဲ တွေးပြီး ရယ်မောပြစ်လိုက်တာ ပေါ့ပေါ့ပါးပါးပဲ စိတ်ကိုထားလိုက်တဲ့အခါ စိတ်သက်သာရာရပြီးခံစားရတာတွေ သက်သာသွားမယ်လို့ ဆိုလိုတာပါ။ ',
+            'မြန်မာလိုတော့ ဝ မရှိဘဲ ဝိ မလုပ်နဲ့တို့ ပန်းတိမ်မတတ်ခင်ရွှေခိုးသင် စတဲ့ စကားပုံတွေနဲ့ နည်းနည်းဆင်ပါတယ်။ တိုက်ရိုက်အဓိပ္ပာယ်ကတော့ မပြေးခင် လမ်းလျှောက်တာကို အရင်သင်ပါ ဆိုတာပါ။ ဆိုလိုချင်တာကတော့ ပိုပြီးခက်ခဲရှပ်ထွေးတဲ့အရာတွေကို မသင်ယူခင်မှာ အခြေခံစွမ်းရည်တွေကို အောက်သက်ကြေအောင် အရင်သင်ယူထားပါ လို့ပြောချင်တာဖြစ်ပါတယ်။ ',
+            'အိပ်ပျော်နေတဲ့ခွေးကို ဒီအတိုင်းလဲလျောင်းခွင့်ပေးလိုက်ပါလို့ တိုက်ရိုက်အဓိပ္ပာယ်ပြန်လို့ရပါတယ်။ ဆိုလိုရင်းကတော့ လူတွေမေ့မေ့ပျောက်ပျောက်ဖြစ်နေတဲ့ မကောင်းတဲ့အတိတ်ကအကြောင်းအရာတွေ ပြသနာတွေကို ပြန်ပြီးအစမဖော်ပါနဲ့။ အစဖော်ရင် မလိုလားအပ်တဲ့ပြသနာတွေ ဖြစ်လာနိုင်တယ်လို့ ဆိုလိုချင်တာဖြစ်ပါတယ်။ ',
+            'အသက် လေးဆယ်မှ ဘဝအသစ်စတာပါလို့ တိုက်ရိုက်အဓိပ္ပာယ်ရတဲ့ ဒီ Proverb ရဲ့ ဆိုလိုရင်းကတော့ သိသင့်ရဲ့ အသိပညာတွေကို ဖြည့်ဆည်းပြီးတဲ့အချိန် ဘဝအတွေ့အကြုံရှိပြီးတဲ့အချိန်ဖြစ်တဲ့ အသက် လေးဆယ်အရွယ်မှာ လူတွေကို ဘဝမှာ နေထိုင်တာကို သဘောကျ စည်းစိမ်ခံစားတတ်လာ ကြတယ်လို့ ဆိုလိုချင်တာဖြစ်ပါတယ်။ ',
+            'မိုးကြိုးက တစ်နေရာထဲကို နှစ်ခါမပစ်ဘူး လို့ တိုက်ရိုက်အဓိပ္ပာယ်ရတဲ့ ဒီ Proverb ရဲ့ ဆိုလိုရင်းကတော့ လူတစ်ယောက်အပေါ်ဖြစ်ခဲ့ဖူးတဲ့ကံဆိုးမှုဟာ တူညီတဲ့ပုံစံနဲ့ အဲ့ဒီလူအပေါ် နောက်တစ်ခေါက်ထပ်ပြီးတော့ ဖြစ်လာနိုင်မှာမဟုတ်ပါဘူးလို့ ဆိုလိုပါတယ်။ '
+        ];
+           
+            for(i = 0 ; i < proverbs.length ; i++){
+            document.write('<div class="proverb">'+proverbs[i]+'</div><div style="display:none" class="exp">'+explanations[i] + '</div>');
+
+        }
+        
+        var divs = document.getElementsByClassName('proverb');
+        var exps = document.getElementsByClassName('exp');
+
+            divs[0].onclick = function(){showExp(0)};
+            divs[1].onclick = function(){showExp(1)};
+            divs[2].onclick = function(){showExp(2)};
+            divs[3].onclick = function(){showExp(3)};
+            divs[4].onclick = function(){showExp(4)};
+        function showExp(n){
+            if(exps[n].style.display == 'block'){
+                exps[n].style.display = 'none';
+            }else{
+                exps[n].style.display = 'block';
+            }
+        }
+    </script>
+    <p>ပုံမှန်ဆိုရင်တော့ ဘယ်လိုမျိုးသုံးတယ်ဆိုတာကို ဥပမာ စာကြောင်းလေးတွေနဲ့ ထည့်ပေးနေကြပါ။ ဒါပေမယ့် အခု ကျောင်းသားတွေလည်း လေ့ကျင့်လို့ရအောင်လို့ ဗီဒီယိုသင်ခန်းစာမှာ ဒီစာကြောင်းတွေကို လက်တွေ့မှာ ဘယ်လိုထည့်သုံးတယ်ဆိုတာကို ဖော်ပြထားပေးပြီး စစ်ပေးနေတာမို့ ဗီဒီယိုသင်ခန်းစာတွေရဲ့ Proverbs and Idioms ဆိုတဲ့အပိုင်းမှာ သွားရောက်ကြည့်ရှုပြီး စာကြောင်းလေးတွေရေးကြည့်နိုင်ပါတယ်။</p>
+</body>
+</html>

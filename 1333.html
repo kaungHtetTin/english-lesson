@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.calamuseducation.com/easyenglish/voalisteningscript.js"></script>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(56, 56, 56);
+            line-height: 25px;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: larger;
+        }
+
+        h2 {
+            background-color: rgb(1, 166, 255);
+            padding: 5px;
+            box-shadow: 1px 1px 1px gray;
+            font-size: 18px;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+
+        table.blue {
+            border-collapse: collapse;
+            max-width: 100%;
+
+        }
+
+        .blue th {
+            background-color: rgb(62, 62, 238);
+            color: rgb(241, 241, 241);
+            border: 1px solid white;
+
+        }
+
+        .blue td {
+            background-color: rgb(246, 249, 255);
+            padding: 5px 10px;
+            border: 1px solid white;
+
+        }
+
+        table.simple {
+            border-collapse: collapse;
+        }
+
+        .simple td,
+        th {
+            padding: 5px 10px;
+        }
+
+        .bigtable {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .bigtable td {
+            padding: 2px;
+            border: 1px solid black;
+            word-break: break-all;
+        }
+
+        @media only screen and (max-width: 800px) {
+            iframe {
+                width: 100%;
+                height: 230px;
+
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            iframe {
+                width: 100%;
+                height: 210px;
+
+            }
+        }
+
+        i {
+            color: rgb(210, 234, 255);
+            background-color: rgb(210, 234, 255);
+        }
+
+        #buttona {
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            font-weight: bolder;
+            transition: 0.2s ease;
+            border-radius: 5px;
+        }
+
+        #buttona:active {
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+  
+    <h2>Lesson 19</h2>
+
+
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3384413.html?type=audio" frameborder="0"
+        scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+        <b>Anna:</b> Hi there! Summer in Washington, D.C. is hot and sunny. I always ride the Metro to work. Riding the
+        Metro is <i>cool and fast.</i> But today it’s closed. So, I am walking to work.<br>
+        (On the phone) Ms. Weaver, I am late this morning. The Metro is closed. So, I am walking to work.<br>
+        <b>Caty:</b> That’s too bad. It’s <i>really hot</i> today.<br>
+        <b>Anna:</b> Yes it is.<br>
+        <b>Caty:</b> When you arrive, please come to my office. I have <i>important news</i> to tell you.<br>
+        <b>Anna:</b> Of course. Good-bye. My boss has news for me. The question is: Is it <i>good news or bad
+            news?</i><br>
+        (At work)<br>
+        <b>Anna:</b> Hello, Ms. Weaver.<br>
+        <b>Caty:</b> Anna, I have good news and I have bad news. Which do you want to <i>hear first?</i><br>
+        <b>Anna:</b> The good news. No … okay, the bad news.<br>
+        <b>Caty:</b> The bad news is you are not good at reading the news.<br>
+        <b>Anna:</b> Oh. I am <i>very sorry to hear that.</i><br>
+        <b>Caty:</b> So, starting next month you will not read the news.<br>
+        <b>Anna:</b> Next month <i>is July.</i> You are firing me in July.<br>
+        <b>Caty:</b> No. I am not firing you in July … or in August or in September. That is the good news.<br>
+        <b>Anna:</b> Okay. You are not firing me. I am not reading the news. What will I be doing?<br>
+        <b>Caty:</b> Well, you are good at <i>asking questions</i>. You are good at talking to people. You are good at
+        showing <i>your feelings.</i> And you are great at <i>being silly.</i><br>
+        <b>Anna:</b> Thank you, Ms. Weaver. But what does all that mean?<br>
+        <b>Caty:</b> I have a <i>new assignment</i> for you! Your skills are perfect for a new show … a children’s
+        show.<br>
+        <b>Anna:</b> <i>A children’s show </i>... That is awesome! When do I start?<br>
+        <b>Caty:</b> You start next month. Start thinking of ideas for the show.<br>
+        <b>Anna:</b> I have <i>tons of ideas!</i> I can show children what it’s like in outer space ...<br>
+        <b>Caty:</b> Great …<br>
+        <b>Anna:</b> … or in the deep, dark ocean …<br>
+        <b>Caty:</b> Those are great ideas, Anna. Please go think of more … at your desk.<br>
+        <b>Anna:</b> Yes. What other things can I show them? Mt. Everest! Everyone has <i>different skills</i>. You have
+        skills. I have skills. The important thing is to know what you are good at. Until next time!
+    </p>
+   <a id='buttona' onclick="showAnswer()">Show answers</a>
+    <script>
+        var btn = document.getElementById('buttona');
+        function showAnswer() {
+            var answers = document.getElementsByTagName('i');
+            for (var i = 0; i < answers.length; i++) {
+                var ans = answers[i];
+                ans.setAttribute('style', 'color:green');
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

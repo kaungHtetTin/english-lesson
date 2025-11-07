@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.calamuseducation.com/easyenglish/voalisteningscript.js"></script>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(56, 56, 56);
+            line-height: 25px;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: larger;
+        }
+
+        h2 {
+            background-color: rgb(1, 166, 255);
+            padding: 5px;
+            box-shadow: 1px 1px 1px gray;
+            font-size: 18px;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+
+        table.blue {
+            border-collapse: collapse;
+            max-width: 100%;
+
+        }
+
+        .blue th {
+            background-color: rgb(62, 62, 238);
+            color: rgb(241, 241, 241);
+            border: 1px solid white;
+
+        }
+
+        .blue td {
+            background-color: rgb(246, 249, 255);
+            padding: 5px 10px;
+            border: 1px solid white;
+
+        }
+
+        table.simple {
+            border-collapse: collapse;
+        }
+
+        .simple td,
+        th {
+            padding: 5px 10px;
+        }
+
+        .bigtable {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .bigtable td {
+            padding: 2px;
+            border: 1px solid black;
+            word-break: break-all;
+        }
+
+        @media only screen and (max-width: 800px) {
+            iframe {
+                width: 100%;
+                height: 230px;
+
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            iframe {
+                width: 100%;
+                height: 210px;
+
+            }
+        }
+
+        i {
+            color: rgb(210, 234, 255);
+            background-color: rgb(210, 234, 255);
+        }
+
+        #buttona {
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            font-weight: bolder;
+            transition: 0.2s ease;
+            border-radius: 5px;
+        }
+
+        #buttona:active {
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Lesson 36</h2>
+    
+    
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3595539.html?type=audio" frameborder="0"
+        scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+        <b>Anna:</b> Last time on Let’s Learn English, Marsha and I <i>invited friends to a dinner party</i> but I
+        shopped with the wrong list. Guests are coming soon. Marsha is worried but I have a plan. Let’s see what it
+        is.<br>
+        <b>Anna:</b> I just need <i>a couple of ingredients</i>. Marsha, please hand me the flour.<br>
+        <b>Marsha:</b> Anna, where is <i>the flour</i> ? It's not in the cabinets.<br>
+        <b>Anna:</b> I put the flour inside the refrigerator.<br>
+        <b>Marsha:</b> Why?<br>
+        <b>Anna:</b> It’s cold and dry in the refrigerator. See, it says: “Put in a cold, dry place.” Okay, now, Marsha,
+        please hand me the eggs.<br>
+        <b>Marsha:</b> Anna, where are the eggs?<br>
+        <b>Anna:</b> The eggs are inside <i>the cabinet under the sink</i>.<br>
+        <b>Marsha:</b> Anna, why are the eggs in here?<br>
+        <b>Anna:</b> On the farm, we always put the eggs there. How else can the chickens see them? Okay. You clean the
+        living room. I will make dinner.<br>
+        <b>Marsha:</b> What are you going to make with <i>these ingredients?</i><br>
+        <b>Anna:</b> I have a plan.<br>
+        <b>Marsha:</b> Okay, the apartment is clean. The kitchen is not. What are you cooking?<br>
+        <b>Anna:</b> I made my favorite recipe: <i>peanut-butter-banana pancakes!</i><br>
+        <b>Marsha:</b> You made breakfast.<br>
+        <b>Anna:</b> Yes! I call it let’s-eat-breakfast-for-dinner dinner!<br>
+        <b>Marsha:</b> Anna! Mmm! Hey, this tastes good! Anna, you made it work!<br>
+        <b>Anna:</b> That’s our guests!<br>
+        <b>Marsha:</b> I’ll answer the door.<br>
+        <b>Anna:</b> I’ll finish here.<br>
+        <b>Anna:</b> Like I said, sometimes Marsha worries too much. When <i>something goes wrong</i> with your plan,
+        just change the plan! Till next time!
+
+    </p>
+    <a id='buttona' onclick="showAnswer()">Show answers</a>
+    <script>
+        var btn = document.getElementById('buttona');
+        function showAnswer() {
+            var answers = document.getElementsByTagName('i');
+            for (var i = 0; i < answers.length; i++) {
+                var ans = answers[i];
+                ans.setAttribute('style', 'color:green');
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

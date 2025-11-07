@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.calamuseducation.com/easyenglish/voalisteningscript.js"></script>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(56, 56, 56);
+            line-height: 25px;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: larger;
+        }
+
+        h2 {
+            background-color: rgb(1, 166, 255);
+            padding: 5px;
+            box-shadow: 1px 1px 1px gray;
+            font-size: 18px;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+
+        table.blue {
+            border-collapse: collapse;
+            max-width: 100%;
+
+        }
+
+        .blue th {
+            background-color: rgb(62, 62, 238);
+            color: rgb(241, 241, 241);
+            border: 1px solid white;
+
+        }
+
+        .blue td {
+            background-color: rgb(246, 249, 255);
+            padding: 5px 10px;
+            border: 1px solid white;
+
+        }
+
+        table.simple {
+            border-collapse: collapse;
+        }
+
+        .simple td,
+        th {
+            padding: 5px 10px;
+        }
+
+        .bigtable {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .bigtable td {
+            padding: 2px;
+            border: 1px solid black;
+            word-break: break-all;
+        }
+
+        @media only screen and (max-width: 800px) {
+            iframe {
+                width: 100%;
+                height: 230px;
+
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            iframe {
+                width: 100%;
+                height: 210px;
+
+            }
+        }
+
+        i {
+            color: rgb(210, 234, 255);
+            background-color: rgb(210, 234, 255);
+        }
+
+        #buttona {
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            font-weight: bolder;
+            transition: 0.2s ease;
+            border-radius: 5px;
+        }
+
+        #buttona:active {
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Lesson 17</h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3365253.html?type=audio" frameborder="0"
+        scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+        <b>Anna:</b> This city is <i>very interesting,</i> I really like my job, and I have some good friends! Speaking
+        of friends … I see one now! Marsha! Hi!<br>
+
+        <b>Marsha:</b> Hi, Anna. <i>What’s going on?</i><br>
+        <b>Anna:</b> Not much. How about you?<br>
+        <b>Marsha:</b> <i>Busy as usual</i>. Hey, do you wanna see a movie with me?<br>
+        <b>Anna:</b> Sure! I never have time to see a movie. When?<br>
+        <b>Marsha:</b> Are you busy this Thursday at 6pm?<br>
+        <b>Anna:</b> Let’s see …. I’m busy. I am going <i>to tap dance</i> with my friends Thursday night.<br>
+        <b>Marsha:</b> <i>Tap dancing?</i> That sounds fun!<br>
+        <b>Anna:</b> I’m still learning. But it is fun!<br>
+        <b>Anna:</b> Are you busy on Friday night?<br>
+        <b>Marsha:</b> Yes. Friday nights are when I visit my parents.<br>
+        <b>Anna:</b> What do you and your family do together?<br>
+        <b>Marsha:</b> We always <i>eat dinner</i> together and sometimes we play <i>board games</i>.<br>
+        <b>Anna:</b> Playing board games is fun, too! The word game Scrabble is <i>my favorite.</i><br>
+        <b>Marsha:</b> I like Connect Four!<br>
+        <b>Anna:</b> I’m not busy <i>Monday night.</i> Are you?<br>
+        <b>Marsha:</b> I am busy on Monday night. I’m going to jog in the park with my friend. <i>Do you jog?</i><br>
+        <b>Anna:</b> Oh! I always jog. Well, sometimes I jog. Okay, I never jog. But I will try because it is good for
+        you.<br>
+        <b>Marsha:</b> I always feel great after I jog.<br>
+        <b>Marsha:</b> <i>How about on Wednesday night?</i><br>
+        <b>Anna:</b> Wednesday night I am not busy. Oh, no, wait. This Wednesday night I will be busy.<br>
+        <b>Marsha:</b> What are you doing?<br>
+        <b>Anna:</b> I’m going to teach children how to <i>play the ukulele.</i><br>
+        <b>Anna:</b> Now, children, play “C.” Good. I like your “C.”<br>
+        <b>Marsha:</b> The world does need more ukulele players.<br>
+        <b>Anna:</b> Marsha, it looks like we’ll never have time to see a movie.<br>
+        <b>Anna:</b> Wait a minute. Are you busy now?<br>
+        <b>Marsha:</b> It’s Saturday afternoon. This is always when I do my <i>errands</i>.<br>
+        <b>Anna:</b> Okay, but the new Star Wars movie is gonna start in 30 minutes.<br>
+        <b>Marsha:</b> I’ll do my errands on Sunday. Let’s go!<br>
+        <b>Anna:</b> Most days of the week, people are really busy. But it’s important to find time to be with your
+        friends!<br>
+        <b>Anna:</b> Until next time!
+    </p>
+    <a id='buttona' onclick="showAnswer()">Show answers</a>
+    <script>
+        var btn = document.getElementById('buttona');
+        function showAnswer() {
+            var answers = document.getElementsByTagName('i');
+            for (var i = 0; i < answers.length; i++) {
+                var ans = answers[i];
+                ans.setAttribute('style', 'color:green');
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

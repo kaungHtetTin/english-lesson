@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <title>Is it A.M. or P.M.? နံနက်ခင်းလား။ ညနေခင်း/ညခင်းလား။</title>    
+    <style> 
+        h5 {         
+            text-align: center;         
+            padding: 5px;         
+            margin-top: 5px;            
+        } 
+       
+        .table{
+            width: 100%;
+             border-collapse: collapse;
+                
+        }
+            
+            
+        .table td{         
+                position: relative !important;         
+        }         
+        .table tr:nth-child(even){             
+            color: #181bc9;         
+        }        
+        @media screen and (max-width:320px) {         
+            .table td{             
+            font-size: 0.8em;         
+        }     
+        }   
+            
+                    
+    </style>    
+</head>
+<body>    
+    <div id="container">        
+        <h5>Is it A.M. or P.M.? </h5>
+        <h5>  နံနက်ခင်းလား။ ညနေခင်း/ညခင်းလား။</h5>
+        <hr>
+                  
+        <div align="center">
+            <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/022-is-it-am-or-pm.mp3" type="audio/mpeg"></audio>
+            <p >ကျေးဇူးပြု၍ အသံဖိုင်ကို အရင်နားဆင်ပါ</p>
+        </div>
+        <hr>
+        <div class="table-responsive">          
+            <table class="table table-borderless table-striped">            
+                <tbody>
+
+                    <tr class="mm" style="display:none">
+                        <td>It’s six o’ clock in the morning. / It’s 6 A.M. </td>
+                    </tr>
+                    <tr>
+                        <td>နံနက်ခင်း ၆ နာရီဖြစ်ပါတယ်။  </td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s twelve (o’ clock)./ It’s 12:00 P.M. / It’s noon. </td>
+                    </tr>
+                    <tr>
+                        <td> ၂ နာရီ ၅ (မိနစ်)ရှိပြီ။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s five after two.  </td>
+                    </tr>
+                    <tr >
+                        <td> ၁၂နာရီဖြစ်ပါတယ်။ / မွန်းတည့်ချိန်ဖြစ်ပါတယ်။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s four (o’ clock) in the afternoon./ It’s 4:00 P.M. </td>
+                    </tr>
+                    <tr>
+                        <td>မွန်းလွဲပိုင်း ၄နာရီဖြစ်ပါတယ်။ </td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s six (o’ clock) in the evening. / It’s 6:00 P.M.   </td>
+                    </tr>
+                    <tr>
+                        <td>ညနေခင်း ၆နာရီဖြစ်ပါတယ်။ </td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s nine (o’ clock) at night./ It’s 9:00 P.M. </td>
+                    </tr>
+                    <tr>
+                        <td>ညခင်း ၉နာရီဖြစ်ပါတယ်။ </td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>It’s twelve (o’ clock) at night./ It’s 12:00 A.M. / It’s midnight. </td>
+                    </tr>
+                    <tr>
+                        <td>ညခင်း ၁၂နာရီဖြစ်ပါတယ်။ / သန်းခေါင်ယံအချိန်ဖြစ်ပါတယ်။  </td>
+                    </tr>
+                                  
+                </tbody>        
+            </table>        
+        </div>
+        <div align="center"><button class="btn btn-primary" onclick="show()">Show in English</button></div>
+        <br>
+                      
+    </div>    
+            
+   <script>        
+         function show (){
+        var m=document.getElementsByClassName("mm");
+        for(var i=0; i<m.length; i++ ){
+            m[i].style.display="";
+            }
+            
+        }
+                
+        </script>      
+        <script  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"         
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"         
+        crossorigin="anonymous" ></script>      
+        <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+        
+</html>

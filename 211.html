@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+        .proverb{
+            border: 1px solid white;
+            margin: 5px;
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+        .proverb:active{
+            background-color: lightblue;
+            color: white;
+        }
+        .exp {
+            padding: 10px;
+            box-shadow: 2px 2px 3px gray;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        var proverbs = [
+            '(1) Don’t judge a book by its cover.',
+            '(2) Fortune favors the brave.',
+            '(3) Honesty is the best policy.',
+            '(4) When in Rome, do as Romans do.',
+            '(5) When it rains, it pours.'
+        ];
+       
+
+        var explanations = [
+            'တိုက်ရိုက်ဘာသာပြန်ရင်တော့ စာအုပ်တစ်အုပ်ကို စာအုပ်အဖုံးကိုပဲကြည့်ပြီး မဆုံးဖြတ်ပါနဲ့လို့ဆိုပါတယ်။ အဓိပ္ပာယ်ကတော့ အကြောင်းအရာတစ်ခု ဒါမှမဟုတ် တစ်စုံတစ်ယောက်ကို အပေါ်ယံကြည့်ပြီးမဆုံးဖြတ်ပါနဲ့ လို့ဆိုလိုချင်တာပါ။<br>Person A: Wow! She is beautiful. She seems kind. Should I go and talk to her?ဟာ သူကအရမ်းလှတာပဲ။ သဘောကောင်းမယ့်ပုံပဲ။ ငါသူ့ဆီသွားပြီး စကားသွားပြောရင်ကောင်းမလား။<br>Person B: She is pretty but she is so rude. You shouldn’t judge a book by its cover.<br>သူကလှပေမယ့် အရမ်းရိုင်းတယ်။ နင်လူတစ်ယောက်ကို အပေါ်ယံကြည့်ပြီးမဆုံး့ဖြတ်သင့်ဘူး။',
+            'ဒီ Proverb ကိုတိုက်ရိုက်ဘာသာပြန်ရင်တော့ ကံတရားက ရဲရင့်တတ်သူတွေကို မျက်နှာသာပေးတယ်လို့ ဆိုပါတယ်။ အဓိပ္ပာယ်ကတော့ ကိစ္စတစ်ခုကို လုပ်တဲ့နေရာမှာ ဒါမှမဟုတ် ဆုံးဖြတ်ချက်တစ်ခုကို ချတဲ့အခါမှာ ချိတုံချတုံ ဖြစ်မနေပဲ သတ္တိမွေးပြီးလုပ်ရင် ကံကောင်းတတ်တယ်ဆိုတဲ့ အဓိပ္ပာယ်ပါ။ ဥပမာ-<br>I know that you are hesitant to go Singapore for your studies. But remember, fortune favors the brave.<br>နင် စင်ကာပူကို ကျောင်းသွားတက်ဖို့အတွက် တွေဝေနေတယ်ဆိုတာကို ငါသိပါတယ်။ ဒါပေမယ့် ကံတရားကို သတ္တိရှိတဲ့သူတွေကို မျက်နှာသာပေးတတ်တယ်ဆိုတာကို သတိရနော်။',
+            'အဓိပ္ပာယ်ကတော့ အမြဲတမ်း အမှန်အတိုင်း ပွင့်ပွင့်လင်းလင်း ရိုးရိုးသားသား ပြောဆိုပြုမူတာက အကောင်းဆုံးပါပဲလို့ ပြောချင်တာပါ။ ဥပမာ အနေနဲ့<br>Thank you for telling me the truth about my broken window. I forgive you for accidently breaking it. Honesty is the best policy after all.<br>ငါပြတင်းပေါက်ကွဲသွားတာနဲ့ ပတ်သတ်ပြီး အမှန်အတိုင်းပြောပြပေးလို့ ကျေးဇူးတင်ပါတယ်။ မတော်တဆခွဲမိတာပဲကို…ငါမင်းကိုခွင့်လွှတ်ပါတယ်။ ပွင့်ပွင့်လင်းလင်းပြောပြတာက အကောင်းဆုံးပါပဲလေ။',
+            'ရောမရောက်ရင်ရောမလိုကျင့် ဆိုတဲ့ မြန်မာစကားပုံနဲ့ အတူတူပဲဖြစ်တဲ့ ဒီစကားပုံရဲ့အဓိပ္ပာယ်က ကိုယ်ရောက်နေတဲ့နေရာမှာ ကျင့်ကြံပြုမှုတဲ့ အပြုအမူကျင့်ဝတ်တွေနဲ့ လိုက်လျောညီထွေအောင်နေပါလို့ဆိုလိုချင်တာပါ။ ဥပမာ-<br>I am a Christian but I take my shoes off when I visit pagodas. When is Rome, do as Romans do.<br>ငါက ခရစ်ယာန်ပေမယ့် စေတီပုထိုးတွေကိုသွားလည်တိုင်း ငါဖိနပ်ချွတ််တယ်။ ရောမရောက်ရင် ရောမလိုကျင့်ရမယ်လေ။',
+            'ကံဆိုးမသွားရာမိုးလိုက်လို့ရွာဆိုတဲ့ မြန်မာစကားပုံနဲ့ အဓိပ္ပာယ်အနည်းငယ်ဆင်တူတဲ့ ဒီ Proverb ဟာ ကံဆိုးရင်ဆက်တိုက်ဆိုးတယ် ဆိုတဲ့အခြေအနေမျိုးမှာအသုံးပြုပါတယ်။ ဥပမာ-<br>Yesterday, I lost my wallet. And my phone’s screen was broken and I got fired. When it rains, it pours.<br>မနေ့ကငါ့ရဲ့ပိုက်ဆံအိတ်ပျောက်သွားတယ်။ ဖုန်းစခရင်ကွဲသွားပြီး အလုပ်လဲထုတ်ခံလိုက်ရတယ်။ ကံမကောင်းတာကဆက်တိုက်ပဲဟေ့။'
+        
+        ];
+        
+
+            for(i = 0 ; i < proverbs.length ; i++){
+            document.write('<div class="proverb">'+proverbs[i]+'</div><div style="display:none" class="exp">'+explanations[i] + '</div>');
+
+        }
+        
+        var divs = document.getElementsByClassName('proverb');
+        var exps = document.getElementsByClassName('exp');
+
+            divs[0].onclick = function(){showExp(0)};
+            divs[1].onclick = function(){showExp(1)};
+            divs[2].onclick = function(){showExp(2)};
+            divs[3].onclick = function(){showExp(3)};
+            divs[4].onclick = function(){showExp(4)};
+        function showExp(n){
+            if(exps[n].style.display == 'block'){
+                exps[n].style.display = 'none';
+            }else{
+                exps[n].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

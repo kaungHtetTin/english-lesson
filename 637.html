@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <title>Articles: Classroom Objects  အာတီကယ်များ : စာသင်ခန်းရှိပစ္စည်းများ</title>    
+    <style> 
+        h5 {         
+            text-align: center;         
+            padding: 5px;         
+            margin-top: 5px;            
+        } 
+       
+        .table{
+            width: 100%;
+             border-collapse: collapse;
+                
+        }
+            
+            
+        .table td{         
+                position: relative !important;         
+        }         
+        .table tr:nth-child(even){             
+            color: #181bc9;         
+        }        
+        @media screen and (max-width:320px) {         
+            .table td{             
+            font-size: 0.8em;         
+        }     
+        }   
+            
+                    
+    </style>    
+</head>
+<body>    
+    <div id="container">        
+        <h5>Articles: Classroom Objects </h5>
+        <h5>စာသင်ခန်းရှိပစ္စည်းများ</h5>
+        <h5>An + Vowel sound (သရသံများ)</h5>
+        <h5>A + Consonant sound (ဗျည်းသံများ)</h5>
+      
+      
+      
+        <hr>
+                  
+        <div align="center">
+            <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/011-classroom-object.mp3" type="audio/mpeg"></audio>
+            <p >ကျေးဇူးပြု၍ အသံဖိုင်ကို အရင်နားဆင်ပါ</p>
+        </div>
+        <hr>
+        <div class="table-responsive">          
+            <table class="table table-borderless table-striped">            
+                <tbody>
+
+                    <tr class="mm" style="display:none">
+                        <td>1.</td>
+                        <td>This is a book.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ဤအရာသည် စာအုပ်တစ်အုပ်ဖြစ်ပါသည်။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>2.</td>
+                        <td>This is an English book. </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> ဤအရာသည် အင်္ဂလိပ်စာ စာအုပ်တစ်အုပ်ဖြစ်ပါသည်။
+
+                        </td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>3.</td>
+                        <td>This is an eraser.</td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td> ဤအရာသည် ခဲဖျက်တစ်တုံးဖြစ်ပါသည်။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>4.</td>
+                        <td>This is a notebook.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ဤအရာသည် မှတ်စုစာအုပ်တစ်အုပ်ဖြစ်ပါသည်။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>5.</td>
+                        <td>This is a pen. </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ဤအရာသည် ဘောပင်တစ်ချောင်းဖြစ်ပါသည်။</td>
+                    </tr>
+                    <tr class="mm" style="display:none">
+                        <td>6.</td>
+                        <td>This is a clock.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ဤအရာသည် နာရီတစ်လုံးဖြစ်ပါသည်။</td>
+                    </tr>	                           
+                </tbody>        
+            </table>        
+        </div>
+        <div align="center"><button class="btn btn-primary" onclick="show()">Show in English</button></div>
+        <br>
+                      
+    </div>    
+            
+   <script>        
+         function show (){
+        var m=document.getElementsByClassName("mm");
+        for(var i=0; i<m.length; i++ ){
+            m[i].style.display="";
+            }
+            
+        }
+                
+        </script>      
+        <script  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"         
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"         
+        crossorigin="anonymous" ></script>      
+        <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+        
+</html>

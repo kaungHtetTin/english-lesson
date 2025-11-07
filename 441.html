@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .ans {
+            background-color: rgb(158, 255, 223);
+            padding: 3px;
+            border-radius: 2px;
+            text-align: justify;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (4)</h4>
+        <div class="square">
+            <h5
+                style="background-color: rgb(0, 72, 92); border-radius: 3px; padding: 7px; text-align: center; color: whitesmoke;">
+                Sub+ Be +Adjective
+            </h5>
+        </div>
+
+        <table class="table table-bordered">
+            <tr>
+                <td>Present Tense:</td>
+                <td>am,is,are+Adj</td>
+                <td>သည်။</td>
+            </tr>
+            <tr>
+                <td> Past Tense: </td>
+                <td>was,were +Adj </td>
+                <td> ခဲ့သည်။</td>
+            </tr>
+            <tr>
+                <td>Future Tense: </td>
+                <td>shall,will +be +Adj </td>
+                <td>လိမ့်မည်။</td>
+            </tr>
+        </table>
+
+        <br>
+
+        Eg.
+        <p>
+            ဝါသနာကောင်းတစ်ခုသည် အလွန်အကျိုးရှိ နိုင်ပါသည်။ <br>
+            A good hobby is very useful.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:rgb(0, 72, 92);border-radius:3px;margin-bottom: 7px; color:whitesmoke">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+
+<script>
+    var question = [
+        'ဝါသနာကောင်းတစ်ခုသည် အလွန်အကျိုးရှိ useful / profitable နိုင်ပါသည်။ ',
+        'နွေရာသီ summer သည်အလွန်ပူသည်။',
+        'သူသည်အလွန်စိတ်သဘောဆိုး bad tempered / ill - tempered သည်။',
+        'ကမ္ဘာမြေကြီးearth ဿည်လုံးဝိုင်း round သည်။',
+        'သူ၏ယောက္ခမသည် parent -in -law များသည်အလွန်လောဘကြီး greedy သည်။',
+        'အချိန်သည်အလွန်တန်ဖိုးရှိ precious / valuable သည်။',
+        'လယ်သမားများသည်အလွန်ရိုးသား simple ကြသည်။',
+        'ကျွန်ုပ်၏တပည့်များသည် အလွန်ဖြောင့်မတ် honest ကြသည်။',
+        'ဤပြိုင်ပွဲသည် အလွန်စိတ်လှုပ်ရှားစရာကောင်း exciting လိမ့်မည်။',
+        'ယနေ့ရာသီဥတု weather အလွန်ကောင်းသည်။',
+        'မနေ့ကရာသီဥတုအလွန်ဆိုးခဲ့သည်။',
+        'ထိုရေသည်အလွန်ကြည်လင် clear ခဲ့သည်။',
+        'ဤပန်းသီးများသည် အလွန်အရသာရှိ tasty / delicious လိမ့်မည်။',
+        'သင်သည်စာကြိုးစား studious ရမည်။',
+        'ကျွန်ုပ်၏အစ်ကိုသည်အလွန်ပျင်းရိ lazy သည်။',
+        'ကျွန်ုပ်၏အဖေသည် အလွန်စိတ်တို short - tempered သည်။',
+        'သူမသည် အလွန်မာနကြီ proud သည်။',
+        'ကျွန်မအလွန်ပျော်ပါသည်။',
+        'သူသည်အလွန်ကျော်ကြား famous သည်။',
+        'ဤစာအုပ်သည် အလွန်လူကြိုက်များ popular သည်။'
+    ];
+
+    var answers = [
+        'A good hobby is very useful. ',
+        'The summer is very hot.',
+        'He is very bad tempered.',
+        'The earth is round.',
+        'His parent in law is very greedy.',
+        'The time is very precious.',
+        'The farmers are very simple.',
+        'My pupils are very honest.',
+        'This competition is very exciting.',
+        'Today, the weather is very fine.',
+        'The weather was very bad yesterday.',
+        'That water was very clear.',
+        'This apple will be very tasty.',
+        'You must be studious.',
+        'My brother is very lazy.',
+        'My father is very short - tempered.',
+        'She is very proud.',
+        'I am very happy.',
+        'He is very famous.',
+        'This book is very  popular.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

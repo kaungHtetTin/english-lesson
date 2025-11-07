@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+        .proverb{
+            border: 1px solid white;
+            margin: 5px;
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+        .proverb:active{
+            background-color: lightblue;
+            color: white;
+        }
+        .exp {
+            padding: 10px;
+            box-shadow: 2px 2px 3px gray;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        var proverbs = [
+            '(6) Look before you leap.',
+            '(7) Make hay while the sun shines.',
+            '(8) Money talks.',
+            '(9) Never put off until tomorrow what you can do today.',
+            '(10) Once bitten twice shy.'
+        
+        ];
+        var explanations = [
+            'သူရဲ့အဓိပ္ပာယ်ကတော့ တစ်ခုခုကို မလုပ်ခင်မှာ ဖြစ်လာနိုင်တဲ့ ပြသနာတွေကို အရင် သေသေချာချာ စဉ်းစားတွေးဆပြီး ဆုံးဖြတ်ပါလို့ ဆိုလိုချင်တာပါ။ ',
+            'မြန်မာလိုတော့ မိုးရွာတုန်းရေခံတို့ လသာတုန်းဗိုင်းငင်တို့နဲ့ အဓိပ္ပာယ်နဲ့တူပါတယ်။ တိုက်ရိုက်ဘာသာပြန်ရင်တော့ နေသာတုန်း မြက်ခြောက်(ကောက်ရိုး)လှန်းပါ လို့ဆိုလိုပါတယ်။ အဓိပ္ပာယ်ကတော့ အခွင့်အရေးရတုန်း၊အချိန်အခါသင့်တုန်းမှာ  အဲ့ဒီအခွင့်အရေးကို အသုံးချပါ၊ လုပ်လို့ရတဲ့ အရာတွေကို လုပ်ထားပါလို့ ဆိုလိုတာပါ။  ',
+            'ဒီ Proverb ရဲ့ ဆိုလိုရင်းကတော့ ပိုက်ဆံချမ်းသာတဲ့သူဟာ ကျော်ကြားမှု၊ လွှမ်းမိုးနိုင်စွမ်းနဲ့ အာဏာကို ပိုင်ဆိုင်နိုင်တယ်။ ပိုင်ဆိုင်ရတယ်လို့ ပြောချင်တာပါ။ ',
+            'တိုတိုနဲ့လိုရင်းပြောရရင်တော့ အချိန်မဆွဲပါနဲ့ပေါ့။ ဒီနေ့လုပ်လို့ ရတဲ့အရာကိုမနက်ဖြန်မှ လုပ်မယ်ဆိုပြီး လုပ်စရာရှိတာကို နေ့ရွေ့ညရွေ့မလုပ်ပါနဲ့လို့ ဆိုလိုချင်တာပါ။ ',
+            'မြန်မာလိုတော့ ခဲမှန်ဖူးတဲ့ စာသူငယ်ဆိုတာနဲ့ ဆင်တူပါတယ်။ ကိစ္စတစ်ခုခုကို လုပ်ရင်းနဲ့ မကောင်းတဲ့အတွေ့အကြုံတစ်ခုခုကို ကြုံခဲ့ပြီးတဲ့အချိ်န်မှာ အဲ့ဒီကိစ္စကို ထပ်လုပ်ဖို့ ကြောက်တာ၊ တွေဝေတာ၊ တုံ့ဆိုင်းသွားတာမျိုးပေါ့။ '
+        ];
+           
+            for(i = 0 ; i < proverbs.length ; i++){
+            document.write('<div class="proverb">'+proverbs[i]+'</div><div style="display:none" class="exp">'+explanations[i] + '</div>');
+
+        }
+        
+        var divs = document.getElementsByClassName('proverb');
+        var exps = document.getElementsByClassName('exp');
+
+            divs[0].onclick = function(){showExp(0)};
+            divs[1].onclick = function(){showExp(1)};
+            divs[2].onclick = function(){showExp(2)};
+            divs[3].onclick = function(){showExp(3)};
+            divs[4].onclick = function(){showExp(4)};
+        function showExp(n){
+            if(exps[n].style.display == 'block'){
+                exps[n].style.display = 'none';
+            }else{
+                exps[n].style.display = 'block';
+            }
+        }
+    </script>
+    <p>ပုံမှန်ဆိုရင်တော့ ဘယ်လိုမျိုးသုံးတယ်ဆိုတာကို ဥပမာ စာကြောင်းလေးတွေနဲ့ ထည့်ပေးနေကြပါ။ ဒါပေမယ့် အခု ကျောင်းသားတွေလည်း လေ့ကျင့်လို့ရအောင်လို့ ဗီဒီယိုသင်ခန်းစာမှာ ဒီစာကြောင်းတွေကို လက်တွေ့မှာ ဘယ်လိုထည့်သုံးတယ်ဆိုတာကို ဖော်ပြထားပေးပြီး စစ်ပေးနေတာမို့ ဗီဒီယိုသင်ခန်းစာတွေရဲ့ Proverbs and Idioms ဆိုတဲ့အပိုင်းမှာ သွားရောက်ကြည့်ရှုပြီး စာကြောင်းလေးတွေရေးကြည့်နိုင်ပါတယ်။</p>
+</body>
+</html>

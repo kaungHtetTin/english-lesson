@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>Lucky you!</title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">Lucky you!</h3>
+
+
+    <br/>
+
+    <div align="center" id="teacherVoice">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/elementary-listening-7-b.mp3" type="audio/mpeg"></audio>
+        <p >Listen to the audio and answer the following question</p>
+        <br>
+    </div>
+
+    <h5><u>Question</u></h5>
+
+    <div id="questionPaper">
+        <!-- this is question container -->
+    </div>
+
+    <br>
+    <div id="result" style="text-align: center;">
+        <!-- this is result -->
+    </div>
+    <br>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="helpbtn" type="button" class="btn btn-danger" onclick="showHelp();" style="display: none;">Help</button>
+    </div>
+
+<div id="helpDiv" style="display: none;" >
+    <div style="margin: 5px; padding: 5px; background-color: aquamarine;">
+
+        <b>Listen to the audio reading the following conversation  carefully and then answer the above questions.</b>
+        <br>
+        <pre>
+
+Leah: Hi, Cody. How was your vacation?
+လီယာ: မင်္ဂလာပါ ကိုဒီရေ။ နင့်ရဲ့အားလပ်ရက်က ဘယ်လိုလဲ။
+Cody: It was excellent! I went to California with my cousin. We had a great time.
+ကိုဒီ: အရမ်းကိုမိုက်ခဲ့တာ။ ငါက ကယ်လီဖိုးနီးယားကို ငါ့ဝမ်းကွဲတစ်ယောက်နဲ့သွားခဲ့တယ်။ ငါတို့ အရမ်းကောင်းတဲ့အချိန်တစ်ခုကိုပိုင်ဆိုင်ခဲ့ကြတယ်။
+Leah: Lucky you! How long were you there?
+လီယာ: ကံကောင်းလိုက်တဲ့မင်းပါလား။ အဲ့ဒီမှာ ဘယ်လောက်ကြာခဲ့လဲ။
+Cody: About a week.
+ကိုဒီ: တစ်ပတ်လောက်ပဲ။
+Leah: Cool! Was the weather OK? 
+လီယာ: မိုက်တာပေါ့။ ရာသီဥတုကရော အဆင်ပြေလား။
+Cody: Not really. It was pretty cloudy. But we went surfing every day. The waves were amazing.
+ကိုဒီ: သိပ်တော့မကောင်းဘူး။ တိမ်တွေကတော်တော်လေးထူခဲ့တာ။ ဒါပေမယ့် ငါတို့နေ့တိုင်း လှိုင်းစီးခဲ့ကြတယ်။ ရေလှိုင်းတွေက အံ့မခန်းပဲ။
+Leah: So, what was the best thing about the trip? 
+လီယာ: ဒါဆို မင်းခရီးစဉ်ရဲ့ အကောင်းဆုံးအရာက ဘာဖြစ်မလဲ။
+Cody: Well, something incredible happened. 
+ကိုဒီ: ပြောရရင်တော့ မယုံကြည်နိုင်လောက်တဲ့အရာတစ်ခုဖြစ်ခဲ့တယ်။
+Leah: So, tell me. What happened?
+လီယာ: ဒါဆို ပြောပါဦး။ ဘာဖြစ်ခဲ့တာလဲ။
+Cody: Well, like I said, I was surfing everyday. One day, I entered a contest and I won. I got first prize.
+ကိုဒီ: ငါပြောခဲ့သလိုပဲ။ ငါကနေ့တိုင်း ရေလှိုင်းစီးနေခဲ့တာလေ။ တစ်နေ့ကျတော့ ငါကပြိုင်ပွဲတစ်ခုကိုဝင်ပြိုင်လိုက်တာ ငါနိုင်သွားခဲ့တယ်။ ငါက ပထမဆုရခဲ့တာ။
+Leah: Wow! Congratulations.
+လီယာ: မိုက်တာပေါ့။ ဂုဏ်ပြုပါတယ်နော်။
+Cody: But that’s not all. Someone made a video of me surfing and posted it online.Do you wanna see it?
+ကိုဒီ: ဒါပေမယ့် အဲ့ဒါအကုန်မဟုတ်သေးဘူးနော်။ တစ်စုံတစ်ယောက်က ငါရေလှိုင်းစီးနေတာကို ဗွီဒီယိုတစ်ခုလုပ်လိုက်ပြီး အွန်လိုင်းပေါ်တင်ခဲ့တယ်။ မင်းအဲ့ဒါ(ဗွီဒီယို)ကို ကြည့်ချင်လား။ 
+Leah: Sure.
+လီယာ: ကြည့်မှာပေါ့။ 
+            
+            
+                     
+        </pre>
+    </div>
+</div>
+
+    <script>
+
+        var question =[
+            "1.	How was Cody’s vacation?",
+            "2.	Leah said, “______! How long were you there?”",
+            "3.	How was the weather during Cody’s vacation?",
+            "4.	Cody entered a _____ contest and won the first prize.",
+            "5.	Someone posted the _____ of Cody surfing."
+        ];
+
+
+        var choice=[
+
+            ["It was boring.","It was bad.","It was excellent."],
+            ["Lucky you","Really","Wow"],
+            ["IT was sunny.","It was pretty cloudy.","It was rainy."],
+            ["photo","swimming","surfing"],
+            ["video","photo","status"]
+           
+        ];
+
+
+        var ansChecker=['13','21','32','43','51'];
+
+    
+
+        var questionPaper=document.getElementById("questionPaper");
+      
+        var mypaper="";
+        for(var i=0;i<question.length;i++){
+           mypaper+=makeMultipleChoiceQuestion(question[i],choice[i],(i+1));
+        }
+
+        questionPaper.innerHTML=mypaper;
+        
+        function makeMultipleChoiceQuestion(question,answer,no){
+            var res =question;
+            for(var i=0;i<answer.length;i++){
+            var ansNo=i+1;
+            res=res+ "<div class='form-check' style='flex:1'>" +
+                    "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
+                    "<label class='form-check-label' for=ans"+no+ansNo+">"+
+                    "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
+                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
+                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "</label>"+
+                "</div>";
+
+            }
+
+            return res;
+        }
+
+
+
+        function checkAnswer(){
+
+     
+            document.getElementById("helpbtn").setAttribute('Style','');
+            var resultDiv=document.getElementById("result");
+           
+
+            var totalMark=0;
+
+            for(var i=0,j=ansChecker.length;i<j;i++){
+                var ansSpan =document.getElementById("right"+ansChecker[i]);
+                ansSpan.setAttribute('style','');
+            }  
+
+            for(var i=0;i<question.length;i++){
+                var no=i+1;
+                for(var j=1;j<4;j++){
+                    var ansInput=document.getElementById("ans"+no+j);
+                    var isChecked=ansInput.checked;
+                    if(isChecked){
+                        var inputId=ansInput.getAttribute("id");
+                        if(inputId=="ans"+ansChecker[i]){
+                            totalMark++;
+                            document.getElementById('correct'+no+j).setAttribute('style','font-size:18px;color:rgb(0, 255, 0);');
+                        }else{
+                            document.getElementById('error'+no+j).setAttribute('style','font-size:18px;color:red;');
+                        }
+                    }
+                }
+            }
+
+            if(totalMark!=question.length){
+                resultDiv.innerHTML="Please listen to the audio again and answer all questions correctly."
+            }else{
+                resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
+            }
+
+
+
+        }
+
+        function showHelp(){
+            document.getElementById("helpDiv").setAttribute('Style','');
+        }
+      
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
+

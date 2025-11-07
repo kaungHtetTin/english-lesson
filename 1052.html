@@ -1,0 +1,271 @@
+<html>
+
+<head>
+    <title>Translation | Exercise 6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .ans {
+            background-color: rgb(158, 255, 223);
+            padding: 3px;
+            border-radius: 2px;
+            text-align: justify;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <br>
+        <h3 class="text-primary">Exercise (6)</h3>
+        <div class="square">
+            <h4
+                style="background-color: rgb(0, 72, 92); border-radius: 3px; padding: 7px; text-align: center; color: whitesmoke;">
+                Prep ==> Noun/ Pronoun/ Gerund</h4>
+        </div>
+
+
+        <div class="note">
+            <div style="padding: 7px; background-color:rgb(216, 247, 255);border-radius:3px;">
+
+                <p>
+                    I. Pronoun ဖြစ်က ကံပုဒ်(me-type) ကိုသုံးပါ။
+                </p>
+                <p>II. Gerund ဖြစ်က ရှေ့၌ the ထည့်လေ့မရှိ။</p>
+
+            </div>
+
+            <br> eg.
+            <table class="table table-bordered">
+                <tr>
+                    <td>သူမ၏ယောကျ်ားထံမှ</td>
+                    <td>from her husband</td>
+                </tr>
+                <tr>
+                    <td>လန်ဒန်မြို့အနီးမှာ </td>
+                    <td>near London</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <br>
+        <div style="padding: 7px; background-color:rgb(0, 72, 92);border-radius:3px;margin-bottom: 7px; color:whitesmoke">
+            မှတ်ချက်။
+        </div>
+
+        <div style="padding: 7px; background-color:rgb(216, 247, 255);border-radius:3px;">
+            <p>
+                Basic Course ရဲ့ Grammar သင်ခန်းစာများထဲမှ
+                <ul>
+                    <li>Grammar 13 - Preposition in Places</li>
+                    <li>Grammar 14 - Preposition to Express Time and Date</li>
+                </ul>
+                Note Book ထဲက Basic Grammar ၏
+                    <ul>
+                        <li>Three Kinds Of Preposition</li>
+                        <li>Locative and Directional Preposition</li>
+                        <li>Other Confuse Preposition</li>
+                    </ul>
+                အစရှိသော သင်ခန်းစာများကို လေ့လာထားပြီး ဖြစ်ရပါမည်။
+            </p>
+        
+        </div>
+
+
+        <br>
+        <div
+            style="padding: 7px; background-color:rgb(0, 72, 92);border-radius:3px;margin-bottom: 7px; color:whitesmoke">
+            Exercise
+        </div>
+
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+
+<script>
+    var question = [
+        'သူမ၏ယောကျ်ားထံမှ ',
+        'လန်ဒန်မြို့အနီးမှာ',
+        'သူ၏ထွက်ခွာမှု departure ပြီးနောက်',
+        'သူမ၏သေခြင်းမတိုင်မီ',
+        'သူ့ဇနီး၏သေခြင်းပြီးနောက်',
+        'သူ့အဖေ၏ထိန်းချုပ်မှု control အောက်မှာ',
+        'သူ့သား၏သေခြင်း မတိုင်မီ',
+        'သူ၏အိမ်၌',
+        'သူ၏သေဆုံးမှုပြီးနောက်',
+        'သူ၏လက်များထဲသို့',
+        'လည်ပတ်မှု visit တစ်ခုမှ',
+        'သူ၏ရောက်ရှိမှု arrival ပြီးနောက်',
+        'လမ်းလျှောက်ခြင်းပြီးနောက်',
+        'သူ၏ဒိုင်ယာရီ diary ကိုဖတ်ခြင်းပြီးနောက်',
+        'စာမျက်နှာ page တစ်ခု၏ထိပ်၌',
+        'အပေါက် hole ကိုဆန့်ကျင်၍',
+        'နှစ် နှစ်ဆယ်ကြာအောင်',
+        'သူ့အနောက်မှာ',
+        'အဝင်အဝနားမှာ',
+        'သူ၏ဆုပ်ကိုင်ထားမှု hold / grip မှ',
+        'ကျွန်ုပ်တို့ရှေ့မှာ',
+        'ပန်းခြံထဲမှာ',
+        'လေးလကြာအောင်',
+        'ဘတ်(စ်)ကားဖြင့်',
+        'သူမပါဘဲ',
+        'ဆိုင်တစ်ဆိုင်မှ',
+        'ညစာစား have ခြင်းပြီးနောက်',
+        'အတန်းထဲမှာ',
+        'ကျွန်ုပ်နှင့် အတူ',
+        'ကျောင်းမတိုင်ခင်',
+        'သူမအနီးမှာ',
+        'ခုံတန်းရှည် bench တစ်ခုပေါ်မှာ',
+        'သင်တို့ဘေးမှာ',
+        'သူတို့အတွက်',
+        'ကျောင်းသို့',
+        'သူ့အကြောင်း',
+        'တနင်္ဂနွေနေ့မှာ',
+        'ဇူလိုင်လ(၁၉) ရက်နေ့မှာ',
+        'မနက်ဘက်မှာ',
+        'လေးလကြာအောင်',
+        'မေလမှာ',
+        'ကျွန်ုပ်ဦးလေး၏ကားဖြင့်',
+        '၁၉၆၀ ခုနှစ်ခုမှာ',
+        'ညကိုးနာရီ၌',
+        ' ရန်ကုန်၌',
+        ' ကမ္ဘာပေါ်မှာ',
+        'မနက် ၈ နာရီတွင်',
+        'ည ၁၀ နာရီတွင်',
+        '၁၀ နာရီမှာ',
+        'ညနေပိုင်းမှာ',
+        'နေ့လယ်မှာ',
+        'ညနေ ၃နာရီတိုင်အောင်',
+        'မနက်စာမတိုင်ခင်',
+        'ခြောက်နှစ်ပြီးနောက်',
+        'လမ်းဘေးမှာ',
+        'လောလောဆယ်မှာ',
+        'အိမ်ထဲသို့',
+        'လမ်းတလျှောက်',
+        'သစ်ပင်နှစ်ပင်ကြားမှာ',
+        'ဆိုင်တစ်ဆိုင်မှ',
+        'အိမ်အပြင်သို့',
+        'ကျောင်းသို့သွားခြင်း မတိုင်ခင်',
+        'အနားယူ take a rest ခြင်းမရှိဘဲ',
+        'ရေချိုး take / have a bath ခြင်းပြီးနောက်',
+        'သူတို့၏အိမ်စာ homework ကို ပြုလုပ်ခြင်းပြီးနောက်',
+        'သူ၏ရှာဖွေတွေ့ရှိမှု discovery ပြီးနောက်',
+        'သစ်ပင်၏ ထိပ်ဖျားမှာ',
+        'ကျောင်းနောက်မှာ',
+        'ပန်းခြံထဲမှာ',
+        'သဲသောင်ပြင်မှာ'
+    ];
+
+    var answers = [
+        'from her husband ',
+        'near London',
+        'after his departure',
+        'before her death',
+        'after the death of his wife',
+        'under the control of his father',
+        'before the death of his son',
+        'at his home',
+        'after his death',
+        'into his hands',
+        'from a visit',
+        'after his arrival',
+        'after walking',
+        'after reading his diary',
+        'at the top of a page',
+        'against the hole',
+        'for twenty years',
+        'behind him',
+        'near the entrance',
+        'from his holding',
+        'in front of us',
+        'in the park',
+        'for four months',
+        'by bus',
+        'without him',
+        'from a shop',
+        'after having the dinner',
+        'in the class',
+        'with me',
+        'before school',
+        'near her',
+        'on a bench',
+        'beside you',
+        'for you',
+        'to school',
+        'about him',
+        'on Sunday',
+        'on 19th July',
+        'in the morining',
+        'for four months',
+        'in May',
+        'in my uncle\'s car',
+        'in 1960',
+        'at 9 pm',
+        'in Yangon',
+        'in the world',
+        'at 8 am',
+        'at 10 pm',
+        'at 10 o\' clock',
+        'in the evening',
+        'in the afternoon',
+        'until 3 pm',
+        'before breakfast',
+        'after 6 years',
+        'beside the road',
+        'at present',
+        'into the house',
+        'along the road',
+        'between the two trees',
+        'from a shop',
+        'out of the house',
+        'before going to school',
+        'without taking a rest',
+        'after taking a bath',
+        'after doing their homework',
+        'after his discovery',
+        'at the top of the tree',
+        'behind the school',
+        'in the park',
+        'on the beach'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

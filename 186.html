@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px; 
+  box-sizing: border-box;
+  color: rgb(56, 56, 56);
+        line-height: 25px;
+  }
+  h1 {
+   font-weight:  bold;
+   text-align: center;
+   font-size: larger;
+  }
+  h2{
+   background-color: teal;
+   padding: 5px;
+            color: white;
+   box-shadow: 1px 1px 1px gray;
+   font-size: 18px;
+            width: fit-content;
+            border-radius: 3px;
+  }
+  
+  table.blue{
+   border-collapse: collapse;
+   width: 100%;
+   
+  }
+  .blue th{
+            background-color:teal;
+   color: rgb(248, 248, 248);
+   border: 1px solid white;
+
+  }
+  .blue td{
+   background-color: whitesmoke;
+   padding: 5px 10px;
+   border: 1px solid white;
+   color: black;
+  }
+  table.simple{
+   border-collapse: collapse;
+  }
+  .simple td,th{
+   padding: 5px 10px;
+  }
+  .bigtable{
+   max-width: 100%;
+   margin: 0;
+   padding: 0;
+   border-collapse: collapse;
+  }
+  .bigtable td{
+   padding: 2px;
+   border: 1px solid black;
+   word-break: break-all;
+  }
+        .forty{
+            width: 40%;
+        }
+        .sixty{
+            width: 60%;
+        }
+    </style>
+
+</head>
+<body>
+
+
+       
+<table class="blue">
+    <tr><th colspan="2">Types of Occupations (အလုပ်အကိုင် အမျိုးအစားများ)</th></tr>
+    <script>
+        var words = ['Accountant(n)','Actor(n)','Actress(n)','Ambassador(n)','Architect(n)','Artist(n)','Astronaut(n)','Bartender(n)','Bellhop(n)','Boxer(n)','Businessman(n)','Carpenter(n)','Chef(n)','City Worker(n)','Construction worker(n)','Courier(n)','Dentist(n)','Detective(n)','Director(n)','Doctor(n)','Doorman(n)','Driver(n)','Electrician(n)','Engineer(n)','Farmer(n)','Firefighter(n)','Flight attendant(n)','Gardener(n)','Handyman(n)','Housewife(n)','Interpreter(n)','Journalist(n)','Judge(n)','Lawyer(n)','Mailman(n)','Mechanic(n)','Merchant(n)','Musician(n)','Nurse(n)','Office Worker(n)','Painter(n)','Paramedic(n)','Pilot(n)','Police officer(n)','President(n)','Sailor(n)','Salesman (n)','Scientist(n)','Secretary(n)','Singer(n)','Soldier(n)','Surgeon(n)','Teacher(n)','Train conductor(n)','Translator(n)','Waiter(n)','Waitress(n)','Zoo-keeper(n)'];
+        var meanings = ['စာရင်းကိုင် ','သရုပ်ဆောင်','သရုပ်ဆောင်မင်းသမီး','သံတမန်','ဗိသုကာပညာရှင်','အနုပညာရှင်','အာကာသယာဉ်မှူး','အဖျော်ဆရာ','ဟိုတယ်အခန်းစောင့်','လက်ဝှေ့သမား','စီးပွားရေးလုပ်ငန်းရှင်','လက်သမား','စားဖိုမှူး','စည်ပင်ဝန်ထမ်း','ဆောက်လုပ်ရေးဝန်ထမ်း','စာပို့ဆက်သား','သွားဆရာဝန်','စုံထောက်','ဒါရိုက်တာ','ဆရာဝန်','တံခါးစောင့်','ကားမောင်းသူ','လျှပ်စစ်ကျွမ်းကျင်သူ','အင်ဂျင်နီယာ','လယ်သမား','မီးသတ်သမား','လေယာဉ်မောင်၊ လေယာဉ်မယ်','ဥယျာဉ်မှူး','အလုပ်မျိုးစုံကို ကျွမ်းကျင်စွာပြုလုပ်နိုင်သူ','အိမ်ရှင်မ','စကားပြန်','သတင်းစာဆရာ','တရားသူကြီး','ရှေ့နေ','စာပို့သမား','စက်ပြင်ဆရာ','ကုန်သည်','ဂီတပညာရှင်','သူနာပြု','ရုံးဝန်ထမ်း','ပန်းချီဆရာ၊ ဆေးသုတ်သမား။','အရေးပေါ်ဆေးကုသရေး ဝန်ထမ်း','လေယာဉ်မှူး၊ သဘောင်္အရာရှိ။','ရဲအရာရှိ။','သမ္မတ','သင်္ဘောသား','အရောင်းဝန်ထမ်း','သိပ္ပံပညာရှင်','အတွင်းရေးမှူး','အဆိုတော်','စစ်သား','ခွဲစိတ်ဆရာဝန်','ဆရာ/ ဆရာမ','ရထားလမ်းပြ','ဘာသာပြန်','စားပွဲထိုး','စားပွဲထိုး (အမျိုးသမီး)','တိရစ္ဆာန်ဥယျာဉ်မှူး'];
+        for(var i=0 ; i < words.length ; i++){
+            document.write('<tr><td class="forty">' + words[i] + '</td><td class="sixty">' + meanings[i] + '</td></tr>')
+        }
+    </script>
+</table>
+
+ 
+   
+
+
+
+
+</body>
+</html>

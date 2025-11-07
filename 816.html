@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>What does she look like?</title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">What does she look like?</h3>
+
+
+    <br/>
+
+    <div align="center" id="teacherVoice">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/elementary-listening-9-a.mp3" type="audio/mpeg"></audio>
+        <p >Listen to the audio and answer the following question</p>
+        <br>
+    </div>
+
+    <h5><u>Question</u></h5>
+
+    <div id="questionPaper">
+        <!-- this is question container -->
+    </div>
+
+    <br>
+    <div id="result" style="text-align: center;">
+        <!-- this is result -->
+    </div>
+    <br>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="helpbtn" type="button" class="btn btn-danger" onclick="showHelp();" style="display: none;">Help</button>
+    </div>
+
+<div id="helpDiv" style="display: none;" >
+    <div style="margin: 5px; padding: 5px; background-color: aquamarine;">
+
+        <b>Listen to the audio reading the following conversation  carefully and then answer the above questions.</b>
+        <br>
+        <pre>
+
+Lauren: I hear you have a new girlfriend, Justin. 
+လော်ရန်: မင်းကောင်မလေးအသစ်ရနေပြီလို့ ငါကြားတယ် ဂျက်စ်တင်။
+Justin: Yes. Her name is Tiffany. She’s really smart, and she’s so pretty!
+ဂျက်စ်တင်: ဟုတ်တယ်။ သူမနာမည်က တစ်ဖနီ။ သူမက တစ်ကယ်စမတ်ကျတယ်။ ပြီးတော့ အရမ်းချောတယ်။
+Lauren: Really? What does she look like?
+လော်ရန်: တစ်ကယ်လား။ သူမက ဘယ်လိုပုံစံမျိုးလဲ။
+Justin: Well, she’s very tall.
+ဂျက်စ်တင်: ပြောရရင်တော့ သူမကတော်တော်အရပ်ရှည်တယ်။
+Lauren: How tall?
+လော်ရန်: ဘယ်လောက်တောင်ရှည်လဲ။
+Justin: About 5 foot 10. I suppose.
+ဂျက်စ်တင်: ၅ပေ၅လောက်တော့ရှိမယ်လို့ ငါယူဆတယ်။
+Lauren: Yeah, that is pretty tall. What colour is her hair?
+လော်ရန်: ဟုတ်လား။ ဒါဆို တော်တော်အရပ်ရှည်တာပဲ။ သူ့ဆံပင်က ဘာအရောင်လဲ။
+
+Justin: She has beautiful brown hair.
+ဂျက်စ်တင်: သူမမှာ လှပတဲ့အညိုရောင်ဆံပင်ရှိတယ်။
+Lauren: And how old is she? 
+လော်ရန်: ပြီးတော့ သူက အသက်ဘယ်လောက်လဲ။
+Justin: I don’t know. I think it’s a little rude to ask.
+ဂျက်စ်တင်: ငါမသိဘူး။ မေးရမှာ နည်းနည်းရိုင်းသွားမယ်လို့ ငါထင်တယ်။
+Lauren: So, you don’t know her age? 
+လော်ရန်: ဒါဆို မင်းသူ့ရဲ့အသက်ကိုမသိဘူးပေါ့။
+Justin: No, but I don’t really care.
+ဂျက်စ်တင်: ဟင့်အင်း။ ဒါပေမယ့် ငါ(သိပ်)ဂရုမစိုက်ပါဘူး။
+Lauren: OK. So, how old do you think she is? 
+လော်ရန်: အင်းပါ။ ဒါဆိုရင် သူမအသက်ဘယ်လောက်လို့ နင်ထင်လဲ။
+Justin: Who knows? I think she’s in her thirties.
+ဂျက်စ်တင်: ဘယ်(သူ)သိမလဲ။ ငါထင်တာတော့ သူမက အသက်သုံးဆယ်ထဲရောက်နေပြီထင်တယ်။
+Lauren: And how old are you?
+လော်ရန်: ဒါဆို မင်းက အသက်ဘယ်လောက်လဲ။
+Justin: I’m 29.
+ဂျက်စ်တင်: ငါက ၂၉ပါ။ 
+Lauren: Oh, cool. So, she’s older than you.
+လော်ရန်: အော် ကောင်းတာပေါ့။ ဒါဆို သူမက မင်းထက်အသက်ကြီးတာပဲ။
+                       
+                     
+        </pre>
+    </div>
+</div>
+
+    <script>
+
+        var question =[
+            "1.	How is Justin’s new girlfriend?",
+            "2.	What does Justin’s girlfriend look like?",
+            "3.	Does Justin know how old his girlfriend is?",
+            "4.	Justin said, “_______? I think she’s in her thirties.”",
+            "5.	How old is Justin?"
+        ];
+
+
+        var choice=[
+
+            ["She’s nice and kind.","She’s fun and cute.","She’s smart and pretty."],
+            ["She’s tall and her hair is brown.","She’s tall and her hair is blond.","She’s short and her hair is black."],
+            ["Yes, he does.","No, he doesn’t.",""],
+            ["Maybe","Why are you asking","Who knows"],
+            ["30","29","28"]
+
+        ];
+
+
+        var ansChecker=['13','21','32','43','52'];
+
+    
+
+        var questionPaper=document.getElementById("questionPaper");
+      
+        var mypaper="";
+        for(var i=0;i<question.length;i++){
+           mypaper+=makeMultipleChoiceQuestion(question[i],choice[i],(i+1));
+        }
+
+        questionPaper.innerHTML=mypaper;
+        
+        function makeMultipleChoiceQuestion(question,answer,no){
+            var res =question;
+            for(var i=0;i<answer.length;i++){
+            var ansNo=i+1;
+            res=res+ "<div class='form-check' style='flex:1'>" +
+                    "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
+                    "<label class='form-check-label' for=ans"+no+ansNo+">"+
+                    "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
+                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
+                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "</label>"+
+                "</div>";
+
+            }
+
+            return res;
+        }
+
+
+
+        function checkAnswer(){
+
+     
+            document.getElementById("helpbtn").setAttribute('Style','');
+            var resultDiv=document.getElementById("result");
+           
+
+            var totalMark=0;
+
+            for(var i=0,j=ansChecker.length;i<j;i++){
+                var ansSpan =document.getElementById("right"+ansChecker[i]);
+                ansSpan.setAttribute('style','');
+            }  
+
+            for(var i=0;i<question.length;i++){
+                var no=i+1;
+                for(var j=1;j<4;j++){
+                    var ansInput=document.getElementById("ans"+no+j);
+                    var isChecked=ansInput.checked;
+                    if(isChecked){
+                        var inputId=ansInput.getAttribute("id");
+                        if(inputId=="ans"+ansChecker[i]){
+                            totalMark++;
+                            document.getElementById('correct'+no+j).setAttribute('style','font-size:18px;color:rgb(0, 255, 0);');
+                        }else{
+                            document.getElementById('error'+no+j).setAttribute('style','font-size:18px;color:red;');
+                        }
+                    }
+                }
+            }
+
+            if(totalMark!=question.length){
+                resultDiv.innerHTML="Please listen to the audio again and answer all questions correctly."
+            }else{
+                resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
+            }
+
+
+
+        }
+
+        function showHelp(){
+            document.getElementById("helpDiv").setAttribute('Style','');
+        }
+      
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
+

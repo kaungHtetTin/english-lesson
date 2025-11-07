@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>My Friends</title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">My Friends</h3>
+
+    <!-- <p class="warnPara" id="warnPara">
+        ဖော်ပြပါစာပိုဒ်ကို ဖတ်ရှု၍ အောက်တွင်ပေးထားသော မေးခွန်းများကို ဖြေဆိုပါ။
+        အခက်အခက် တစ်စုံတစ်ရာရှိပါက အောက်တွင်ပေးထားသော "Ask the teacher for help!" ကိုနှိပ်၍ ဆရာ၏ ရှင်းလင်းသင်ပြမှုကိုနားထောင်ပါ။
+    </p> -->
+    <!-- answer no 4 is detecting only on yellow -->
+
+    <img src="https://www.calamuseducation.com/uploads/lessons/images/11-my-friends-a.png" class="image">
+    <img src="https://www.calamuseducation.com/uploads/lessons/images/11-my-friends-b.png" class="image">
+
+    <br/>
+
+    <h5><u>Question</u></h5>
+
+    <div class="mb-3">
+        <label for="q1" class="form-label">1. Which friends ride the bus?</label>
+        <div style="display: flex;">
+            <input value="" class="form-control" id="q1" placeholder="Enter your answer" style="margin-right: 10px;">
+            <i id="correct1" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0);display: none;">check_circle</i>
+            <i id="error1" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+        </div>
+        <p class="answer" style="display: none;"></p>
+    </div>
+
+    <div class="mb-3">
+        <label for="q2" class="form-label">2. Which friends play soccer?</label>
+        <div style="display: flex;">
+            <input type="email" class="form-control" id="q2" placeholder="Enter your answer"  style="margin-right: 10px;">
+            <i id="correct2" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
+            <i id="error2" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+        </div>
+        <p class="answer" style="display: none;"></p>
+    </div>
+
+    <div class="mb-3">
+        <label for="q3" class="form-label">3. Who plays with Tony and Brian on the playground?</label>
+        <div style="display: flex;">
+            <input type="email" class="form-control" id="q3" placeholder="Enter your answer"  style="margin-right: 10px;">
+            <i id="correct3" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
+            <i id="error3" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+        </div>
+        <p class="answer" style="display: none;"></p>
+    </div>
+
+    <div class="mb-3">
+        <label for="q4" class="form-label">4. Who are the cousins?</label>
+            <div style="display: flex;">
+                <input type="email" class="form-control" id="q4" placeholder="Enter your answer"  style="margin-right: 10px;">
+                <i id="correct4" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
+                <i id="error4" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+            </div>
+            <p class="answer" style="display: none;"></p>
+    </div>
+
+    <div class="mb-3">
+        <label for="q5" class="form-label">5. Who eats lunch together?</label>
+        <div style="display: flex;">
+            <input type="email" class="form-control" id="q5" placeholder="Enter your answer"  style="margin-right: 10px;">
+            <i id="correct5" class="material-icons" style="font-size:30px;color:rgb(0, 255, 0); display: none;">check_circle</i>
+            <i id="error5" class="material-icons" style="font-size:30px;color:red; display: none;">cancel</i>
+        </div>
+        <p class="answer" style="display: none;"></p>
+    </div>
+
+    <div align="center" id="teacherVoice" style="display: none;">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/11-my-friends.mp3" type="audio/mpeg"></audio>
+        <p >ကျေးဇူးပြု၍ အသံဖိုင်ကို အရင်နားဆင်ပါ</p>
+        <br>
+    </div>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="showbtn" type="button" class="btn btn-danger" onclick="showAnswer();" style="display: none;">Show answer</button>
+    </div>
+
+    <div style=" width: 100%; text-align: center;">
+        <button id="trVoice" type="button" class="btn btn-primary" onclick="help();" >Ask The Teacher For Help</button>
+    </div>
+    
+    <script>
+
+        var question=['tony and brian','hunter and jake','lisa and emma','abby and kevin','lisa'];
+        
+        var question2=['Tony and Brian ride the bus.','Hunter and Jake play soccer.','Lisa and Emma play with Tony and Brian.','Abby and Kevin are the cousins.','Tony, Brian, Lisa and Emma eat lunch together.'];
+      
+        var icon=document.getElementsByTagName("i");
+        var ansArr=document.getElementsByTagName("input");
+        var ansArr=document.getElementsByTagName("input");
+        var ansBox=document.getElementsByClassName("answer");
+
+        function checkAnswer(){
+           
+            for(var i=0; i<5 ; i++){
+                icon[i].setAttribute('style','display:none');
+                ansBox[i].setAttribute('style','display: none');
+            }
+              
+            for(var i=0;i<5;i++){
+                var iconId=i+1;
+
+                if(ansArr[i].value.toLowerCase().includes(question[i])){
+                    document.getElementById("correct"+iconId).setAttribute('style','color: rgb(0, 255, 0)');
+                }else{
+                        document.getElementById("error"+iconId).setAttribute('style','color: rgb(255, 0, 0)');
+                }
+               
+
+            }
+
+            document.getElementById("showbtn").setAttribute('style','')
+           
+        }
+
+        function showAnswer(){
+        
+            for(var i=0,j=icon.length; i<j ; i++){
+                icon[i].setAttribute('style','display:none');
+            }
+
+          
+            for(var i=0;i<5;i++){
+                ansBox[i].setAttribute('style','');
+                ansBox[i].innerHTML=question2[i];
+            } 
+        }
+        function help(){
+            var teacherVoice=document.getElementById("teacherVoice");
+            teacherVoice.setAttribute('style','');
+            document.getElementById("trVoice").setAttribute('style','display:none');
+        }
+
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
+

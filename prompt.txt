@@ -1,0 +1,9 @@
+You must modify all of the html files
+Remove bootstrap
+You can use Jquery or Javascript like current version
+make the component and theme color consistent to all html files
+you can use theme.css for common consistency
+the main important theme is that 
+all html files will be inserted in a web ifram. 
+so make sure your css style are not interface to the other part of 
+the host website.

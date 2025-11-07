@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>Which one is she? </title>
+
+
+    <style>
+        .image{
+            width: 100%;
+            height: auto;
+           
+            align-self: center;
+        }
+        .warnPara{
+          
+            text-align: justify;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body{
+            padding: 20px;
+        }
+
+        button{
+            float: 1;
+            margin: 5px;
+        }
+        .answer{
+            color: white;
+            background-color: rgb(0, 201, 27);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+</head>
+
+  
+<body>
+    <br>
+    <h3 class="h3 text-primary" align="center">Which one is she? </h3>
+
+
+    <br/>
+
+    <div align="center" id="teacherVoice">
+        <br>
+        <audio controls autoplay><source src="https://www.calamuseducation.com/uploads/lessons/audios/elementary-listening-9-b.mp3" type="audio/mpeg"></audio>
+        <p >Listen to the audio and answer the following question</p>
+        <br>
+    </div>
+
+    <h5><u>Question</u></h5>
+
+    <div id="questionPaper">
+        <!-- this is question container -->
+    </div>
+
+    <br>
+    <div id="result" style="text-align: center;">
+        <!-- this is result -->
+    </div>
+    <br>
+
+    <div style=" width: 100%; text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer();" >Check answer</button>
+        <button id="helpbtn" type="button" class="btn btn-danger" onclick="showHelp();" style="display: none;">Help</button>
+    </div>
+
+<div id="helpDiv" style="display: none;" >
+    <div style="margin: 5px; padding: 5px; background-color: aquamarine;">
+
+        <b>Listen to the audio reading the following conversation  carefully and then answer the above questions.</b>
+        <br>
+        <pre>
+Brooke: Hi, Diego! Good to see you! Is Cora here, too?
+ဘရွတ်ခ်: မင်္ဂလာပါ ဒီယေဂိုရေ။ တွေ့ရတာဝမ်းသာလိုက်တာ။ ကိုရာရော ဒီမှာရှိလား။
+Diego: Oh, she couldn’t make it. She went to a concert with Alana.
+ဒီယေဂို: အိုး… သူမမလာနိုင်ဘူး။ သူမက အလာနာနဲ့အတူ ရှိုးပွဲသွားတယ်။
+Brooke: Oh! Let’s go talk to my friend Paula. She doesn’t know anyone here.
+ဘရွတ်ခ်: အိုး…(ဟုတ်လား) ငါ့သူငယ်ချင်း ပေါ်လာကို စကားသွားပြောရအောင်။ သူမက ဒီမှာရှိတဲ့သူတွေ တစ်ယောက်နဲ့မှမသိဘူးလေ။
+Diego: Paula? Which one is she? Is she the woman wearing a long skirt over there? 
+ဒီယေဂို: ပေါ်လာလား။ သူကဘယ်တစ်ယောက်လဲ။ ဟိုမှာ စကပ်အရှည်ဝတ်ထားတဲ့အမျိုးသမီးက သူလား။ 
+Brooke: No, she’s the tall one in jeans and a scarf. She’s standing near the window.
+ဘရွတ်ခ်: မဟုတ်ဘူး။ သူမက ဂျင်းဘောင်းဘီနဲ့ လည်စည်းပုဝါဝတ်ထားတဲ့ အရပ်ရှည်တဲ့တစ်ယောက်ပါ။ သူမက ပြူတင်းပေါက်နားမှာရပ်နေတယ်။  
+Diego: OK. I’d like to meet her.
+ဒီယေဂို: ကောင်းပြီလေ။ ငါသူနဲ့တွေ့ချင်တယ်။ 
+Brooke: Let’s see. Who else is here? Do you know Liam? He’s really nice.
+ဘရွတ်ခ်: ကြည့်ရအောင်။ ဒီမှာဘယ်သူတွေရှိသေးလဲ။ မင်းလီယံကိုသိလား။ သူက အရမ်းသဘောကောင်းတယ်။
+Diego: No, I don’t. Which one is he?
+ဒီယေဂို: ဟင့်အင်း ငါမသိဘူး။ သူက ဘယ်တစ်ယောက်လဲ။
+Brooke: He’s over there. He’s the one wearing grey pants, a white shirt and….
+ဘရွတ်ခ်: သူက ဟိုနားမှာ။ သူက မီးခိုးရောင်ဘောင်းဘီနဲ့ အဖြူရောင်ရှပ်ဝတ်ထားတဲ့တစ်ယောက်လေ။ ပြီးတော့သူဝတ်ထားတာက…
+Diego: And the light blue sweater? 
+ဒီယေဂို: ပြီးတော့ အပြာနုရောင်ဆွယ်တာ(ဝတ်ထားတဲ့တစ်ယောက်)လား။
+Brooke: That’s right. And then, there’s Hina Sasaki. She works with me at the office. 
+ဘရွတ်ခ်: ဟုတ်တာပေါ့။ ပြီးတော့ ဟိုမှာ ဟိန ဆာဆခီလေ။ သူမက ငါနဲ့အတူတူ ရုံးမှာအလုပ်လုပ်တာ။
+Diego: Oh, which one is Hina?
+ဒီယေဂို: အော် ဟိနက ဘယ်တစ်ယောက်လဲ။
+Brooke: She’s the woman in a long dress. She’s wearing glasses.
+ဘရွတ််ခ်: သူမက စကပ်အရှည်ဝတ်ထားတဲ့အမျိုးသမီးလေ။ သူမက မျက်မှန်တပ်ထားတယ်။ 
+Diego: Yeah, I see her. She’s the one talking to Liam, right? 
+ဒီယေဂို: အော် ငါသူ့ကိုမြင်ပြီ။ သူမက လီယံကိုစကားပြောနေတဲ့တစ်ယောက်၊ ဟုတ်တယ်မလား။
+Brooke: Yep.
+ဘရွတ်ခ်: ဟုတ်တယ်။
+Diego: And who are those two people dancing?
+ဒီယေဂို: ပြီးတော့ ဟိုမှာကနေတဲ့လူနှစ်ယောက်က ဘယ်သူတွေလဲ။
+Brooke: Oh, that’s my best friend. Her name is Sierra. She’s really nice.
+ဘရွတ်ခ်: အော် အဲ့ဒါကငါ့ရဲ့အချစ်ဆုံးသူငယ်ချင်းလေ။ သူမနာမည်က စီယာရာ။ သူမက တစ်ကယ်သဘောကောင်းတယ်။
+Diego: That’s a pretty red dress. And who’s that guy dancing with her?
+ဒီယေဂို: အဲ့ဒါက တော်တော်လှတဲ့အနီရောင်ဂါဝန်ပဲ။ ပြီးတော့ သူမနဲ့တွဲကနေတဲ့ အမျိုးသားက ဘယ်သူလဲ။
+Brooke: That’s Matt Sigor. Her new boyfriend.
+ဘရွတ်ခ်: အဲ့ဒါ မတ်စီဂေါပါ။ သူမရဲ့ကောင်လေးအသစ်လေ။
+Diego: Oh, that’s her boyfriend?
+ဒီယေဂို: အော် အဲ့ဒါသူမရဲ့ကောင်လေးလား။
+Brooke: Hey, didn’t you wanna meet Paula?
+ဘရွတ်ခ်: ဟေး… မင်းပေါ်လာနဲ့တွေ့ချင်တယ်ဆို။
+Diego: Sorry. Which one is Paula again?
+ဒီယေဂို: စောရီးနော်။ ပေါ်လာကဘယ်တစ်ယောက်လဲ (ပြန်ပြောပေးပါဦး)။
+            
+                       
+                     
+        </pre>
+    </div>
+</div>
+
+    <script>
+
+        var question =[
+            "1.	Is Cora at the party?",
+            "2.	Who is Paula?",
+            "3.	How’s Liam?",
+            "4.	Liam is wearing grey pants, a white shirt and a _______.",
+            "5.	Hina is wearing a ________ and a pair of glasses.",
+            "6.	Who is wearing the red dress?"
+        ];
+
+
+        var choice=[
+
+            ["No, she didn’t make it.","She’ll be in 30 minutes.","Yes, she is."],
+            ["She’s the tall one in jeans and a scarf.","She’s the one with a long skirt.","She’s the one with a dress."],
+            ["He’s funny.","He’s talkative.","He’s nice."],
+            ["green sweater","light blue sweater","black coat"],
+            ["long dress","long pants","uniform"],
+            ["Hina","Sierra","Brooke"]
+
+        ];
+
+
+        var ansChecker=['11','21','33','42','51','62'];
+
+    
+
+        var questionPaper=document.getElementById("questionPaper");
+      
+        var mypaper="";
+        for(var i=0;i<question.length;i++){
+           mypaper+=makeMultipleChoiceQuestion(question[i],choice[i],(i+1));
+        }
+
+        questionPaper.innerHTML=mypaper;
+        
+        function makeMultipleChoiceQuestion(question,answer,no){
+            var res =question;
+            for(var i=0;i<answer.length;i++){
+            var ansNo=i+1;
+            res=res+ "<div class='form-check' style='flex:1'>" +
+                    "<input class='form-check-input' type='radio' name="+no+" id=ans"+no+ansNo+">" +
+                    "<label class='form-check-label' for=ans"+no+ansNo+">"+
+                    "<span id=right"+no+ansNo+">"+answer[i] +"</span>"+
+                    "<i id=correct"+no+ansNo+ " class='material-icons' style='font-size:18px;color:rgb(0, 255, 0);display:none;'>check_circle</i>"+
+                    "<i id=error"+no+ansNo+ " class='material-icons' style='font-size:18px;color:red;display:none;'>cancel</i>"+                   
+                    "</label>"+
+                "</div>";
+
+            }
+
+            return res;
+        }
+
+
+
+        function checkAnswer(){
+
+     
+            document.getElementById("helpbtn").setAttribute('Style','');
+            var resultDiv=document.getElementById("result");
+           
+
+            var totalMark=0;
+
+            for(var i=0,j=ansChecker.length;i<j;i++){
+                var ansSpan =document.getElementById("right"+ansChecker[i]);
+                ansSpan.setAttribute('style','');
+            }  
+
+            for(var i=0;i<question.length;i++){
+                var no=i+1;
+                for(var j=1;j<4;j++){
+                    var ansInput=document.getElementById("ans"+no+j);
+                    var isChecked=ansInput.checked;
+                    if(isChecked){
+                        var inputId=ansInput.getAttribute("id");
+                        if(inputId=="ans"+ansChecker[i]){
+                            totalMark++;
+                            document.getElementById('correct'+no+j).setAttribute('style','font-size:18px;color:rgb(0, 255, 0);');
+                        }else{
+                            document.getElementById('error'+no+j).setAttribute('style','font-size:18px;color:red;');
+                        }
+                    }
+                }
+            }
+
+            if(totalMark!=question.length){
+                resultDiv.innerHTML="Please listen to the audio again and answer all questions correctly."
+            }else{
+                resultDiv.innerHTML="Congratulation! You have answered all questions correctly.";
+            }
+
+
+
+        }
+
+        function showHelp(){
+            document.getElementById("helpDiv").setAttribute('Style','');
+        }
+      
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
+

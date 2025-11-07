@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.calamuseducation.com/easyenglish/voalisteningscript.js"></script>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(56, 56, 56);
+            line-height: 25px;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: larger;
+        }
+
+        h2 {
+            background-color: rgb(1, 166, 255);
+            padding: 5px;
+            box-shadow: 1px 1px 1px gray;
+            font-size: 18px;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+
+        table.blue {
+            border-collapse: collapse;
+            max-width: 100%;
+
+        }
+
+        .blue th {
+            background-color: rgb(62, 62, 238);
+            color: rgb(241, 241, 241);
+            border: 1px solid white;
+
+        }
+
+        .blue td {
+            background-color: rgb(246, 249, 255);
+            padding: 5px 10px;
+            border: 1px solid white;
+
+        }
+
+        table.simple {
+            border-collapse: collapse;
+        }
+
+        .simple td,
+        th {
+            padding: 5px 10px;
+        }
+
+        .bigtable {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        .bigtable td {
+            padding: 2px;
+            border: 1px solid black;
+            word-break: break-all;
+        }
+
+        @media only screen and (max-width: 800px) {
+            iframe {
+                width: 100%;
+                height: 230px;
+
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            iframe {
+                width: 100%;
+                height: 210px;
+
+            }
+        }
+
+        i {
+            color: rgb(210, 234, 255);
+            background-color: rgb(210, 234, 255);
+        }
+
+        #buttona {
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            font-weight: bolder;
+            transition: 0.2s ease;
+            border-radius: 5px;
+        }
+
+        #buttona:active {
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <h2>Lesson 26</h2>
+
+    
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3474040.html?type=audio" frameborder="0"
+        scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+        <b>Anna:</b> This is the Roosevelt Memorial. Where is the symbol?<br>
+        Anna remembers that Dan said: You have to find things that aren't really there. ... When you find an American
+        symbol, you win points and a Fun Fact about a U.S. President.<br>
+        <b>Anna:</b> Yay! I found Uncle Sam and I won another 40 points! What is the Fun Fact?<br>
+        <b>Voice:</b> Franklin Roosevelt was <i>the first to fly in a plane as president!</i><br>
+        <b>Anna:</b> I didn't know that. This is a really <i>beautiful memorial.</i><br>
+        <b>Anna:</b> This is the Lincoln Memorial! Where is the symbol?<br>
+        <b>Anna:</b> I found it! The Statue of Liberty! Please give me my Fun Fact.<br>
+        <b>Voice:</b> Abraham Lincoln was <i>a great wrestler!</i><br>
+        <b>Anna:</b> I didn't know that. Lincoln wanted <i>freedom for all people.</i> So, the Statue of Liberty works
+        well.<br>
+        <b>Anna:</b> And I won 20 points! Time to find the next symbol.<br>
+        <b>Dan:</b> Hey! Look out!<br>
+        <b>Anna:</b> Sorry. Hey, it's you! Now, I should be more careful.<br>
+        <b>Dan:</b> That’s okay.<br>
+        <b>Anna:</b> This game is a lot of fun. Hey, what’s your name?<br>
+        <b>Dan:</b> Dan. What’s yours?<br>
+        <b>Anna:</b> Anna.<br>
+        <b>Dan:</b> <i>Like Americana</i>!<br>
+        <b>Anna:</b> Yeah, I guess so.<br>
+        <b>Dan:</b> Did you find any symbols?<br>
+        <b>Anna:</b> Yes, I found three and <i>won 120 points!</i><br>
+        <b>Dan:</b> Me too. But, did you find the <i>bald eagle?</i><br>
+        <b>Anna:</b> No. Did you?<br>
+        <b>Dan:</b> No.<br>
+        <b>Anna:</b> First one to find it wins?<br>
+        <b>Dan:</b> Anna, look out for that tree!<br>
+        <b>Anna:</b> I learned a lot about presidents with this game. But I ought to be more careful. Until next time …!
+    </p>
+   <a id='buttona' onclick="showAnswer()">Show answers</a>
+    <script>
+        var btn = document.getElementById('buttona');
+        function showAnswer() {
+            var answers = document.getElementsByTagName('i');
+            for (var i = 0; i < answers.length; i++) {
+                var ans = answers[i];
+                ans.setAttribute('style', 'color:green');
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>
