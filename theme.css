@@ -455,7 +455,13 @@ body.lesson-theme .text-center { text-align: center !important; }
 body.lesson-theme .text-end { text-align: right !important; }
 
 body.lesson-theme .border { border: 1px solid var(--lesson-border) !important; border-radius: var(--lesson-radius-sm); padding: 1rem; }
-body.lesson-theme .sborder { border-left: 4px solid var(--lesson-primary); padding-left: 1rem; background: var(--lesson-primary-soft); border-radius: var(--lesson-radius-sm); }
+body.lesson-theme .sborder { 
+    border-left: 4px solid var(--lesson-primary); padding-left: 1rem;
+     background: var(--lesson-primary-soft);
+      border-radius: var(--lesson-radius-sm); 
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
 
 body.lesson-theme .mb-3 { margin-bottom: 1.25rem !important; }
 body.lesson-theme .my-5 { margin-block: 3rem !important; }
