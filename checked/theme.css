@@ -45,7 +45,7 @@
 body.lesson-theme {
     margin: 0;
     padding: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-    background: var(--lesson-surface-muted);
+    background: white url('https://www.calamuseducation.com/uploads/icons/oxfort_word_bg.jpg') center/cover no-repeat;
     color: var(--lesson-text);
     font-family: var(--lesson-font-sans);
     font-size: 16px;
@@ -63,7 +63,7 @@ body.lesson-theme .container,
 body.lesson-theme .card,
 body.lesson-theme .panel,
 body.lesson-theme .wrapper {
-    background: var(--lesson-surface);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: var(--lesson-radius-lg);
     box-shadow: var(--lesson-shadow-soft);
     padding: clamp(1.5rem, 1.5vw + 1rem, 2rem);
@@ -202,7 +202,7 @@ body.lesson-theme table,
 body.lesson-theme .table {
     width: 100%;
     border-collapse: collapse;
-    background: var(--lesson-surface);
+    background: rgba(255, 252, 230, 0.7);
     border-radius: var(--lesson-radius-md);
     overflow: hidden;
     box-shadow: inset 0 0 0 1px var(--lesson-border);
@@ -220,7 +220,7 @@ body.lesson-theme .table td {
 
 body.lesson-theme table thead tr,
 body.lesson-theme .table thead tr {
-    background: var(--lesson-primary-soft);
+    background: rgba(255, 243, 180, 0.888);
 }
 
 body.lesson-theme table th,
@@ -236,7 +236,7 @@ body.lesson-theme .table tr:last-child td {
 
 body.lesson-theme .table-striped tbody tr:nth-child(even),
 body.lesson-theme table.table-striped tbody tr:nth-child(even) {
-    background: var(--lesson-primary-soft-alt);
+    background: rgba(255, 252, 235, 0.848);
 }
 
 body.lesson-theme .table-bordered,
@@ -270,13 +270,13 @@ body.lesson-theme table.bluetable {
 
 body.lesson-theme table.blue th,
 body.lesson-theme table.bluetable th {
-    background: var(--lesson-primary);
-    color: #fff;
+    background: rgba(255, 239, 199, 0.883);
+    color: var(--lesson-primary-strong);
 }
 
 body.lesson-theme table.blue td,
 body.lesson-theme table.bluetable td {
-    background: var(--lesson-primary-soft-alt);
+    background: rgba(255, 252, 230, 0.853);
 }
 
 body.lesson-theme table.simple,
@@ -455,7 +455,13 @@ body.lesson-theme .text-center { text-align: center !important; }
 body.lesson-theme .text-end { text-align: right !important; }
 
 body.lesson-theme .border { border: 1px solid var(--lesson-border) !important; border-radius: var(--lesson-radius-sm); padding: 1rem; }
-body.lesson-theme .sborder { border-left: 4px solid var(--lesson-primary); padding-left: 1rem; background: var(--lesson-primary-soft); border-radius: var(--lesson-radius-sm); }
+body.lesson-theme .sborder { 
+    border-left: 4px solid var(--lesson-primary); padding-left: 1rem;
+     background: var(--lesson-primary-soft);
+      border-radius: var(--lesson-radius-sm); 
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
 
 body.lesson-theme .mb-3 { margin-bottom: 1.25rem !important; }
 body.lesson-theme .my-5 { margin-block: 3rem !important; }
