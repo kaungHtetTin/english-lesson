@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345709.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3760323.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3183926.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (1) Listening</h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3185254.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+<b>Jonathan</b>: Hey, Pete! <i>Who’s your friend</i> ?<br>
+<b>Pete</b>: She is Anna. She is <i>new to D.C.</i><br>
+<b>Jonathan</b>: Where are you from?<br>
+<b>Anna:</b> I am from <i>a small town</i> .<br>
+<b>Jonathan</b>: Well, <i>welcome to</i> D.C.<br>
+<b>Anna:</b> Thank you.<br>
+<b>Jonathan</b>: I am Jonathan. I am in <i>apartment B4</i> .<br>
+<b>Anna:</b> I am in apartment C2. Marsha is <i>my roommate.</i><br>
+<b>Jonathan</b>: I know Marsha. She is nice.<br>
+<b>Pete</b>: And I am in <i>Apartment D7.</i> I <i>have to</i> go now.<br>
+<b>Anna:</b> Oh!<br>
+<b>Pete</b>: <i>Remember to call</i> Marsha at work. Tell her you’re here.<br>
+<b>Anna:</b> Right, thanks, Pete. Nice to meet you!<br>
+<b>Jonathan</b>: You too, Bye.<br>
+<b>Anna:</b> Apartment C2, <i>here I come!</i>
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

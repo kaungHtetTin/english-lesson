@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3579875.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3579471.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3579479.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3576096.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+       <b> Anna:</b> Hi there! Washington, D.C. has <i>many fun places to eat</i>. But, sometimes it's more fun to cook. In fact, tonight Marsha and I are cooking for friends. Well, she is cooking. I am doing the shopping.<br>
+        (phone rings) It’s Marsha. Hi, Marsha.<br>
+        <b>Marsha:</b> Hi, Anna. Do you have <i>the shopping list?</i><br>
+       <b> Anna:</b> Yes, I told you: I have the shopping list. Can you hear it?<br>
+        <b>Marsha:</b> Okay, good. I hear the list. Anna, please buy all the ingredients on the list.<br>
+       <b> Anna:</b> Yes, Marsha, I will.<br>
+        <b>Marsha:</b> And <i>do not spend too much time shopping.</i><br>
+       <b> Anna:</b> No, Marsha, I won’t. See you later.<br>
+       <b> Anna:</b> Sometimes, Marsha worries too much. I love shopping! And, I did not spend too much money. Oh, no! But I did spend too much time! I have to return home now!<br>
+        <b>Marsha:</b> Anna, what took you so long? Our guests <i>will be here soon!</i><br>
+       <b> Anna:</b> Don’t worry, Marsha. I bought everything on the list.<br>
+        <b>Marsha:</b> Let me see. You bought <i>a bunch of bananas,</i> <i>a box of pancake mix,</i> a bag of coffee … Anna, this is all wrong!<br>
+       <b> Anna:</b> What do you mean wrong? I bought <i>a jar of peanut butter and a loaf of bread</i> … no, wait … two loaves of bread.<br>
+        <b>Marsha:</b> Anna, these are the wrong <i>ingredients!</i><br>
+       <b> Anna:</b> These ingredients are all on the list! I took this list from the counter.<br>
+        <b>Marsha:</b> Anna, this is the shopping list for breakfast. I said, take the shopping list - on the <i>refrigerator - for dinner!</i><br>
+       <b> Anna:</b> Marsha, there was no shopping list - on the refrigerator - for dinner!<br>
+        <b>Marsha:</b> Oh no! It’s on the floor!!<br>
+        Anna/<b>Marsha:</b> Ahh!!! Ahh!!!<br>
+        <b>Marsha:</b> What are we going to do?<br>
+       <b> Anna:</b> When do our guests arrive?<br>
+        <b>Marsha:</b> They arrive in 30 minutes!<br>
+       <b> Anna:</b> I can fix this. Do you trust me?<br>
+        <b>Marsha:</b> Do I have to?<br>
+       <b> Anna:</b> Yes.<br>
+        (The story continues next week)
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

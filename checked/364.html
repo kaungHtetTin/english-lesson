@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3664386.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3664327.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3664340.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3664614.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Anna:</b> Hi. I am walking to work. Today my boss will tell me what she thinks of my work. Is it good? Or is it bad? Okay, <i>time for work.</i> I am going right now. Okay, okay, I’m going!<br><br>
+
+        <b>Ms. Weaver:</b> Anna, hello.<br>
+        <b>Anna:</b> Hello.<br>
+        <b>Ms. Weaver:</b> Sit down. As you know, at the start of a new year we <i>have a work review.</i><br>
+        <b>Anna:</b> Yes. It’s time for mine.<br>
+        <b>Ms. Weaver:</b> Yes. Anna, this chart shows <i>the audience of The Time Traveling Treehouse.</i> If you look at it, you will see something bad. Your audience is going down, down, DOWN!<br>
+        <b>Anna:</b> Ms. Weaver, I think the chart is upside down.<br>
+        <b>Anna:</b> Here, <i>let’s flip that around</i>. Now, it’s right-side up.<br>
+        <b>Ms. Weaver:</b> Oh. If you look at this chart, you will see something good. Your audience is big.<br>
+        <b>Anna:</b> Good!<br>
+        <b>Ms. Weaver:</b> But not big enough.<br>
+        <b>Anna:</b> Not good.<br>
+        <b>Ms. Weaver:</b> I want to see these numbers go up, and up, and UP!<br>
+        <b>Anna:</b> How?<br>
+        <b>Ms. Weaver:</b> I have something -- <i>idea posters!</i><br>
+        <b>Anna:</b> (whispers) Idea posters.<br>
+        <b>Ms. Weaver:</b> You really <i>ought to think</i> seriously about them. I like this one. Please read it.<br>
+        <b>Anna:</b> <i>“If at first you SUCCEED; you will be a success.”</i> Well, it's a cute cat.<br>
+        <b>Ms. Weaver:</b> Here’s another one. I like it.<br>
+        <b>Anna:</b> <i>“WORKING HARD looks hard because it really is hard.”</i> I see. It's another cute cat.<br>
+        <b>Ms. Weaver:</b> This is my favorite.<br>
+        <b>Anna:</b> <i>“TEAMWORK works best with a team.”</i> A team of cats. Look at all those cats!<br>
+        <b>Ms. Weaver:</b> So, Anna, do you understand what I want?<br>
+        <b>Anna:</b> Yes, Ms. Weaver. I understand.<br>
+        <b>Anna:</b> Okay, team. There is a problem in the Treehouse.<br>
+        <b>Amelia:</b> Problem? What's the problem?<br>
+        <b>Anna:</b> Our audience is big.<br>
+        <b>Bryan:</b> But that's a good thing.<br>
+        <b>Anna:</b> No, it is not big enough.<br>
+        <b>Anna:</b> Please don’t worry. I know what Ms. Weaver wants. Here’s the plan. (whispers)<br>
+        <b>Bryan:</b> Is that what she wants?<br>
+        <b>Amelia:</b> Are you sure?<br>
+        <b>Anna:</b> Yes. Let’s <i>get to work!</i><br>
+        <b>Anna:</b> Good job, team. This is exactly what Ms. Weaver wants!<br>
+        <b>Anna:</b> Welcome to The Time Traveling Treehouse! Today you will learn about a very popular pet … cats!<br>
+        <b>MINDY:</b> Anna. Did I give you enough cats?<br>
+        <b>Anna:</b> I don’t know, MINDY. I think we need more cats!
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

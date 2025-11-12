@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3359153.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3359180.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3359240.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (16) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3359355.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hello! Washington, D.C. has many tourists! People from different countries come here. Today, my job is to <i>interview tourists</i>. I have to learn why they come here. This is very exciting! Excuse me. I’m Anna Matteo from The News. Do you have time for an interview?<br>
+        <b>Sabrina:</b> Sure, I have time.<br>
+        <b>Anna:</b> What is your name?<br>
+        <b>Sabrina:</b> My name is Sabrina.<br>
+        <b>Anna:</b> What country are you from?<br>
+        <b>Sabrina:</b> I’m from Bangladesh.<br>
+        <b>Anna:</b> So, you are Bangladeshi.<br>
+        <b>Sabrina:</b> That’s right! My <i>nationality</i> is Bangladeshi.<br>
+        <b>Anna:</b> Do you like Washington, D.C.?<br>
+        <b>Sabrina:</b> Yes! The city is very beautiful!<br>
+        <b>Anna:</b> What do you like to do in Washington D.C.?<br>
+        <b>Sabrina:</b> I like history. So, I like walking around and looking at all the <i>monuments and memorials.</i> They make history come alive!<br>
+        <b>Anna:</b> Washington has many monuments and memorials. The Washington Monument is behind us! Which is <i>your favorite?</i><br>
+        <b>Sabrina:</b> I really like Lincoln Memorial. It is very beautiful. And it feels like Abraham Lincoln is <i>still alive.</i><br>
+        <b>Anna:</b> Awesome. Thank you for your time, Sabrina!<br>
+        <b>Sabrina:</b> You’re welcome.<br>
+        <b>Anna:</b> Let’s find another tourist.<br>
+        <b>Anna:</b> Oh! <i>Excuse me.</i> I am Anna Matteo from The News. Do you have time for a <i>couple of questions?</i><br>
+        <b>Louis:</b> Sure!<br>
+        <b>Anna:</b> Are you from Washington, D.C.?<br>
+        <b>Louis:</b> No, I’m not.<br>
+        <b>Anna:</b> What is your name and <i>where are you from?</i><br>
+        <b>Louis:</b> My name is Louis. And I’m from China.<br>
+        <b>Anna:</b> What languages do you speak?<br>
+        <b>Louis:</b> I speak Chinese and English.<br>
+        <b>Anna:</b> What do you like about Washington DC?<br>
+        <b>Louis:</b> I like the museums. I really like <i>the art museums.</i><br>
+        <b>Anna:</b> Many of the museums are free.<br>
+        <b>Louis:</b> I like that too!<br>
+        <b>Anna:</b> Awesome! Thanks for your time, Louis.<br>
+        <b>Louis:</b> You’re very welcome. Bye!<br>
+        <b>Anna:</b> Now, let’s find another tourist!<br>
+        <b>Anna:</b> Hello! I am Anna Matteo from The News. Do you have time to answer a couple of questions?<br>
+        <b>Mehrnoush:</b> Sure!<br>
+        <b>Anna:</b> What is <i>your name</i> and where’re you from?<br>
+        <b>Mehrnoush:</b> My name is Mehrnoush. I am from Iran. <i>I’m Iranian</i>.<br>
+        <b>Anna:</b> What language do they speak in Iran? Is it <i>Persian?</i><br>
+        <b>Mehrnoush:</b> They speak <i>Farsi</i>.<br>
+        <b>Anna:</b> What do you like to do in Washington DC?<br>
+        <b>Mehrnoush:</b> Well, I like learning about <i>government and politics.</i><br>
+        <b>Anna:</b> Washington has many politicians!<br>
+        <b>Mehrnoush:</b> It does! I want to see the U.S. Capitol.<br>
+        <b>Anna:</b> Look, you are very near.<br>
+        <b>Mehrnoush:</b> I am!<br>
+        <b>Anna:</b> <i>Have fun!</i><br>
+        <b>Mehrnoush:</b> Thanks!<br>
+        <b>Anna:</b> There you have it. Tourists from all over the world come to Washington, D.C. They all like doing and seeing different things in the city. This is Anna Matteo <i>reporting</i> for The News. Until next time!<br>
+        <b>Anna:</b> Is that okay? Awesome! Now, I want to do my favorite thing in the city … ride the carousel!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

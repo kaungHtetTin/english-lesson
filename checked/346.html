@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3393885.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3387925.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3387727.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (19) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3384413.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hi there! Summer in Washington, D.C. is hot and sunny. I always ride the Metro to work. Riding the Metro is <i>cool and fast.</i> But today it’s closed. So, I am walking to work.<br>
+        (On the phone) Ms. Weaver, I am late this morning. The Metro is closed. So, I am walking to work.<br>
+        <b>Caty:</b> That’s too bad. It’s <i>really hot</i> today.<br>
+        <b>Anna:</b> Yes it is.<br>
+        <b>Caty:</b> When you arrive, please come to my office. I have <i>important news</i> to tell you.<br>
+        <b>Anna:</b> Of course. Good-bye. My boss has news for me. The question is: Is it <i>good news or bad news?</i><br>
+        (At work)<br>
+        <b>Anna:</b> Hello, Ms. Weaver.<br>
+        <b>Caty:</b> Anna, I have good news and I have bad news. Which do you want to <i>hear first?</i><br>
+        <b>Anna:</b> The good news. No … okay, the bad news.<br>
+        <b>Caty:</b> The bad news is you are not good at reading the news.<br>
+        <b>Anna:</b> Oh. I am <i>very sorry to hear that.</i><br>
+        <b>Caty:</b> So, starting next month you will not read the news.<br>
+        <b>Anna:</b> Next month <i>is July.</i> You are firing me in July.<br>
+        <b>Caty:</b> No. I am not firing you in July … or in August or in September. That is the good news.<br>
+        <b>Anna:</b> Okay. You are not firing me. I am not reading the news. What will I be doing?<br>
+        <b>Caty:</b> Well, you are good at <i>asking questions</i>. You are good at talking to people. You are good at showing <i>your feelings.</i> And you are great at <i>being silly.</i><br>
+        <b>Anna:</b> Thank you, Ms. Weaver. But what does all that mean?<br>
+        <b>Caty:</b> I have a <i>new assignment</i> for you! Your skills are perfect for a new show … a children’s show.<br>
+        <b>Anna:</b> <i>A children’s show </i>... That is awesome! When do I start?<br>
+        <b>Caty:</b> You start next month. Start thinking of ideas for the show.<br>
+        <b>Anna:</b> I have <i>tons of ideas!</i> I can show children what it’s like in outer space ...<br>
+        <b>Caty:</b> Great …<br>
+        <b>Anna:</b> … or in the deep, dark ocean …<br>
+        <b>Caty:</b> Those are great ideas, Anna. Please go think of more … at your desk.<br>
+        <b>Anna:</b> Yes. What other things can I show them? Mt. Everest! Everyone has <i>different skills</i>. You have skills. I have skills. The important thing is to know what you are good at. Until next time!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

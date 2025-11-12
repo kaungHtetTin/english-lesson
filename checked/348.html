@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3416894.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3416914.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3416913.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (21) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3413985.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hi there! Washington, D.C. has some great coffee shops. My favorite is this one -- Busboys & Poets.<br>
+        <b>Anna:</b><i>Actually </i> it’s more than a coffee shop. It’s also a <i>bookstore,</i> a restaurant and a theater!<br>
+        <b>Anna:</b> Marsha and I love coming here.<br>
+        <b>Marsha:</b> Hey, Anna, my friend is having <i>a party on Saturday.</i> Can you come with me?<br>
+        <b>Anna:</b> Sorry, I can’t come with you. I have to get my <i>driver’s license.</i><br>
+        <b>Marsha:</b> Will you be busy all day?<br>
+        <b>Anna:</b> I don’t know. First, I have to take a test on the computer. Then I have to take a test in the car.<br>
+        <b>Marsha:</b> But you have to take the test during the day, don't you?<br>
+        <b>Anna:</b> Yes.<br>
+        <b>Marsha:</b> The party <i>is at night.</i><br>
+        <b>Anna:</b> Oh. Then I can come with you to the party on Saturday night.<br>
+        <b>Marsha:</b> Great! I have to help my friend with the party. Can you help me?<br>
+        <b>Anna:</b> Sure. That <i>sounds like fun.</i><br>
+        <b>Marsha:</b> Everyone has to bring something or do something. You can bring food, or you can perform.<br>
+        <b>Anna:</b> Really, I can perform?<br>
+        <b>Marsha:</b> You can! Can you?<br>
+        <b>Anna:</b> Yes! I can <i>recite poetry.</i> (Anna is in a club reciting a poem)<br>
+        - A poem -<br>
+        Light dark<br>
+        Light dark<br>
+        Darkness<br>
+        Dark<br>
+        <b>Marsha:</b> In this country, nobody recites poetry at parties. Um … can you do anything else?<br>
+        <b>Anna:</b> Hmm, yes. I can do a <i>card trick.</i> (Anna is doing a card trick)<br>
+        Your card is the 10 of diamonds! No?<br>
+        Pick a card. Any card.<br>
+        Here, just pick this one.<br>
+        Great!<br>
+        <b>Marsha:</b> Anna, maybe you can just bring food.<br>
+        <b>Anna:</b> No, I can’t cook. And I really want to perform. You know, there is one thing I can do. (Anna plays a song on the ukulele and sings)<br>
+        Trouble in mind. I’m blue...<br>
+        But I won't be blue always<br>
+        The sun's gonna shine in my back door some day.*<br>
+        <b>Marsha:</b> That’s it! You can sing at the party. Now, I have to <i>go shopping</i> for food.<br>
+        <b>Anna:</b> Can I help? I’m not busy right now.<br>
+        <b>Marsha:</b> Sure, let’s go!<br>
+        <b>Anna:</b> We have to go. I have to help Marsha shop. And I <i>have to practice</i> my song! Trouble in mind. I’m blue...<br>
+        <b>Anna:</b> Until next time!<br>
+        *The song Trouble in Mind was written by jazz pianist Richard M. Jones.
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

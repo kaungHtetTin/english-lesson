@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3558003.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3558120.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3558126.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3561047.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Coworker 2:</b> It is time for part two of the children’s show!<br>
+        <b>Coworker 1:</b> It’s time! It’s time! I can’t wait!<br>
+        <b>Coworker 3:</b> Shh! I can’t hear it!<br>
+        <b>Announcer:</b> Last time on "The Time Traveling Treehouse," Anna <i>was lost, really lost.</i> She wants to learn about baseball. But her computer, MINDY, sent her to many wrong places.<br>
+        <b>Anna:</b> MINDY! Help me! I am in the ocean with a shark!<br>
+        <b>MINDY:</b> I will try one more time, Anna.<br>
+        <b>Anna:</b> Please try harder, MINDY!<br>
+        <b>Anna:</b> Now, where am I? I am at a playground with a baseball field! Yes! I can teach children about baseball here! MINDY, MINDY, it took you <i>a long time.</i> But you did it!<br>
+        <b>MINDY:</b> Thanks, Anna. Give me a call when you find the answer.<br>
+        <b>Anna:</b> Okay. Come with me. Let’s learn how to play baseball! This is <i>a baseball field.</i> This is a pitcher's mound. This is first base! This is second base! This is third base! This is home plate!<br>
+        <b>Anna:</b> To play baseball, you really only need a bat, a ball and a glove. Each team has many players.<br>
+        <i>Pitchers pitch</i> the ball.<br>
+        <i>Catchers catch</i> the ball.<br>
+        <i>Batters bat</i> the ball.<br>
+        <i>Runners run</i> the bases.<br>
+        Fielders field the ball.<br>
+        <b>Anna:</b> First, the pitcher pitches the ball to the batter. The batter bats the ball. Then, the runner runs to first base.<br>
+        <b>Anna:</b> Each time a batter bats, the runners run around the bases. Each time a runner runs across home plate, they score a run! There are nine innings in a game. The team with the most runs at the end of nine innings wins the game!<br>
+        <b>Anna:</b> MINDY, MINDY, we found the answer! It’s time to return to the treehouse.<br>
+        <b>MINDY:</b> Good job! That was fast.<br>
+        <b>Coworker 3:</b> Good job Anna. You know, I still don't like children's shows, but I like this children's show.
+        <b>Coworker 2:</b> I liked the time travel.<br>
+        <b>Coworker 1:</b> But time travel is not real. You’re so silly, Anna.<br>
+        <b>Anna:</b> Yeah, time travel is <i>so silly.</i> Thanks, goodbye. Bye, thank you.<br>
+        <b>Anna:</b> Hello, MINDY? Are you there?<br>
+        <b>MINDY:</b> Hello, Anna.<br>
+        <b>Anna:</b> MINDY, I want to go to China! Until next time …
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

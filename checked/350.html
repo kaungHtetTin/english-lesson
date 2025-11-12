@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3426112.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3435901.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3437309.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (23) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3437143.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Washington, D.C. has great food from all over the world. <br>
+        <b>Anna:</b> Today I’m <i>having lunch</i> with my boss. Ms. Weaver says we’re going on a trip around the world. But she knows I only have an hour for lunch! Silly woman.<br>
+        <b>Jonathan:</b> Hi, Anna!<br>
+        <b>Anna:</b> Hi Jonathan! Hey, we are meeting Ms. Weaver <i>for lunch at noon,</i> aren’t we?<br>
+        <b>Jonathan:</b> Yes.<br>
+        <b>Anna:</b> What time is it now?<br>
+        <b>Jonathan:</b> 11:50.<br>
+        <b>Anna:</b> 11:50! We have to go!<br>
+        <b>Anna:</b> So, where is this world food restaurant?<br>
+        <b>Caty:</b> We’re not eating <i>at a restaurant.</i><br>
+        <b>Anna:</b> Where are we eating?<br>
+        <b>Caty:</b> We are eating at ... <i>food trucks!</i><br>
+        <b>Anna:</b> Food trucks … awesome! What’s a food truck?<br>
+        <b>Caty:</b> These are food trucks!<br>
+        <b>Anna:</b> Wow!<br>
+        <b>Jonathan:</b> Whoa!<br>
+        <b>Caty:</b> Okay, Jonathan, you will buy the first dish. Here is $10. Surprise us!<br>
+        <b>Jonathan:</b> Okay, I’ll be back in 15 minutes.<br>
+        <b>Anna:</b> What country do I want to visit?<br>
+        <b>Caty:</b> Anna, you pick the second country. Here is $10.<br>
+        <b>Anna:</b> I want chicken.<br>
+        <b>Caty:</b> The food truck, over there, has great chicken.<br>
+        <b>Anna:</b> Awesome!<br>
+        <b>Caty:</b> After you buy your food, meet me here.<br>
+        <b>Jonathan:</b> Excuse me, I’ll <i>have the shrimp.</i><br>
+        <b>Jonathan:</b> Oh, you’re out of shrimp. Okay, I’ll <i>have the beef</i> then.<br>
+        <b>Anna:</b> Hello. I want the chicken dish.<br>
+        <b>Truck worker:</b> We're out of chicken.<br>
+        <b>Anna:</b> You're out of chicken.<br>
+        <b>Worker: </b> Yep.<br>
+        <b>Anna:</b> I’ll try another food truck. Thanks!<br>
+        <b>Worker: </b> You're welcome.<br>
+        <b>Jonathan:</b> Okay, here is <i>your change.</i> The dish is $7. So, here is 1, 2, 3 dollars back from your 10.<br>
+        <b>Caty:</b> Great.<br>
+        <b>Jonathan:</b> Where’s Anna? Is she dancing by that food truck?<br>
+        <b>Caty:</b> Yes. Yes, she is.<br>
+        <b>Anna:</b> Ms. Weaver, here is your change. The dish <i>costs $5</i>. So - $5 back.<br>
+        <b>Caty:</b> Thanks, Anna. But where is the food?<br>
+        <b>Anna:</b> I’m eating it. The Peruvian chicken <i>is delicious!</i> <i>Try some!</i><br>
+        (Caty and Jonathan shake their heads “no”)<br>
+        <b>Caty:</b> Well, we still have $8! What do you want now?<br>
+        <b>Anna:</b> We can buy <i>dessert!</i><br>
+        <b>Caty:</b> I’ll buy dessert.<br>
+        <b>Anna:</b> In Washington, D.C., you can travel around the world … with food trucks! And it does not cost a lot.<br>
+        <b>Anna:</b> Until next time!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3399192.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3397800.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3398759.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (20) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3397373.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hi, there! Washington, D.C. is a great place to work. Many people here work in government and politics. But there are many other jobs. You can work at <i>a hospital; a university.</i> You can work in a <i>coffee shop.</i> Wait a minute, I think I see a friend of mine. Pete? Is that you?<br>
+        <b>Pete:</b> Hi, Anna.<br>
+        <b>Anna:</b> You look different. <i>Your beard </i> … is really big.<br>
+        <b>Pete:</b> You don’t like it, do you?<br>
+        <b>Anna:</b> No, no. You just look … different.<br>
+        (To server) Thank you. So, what’s wrong? You look sad.<br>
+        <b>Pete:</b> I don’t <i>have a job.</i><br>
+        <b>Anna:</b> Sorry, I can’t hear you.<br>
+        <b>Pete:</b> I do not have a job!<br>
+        <b>Anna:</b> Oh. I’m sorry to hear that, Pete.<br>
+        <b>Pete:</b> I don’t have a skill.<br>
+        <b>Anna:</b> Everyone <i>has a skill.</i> You need to find yours.<br>
+        <b>Pete:</b> I don’t know, Anna.<br>
+        <b>Anna:</b> Pete, I am good at <i>asking questions. </i> Let me ask you some.<br>
+        <b>Pete:</b> Really, Anna? Can you help me?<br>
+        <b>Anna:</b> Yes, I can. Let me help.<br>
+        <b>Pete:</b> Sure, Anna. Maybe you can help.<br>
+        <b>Anna:</b> Can you <i>write code?</i><br>
+        <b>Pete:</b> Sure, c-o-l-d. How is this going to help?<br>
+        <b>Anna:</b> No, not “cold.” Code; you know, for making <i>phone apps, or websites.</i> You can make tons of money writing code.<br>
+        <b>Pete:</b> Tons of money? But I can’t code.<br>
+        <b>Anna:</b> Next question. Can <i>you drive?</i><br>
+        <b>Pete:</b> Do you mean drive a race car? It’s really hard to be a race car driver. First, you need a race car ...<br>
+        <b>Anna:</b> No, I mean drive a taxi or drive a bus.<br>
+        <b>Pete:</b> No, I always <i>fall asleep when I drive.</i><br>
+        <b>Anna:</b> Oh, that’s not good. Next question. Can you teach? You can <i>be a teacher in a school</i>.<br>
+        <b>Pete:</b> No, I cannot teach.<br>
+        <b>Anna:</b> Can you cook? You can be a <i>chef in a restaurant.</i><br>
+        <b>Pete:</b> No, I can’t code! I can’t teach! I can’t cook! Anna, I can’t do anything. This is sad. I’m gonna write about <i>my feelings in my blog.</i><br>
+        <b>Anna:</b> You write a blog?<br>
+        <b>Pete:</b> Yeah, I write a blog.<br>
+        <b>Anna:</b> <i>How many followers</i> do you have?<br>
+        <b>Pete:</b> I don’t know … <i>59,538.</i><br>
+        <b>Anna:</b> Pete, that's a lot of followers! You can make money writing!<br>
+        <b>Pete:</b> Writing is easy. Everyone can write.<br>
+        <b>Anna:</b> Not everyone can write well. You can be a writer!<br>
+        <b>Pete:</b> I can be a writer. I can be a writer! I can be a writer! Thanks, Anna.<br>
+        <b>Marsha:</b> Hi, Pete. Hi, Anna.<br>
+        <b>Pete:</b> Hi, Marsha. Excuse me, I have to go.<br>
+        <b>Marsha:</b> Where are you going?<br>
+        <b>Pete:</b> I’m going to <i>be a writer!</i><br>
+        <b>Marsha:</b> Good luck, Pete!<br>
+        (To Anna) He does know that it’s not easy to be a writer, doesn’t he?<br>
+        <b>Anna:</b> There are many <i>different jobs</i> you can have in Washington, D.C. Pete wants to be a writer. <i>I wish him luck.</i> Lots of luck. Until next time!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

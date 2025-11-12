@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3799357.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>  
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3799404.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3784938.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3829611.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Anna:</b> Hello, and welcome to Georgetown University in Washington, D.C.! I am going back to school! Georgetown is the oldest Catholic and Jesuit university in the United States. The Jesuits are a religious order known worldwide for their <i>many colleges and universities.</i> Students have been studying here since 1792!
+        <b>Sarah:</b> Hey, are you <i>finished with your report?</i><br>
+        <b>Taylor:</b> Almost. I <i>have been writing and re-writing</i> since last night! The subject is really <i>interesting to me.</i><br>
+        <b>Sarah:</b> Me too! I have been studying this topic* for a long time.<br>
+        <b>Anna:</b> Am I late?<br>
+        <b>Sarah:</b> You’re a little late. But don’t worry. The professor isn’t here yet.<br>
+        <b>Anna:</b> How long has the class been waiting?<br>
+        <b>Taylor:</b> We’ve only been waiting for <i>about 10 minutes.</i><br>
+        <b>Anna:</b> Oh good. Oh, no! I forgot <i>my pencil sharpener.</i> Excuse me, do you have a pencil sharpener I can borrow?<br>
+        <b>Taylor:</b> No, sorry.<br>
+        <b>Anna:</b> Oh wait. I found my extra one! Whew, that was close.<br>
+        <b>Anna:</b> So, how long have you been studying at Georgetown?<br>
+        <b>Andrew:</b> I’ve been studying here since 2015.<br>
+        <b>Anna:</b> Awesome. You know, I've been wanting to go back to school for a long time. So, here I am!<br>
+        <b>Andrew:</b> Well, you picked a great school. I’ve been really happy here.<br>
+        <b>Anna:</b> Awesome. See, I’ve been working <i>for several years now.</i> So, going back to school makes me a little nervous.<br>
+        <b>Randall:</b> <i>Don’t be nervous.</i> Just pay attention and do your best!<br>
+        <b>Anna:</b> That is great advice. You know, I have been paying attention. But sometimes I still feel like I don’t understand. Like last week …<br>
+        <b>Anna:</b> What’s that?<br>
+        <b>Jada:</b> <i>This is my draft.</i><br>
+        <b>Anna:</b> What draft?<br>
+        <b>Jada:</b> The professor told us to bring our drafts.<br>
+        <b>Anna:</b> I think she said “giraffe.”<br>
+        <b>Jada:</b> No. She didn’t.<br>
+        <b>Anna:</b> Here comes the professor.<br>
+        <b>Dr. Jones:</b> Hello class! Sorry I'm late, but <i>the snow storm made getting here really difficult.</i> I see you’ve been waiting very patiently. So, let’s get started! Who wants to give their talk first?<br>
+        <b>Anna:</b> Oh! Oh! Please, please pick me.<br>
+        <b>Dr. Jones:</b> Anna?<br>
+        <b>Anna:</b> Who me? Sure. Thanks.<br>
+        <b>Anna:</b> Here is my report on <i>“Violins in the City.”</i><br>
+        <b>Anna:</b> People have been looking for a solution to the problem of violins in the city. I say stop! Stop! They are not the problem! In fact, violins are part of the solution!<br>
+        <b>Anna:</b> Violins create beautiful music that can fill a city with hope.<br>
+        <b>Dr. Jones:</b> Anna …<br>
+        <b>Anna:</b> If we put a violin in the hands of every child …<br>
+        <b>Dr. Jones:</b> Anna! The topic is <i>“Violence in the city.”</i> Violence. Not violins.<br>
+        <b>Anna:</b> Until next time …Like I was saying, many people are saying that violence in the city is a problem. A very big problem.<br>
+        * topic = subject
+        
+    </p>
+    <a id='buttona' onclick="showAns();">Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

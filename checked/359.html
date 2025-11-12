@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3565940.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3568504.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3567421.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3567404.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Anna:</b> Hello! <i>Halloween is very popular</i> in the United States.<br>
+        <b>Anna:</b> Children trick-or-treat. They <i>ask people for candy.</i> Children and adults wear costumes and go to parties!<br>
+        <b>Anna:</b> In fact, there is a Halloween party tonight. I need my friend, Genie. Genie!<br>
+        <b>Anna:</b> Hi!<br>
+        <b>Genie:</b> Hi, Anna! What do you need?<br>
+        <b>Anna:</b> Tonight, there is a Halloween party.<br>
+        <b>Genie:</b> I love Halloween! Are you going?<br>
+        <b>Anna:</b> I might go. I might not go. I don’t <i>have a costume</i>. Can you help me?<br>
+        <b>Genie:</b> Dress as a genie!<br>
+        <b>Anna:</b> Great idea! I can do a genie trick <i>like read minds!</i><br>
+        <b>Genie:</b> Anna, be careful. Things might go wrong.<br>
+        <b>Anna:</b> What can go wrong?<br>
+        <b>Genie:</b> Okay.<br>
+        <b>Anna:</b> Hey, look! I’m a genie! This is going to be fun!<br>
+        <b>Genie:</b> Remember, Anna. Be careful!<br>
+        <b>Anna:</b> Don’t worry, Genie! I will!<br>
+        <b>Rebecca:</b> Excuse me, are you really a mind reader?<br>
+        <b>Anna:</b> I might be.<br>
+        <b>Rebecca:</b> Okay, tell me what I am thinking.<br>
+        <b>Anna:</b> Sure! First, what do you do?<br>
+        <b>Rebecca:</b> I study. I'm a junior in college.<br>
+        <b>Anna:</b> What do you study?<br>
+        <b>Rebecca:</b> I study <i>journalism.</i><br>
+        <b>Anna:</b> Okay. Wait. You are thinking … you will graduate from college in about one year.<br>
+        <b>Rebecca:</b> Well, yeah. That’s the plan. I told you, I’m a junior in college.<br>
+        <b>Anna:</b> Right, um, wait. There’s more. You are thinking … you might get <i>a job writing the news</i>.<br>
+        <b>Rebecca:</b> I MIGHT get a job writing the news? I MIGHT! That means I might not. And I'm studying really hard.<br>
+        <b>Anna:</b> No, no, no, no. Uh, no, you will! You WILL get a job writing the news.<br>
+        <b>Rebecca:</b> I will?<br>
+        <b>Anna:</b> You will.<br>
+        <b>Rebecca:</b> I will. I think.<br>
+        <b>Anna:</b> 'Bye. <i>Happy to help!</i><br>
+        <b>Kaveh:</b> Can you really read minds?<br>
+        <b>Anna:</b> I might.<br>
+        <b>Kaveh:</b> Well, today, I will ask <i>my girlfriend to marry me.</i> What am I thinking?<br>
+        <b>Anna:</b> Wait. Wait, you are thinking ... you might have a wedding very soon!<br>
+        <b>Kaveh:</b> Might? MIGHT? She won’t say "no," will she?<br>
+        <b>Anna:</b> No, no! She WILL say “yes”!<br>
+        <b>Kaveh:</b> I will have a wedding, won’t I?<br>
+        <b>Anna:</b> You will. You will!<br>
+        <b>Kaveh:</b> Thanks. I think.<br>
+        <b>Anna:</b> Good luck!<br>
+        <b>Anna:</b> This is hard. Genie! Genie!<br>
+        <b>Genie:</b> Anna, what’s wrong?<br>
+        <b>Anna:</b> I don’t want to be a <i> genie for Halloween.</i> I might not go to the party.<br>
+        <b>Genie:</b> Of course you will go. I have another costume for you!<br>
+        <b>Anna:</b> I’m <i>a rock star!</i> You read my mind!<br>
+        <b>Genie:</b> No. You told me you like rock music.<br>
+        <b>Anna:</b> Oh, right. Well, I love it!<br>
+        <b>Genie:</b> Have fun, Anna!<br>
+        <b>Anna:</b> Thanks, Genie!!<br>
+        <b>Anna:</b> I am ready for the Halloween party! But I am not going to read minds. I might play some rock music! Or I might not. Until next time …
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

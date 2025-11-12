@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345860.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3325945.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3325974.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3326063.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hi, there! In Washington, D.C. people do many things in the evening. They go listen to music. They eat at a restaurant. They go to <i>the theater.</i><br>
+        <b>Anna:</b> Tonight I am going to the theater with my friends. But I don’t know what clothes to wear. Maybe <i>this magazine</i> can help.<br>
+        <b>Anna:</b> Her clothes are beautiful! I really want a friend like her <i>to help me.</i><br>
+        <b>Anna:</b> Who are you?<br>
+        <b>Genie:</b> I am Genie! You want help. I am here to help you find the <i>right clothes!</i><br>
+        <b>Anna:</b> Awesome! <i>How about</i> jeans and a t-shirt?<br>
+        <b>Genie:</b> No! Jeans and a t-shirt are <i>too casual.</i> How about something more formal?<br>
+        <b>Anna:</b> Sure!<br>
+        <b>Anna:</b> Wow! Genie, this dress is beautiful. But it’s not the right size. It’s too small.<br>
+        <b>Genie:</b> Yes, it is <i>too small.</i> But green looks great on you.<br>
+        <b>Anna:</b> Thanks.<br>
+        <b>Genie:</b> <i>Take off</i> the green dress. Let’s try a green shirt and a skirt.<br>
+        <b>Anna:</b> Oh, Genie! This green shirt is too large and this orange skirt is <i>too orange.</i><br>
+        <b>Genie:</b> Yes, the right size for you is medium. Let’s try again.<br>
+        <b>Anna:</b> Oh, I don’t like this outfit.<br>
+        <b>Genie:</b> No. That does not match.<br>
+        <b>Anna:</b> Nothing.<br>
+        <b>Anna:</b> These clothes <i>are formal: a suit jacket</i>, a dress shirt and a tie! They look great!<br>
+        <b>Genie:</b> Those clothes look great … for a man! Something is wrong.<br>
+        <b>Anna:</b> Let me see.<br>
+        <b>Anna:</b> There. Now try.<br>
+        <b>Genie:</b> Oh. Thanks! Now these clothes <i>look great</i> on you!<br>
+        <b>Anna:</b> They do! Um, Genie, can you put on <i>a gold belt?</i><br>
+        <b>Genie:</b> Sure!<br>
+        <b>Genie:</b> That looks great.<br>
+        <b>Anna:</b> Can you put on a jacket?<br>
+        <b>Genie:</b> Why not?<br>
+        <b>Anna:</b> I love the jacket! How about <i>a hat?</i><br>
+        <b>Genie:</b> Why not?<br>
+        <b>Genie:</b> Mm, take off the hat. That’s better.<br>
+        <b>Anna:</b> Genie, these clothes look and feel great! Let’s go to the theater!<br>
+        <b>Genie:</b> Sorry, Anna. I have to help other friends. Go to the magazine if you want me to help again.<br>
+        <b>Anna:</b> Thanks, Genie. <i>Sure thing.</i> Goodbye!<br>
+        <b>Genie:</b> Goodbye!<br>
+        <b>Anna:</b> There are many places in DC to go for a great evening out! And it’s nice to have a friend to help me look my best. Until next time! Bye!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3369337.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3287620.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3286214.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3286224.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hi! Today, my friend Ashley, is coming over. I am showing her my new apartment! Oh! That’s Ashley calling.<br>
+
+        <b>Anna:</b> Hi Ashley!<br>
+        <b>Ashley:</b> Hi Anna! I’m coming to your apartment. Where is <i>your apartment?</i><br>
+        <b>Anna:</b><i> My apartment is near</i> the Columbia Heights Metro.<br>
+        <b>Ashley:</b> It is near the Columbia Heights Metro?<br>
+        <b>Anna:</b> Yes. <i>Exit the Metro</i> and turn right. Then <i>at the bus station turn left</i>. Then walk <i>straight ahead.</i><br>
+        <b>Ashley:</b> Okay. Exit Metro, turn right, turn left, then go straight ahead?<br>
+        <b>Anna:</b> Yes. My apartment is <i>near a coffee shop.</i><br>
+        <b>Ashley:</b> Okay. See you soon!<br>
+        <b>Anna:</b> Hi, Ashley.<br>
+        <b>Ashley:</b> Anna, Which coffee shop? There are <i>three coffee shops</i>.<br>
+        <b>Anna:</b> Okay, my apartment <i>is across from a big department store.</i><br>
+        <b>Ashley:</b> A big department store? Ah, I see it!<br>
+        <b>Anna:</b> Okay! Bye, Ashley. <i>See you soon!</i><br>
+        <b>Ashley:</b> Okay. See you soon.<br>
+        <b>Anna:</b> Ashley! Ashley! Ashley! Over here! It’s Anna! It’s Anna! Hi!<br>
+        <b>Anna:</b> I love having <i>my friends</i> over. Come on!<br>
+        <b>Ashley:</b> Great!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

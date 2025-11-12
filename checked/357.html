@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3549264.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3549706.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3549574.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3549214.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Anna:</b> Hello! Today is a big day. My first children’s show is on television! Woo-hoo! <i>I’m excited and nervous.</i><br>
+        <b>Ms. Weaver:</b> Hello, Anna.<br>
+        <b>Anna:</b> Hello, Ms. Weaver!<br>
+        <b>Ms. Weaver:</b> Some people are going to watch your children’s show. After they watch it, they’ll tell me what they liked, and what they didn’t like.<br>
+        <b>Anna:</b> Oh, dear.<br>
+        <b>Ms. Weaver:</b> They’re in <i>the conference room.</i> They’re in the conference room.<br>
+        <b>Anna:</b> Hello, everyone. I’m Anna, and thanks for coming!<br>
+        <b>Anna:</b> Today you are going to watch my new show. I hope you like it<br>
+        <b>Coworker 2:</b> What is the show about?<br>
+        <b>Anna:</b> It’s a children’s show.<br>
+        <b>Coworker 1:</b> But we are not children!<br>
+        <b>Anna:</b> This children's show is different. I hope.<br>
+        <b>Coworker 3:</b> I don’t really like children's shows.<br>
+        <b>Anna:</b> Shhh, please. The show <i>is starting!</i><br>
+        <b>Anna:</b> Oh, hi! Just give me one minute ….oops! Oh well. I can fix that later.<br>
+        <b>Anna:</b> Hello, I’m Anna! Welcome to <i>“The Time Traveling Treehouse!”</i> This is not a usual treehouse. It can time travel! That is why it’s called "The Time Traveling Treehouse."<br>
+        <b>MINDY:</b> Anna, do not forget me.<br>
+        <b>Anna:</b> Of course not! This is my partner, MINDY!<br>
+        <b>MINDY:</b> My name means Massive Information Navigation Device, for You!<br>
+        <b>Anna:</b> That means we can travel to many places and learn many things. Kids from all over the world ask us questions. We find them answers!<br>
+        <b>MINDY:</b> Woo-hoo! That is right, Anna.<br>
+        <b>Anna:</b> MINDY, what is our first question?<br>
+        <b>MINDY:</b> Layla asks us this question.<br>
+        <b>Layla:</b> Hello, Anna! Hello, MINDY! I'd like to know -- how do you play baseball?<br>
+        <b>Anna:</b> That is <i>a great question!</i> MINDY, we need to find her an answer!<br>
+        <b>MINDY:</b> I know that we can find it, Anna!<br>
+        <b>Anna:</b> Where am I now? MINDY, now I am on <i>a snowy mountain!</i><br>
+        <b>MINDY:</b> That is a good place to learn how to ski.<br>
+        <b>Anna:</b> Yes, MINDY, but it cannot teach us about baseball! And I don’t know how to ski!<br>
+        <b>MINDY:</b> Sorry, Anna. Let’s try again.<br>
+        <b>Anna:</b> Where I am now!? MINDY, I am in the ocean! An ocean cannot teach us about baseball!<br>
+        <b>MINDY:</b> Please don’t yell, Anna. The ocean can teach <i>us about surfing.</i><br>
+        <b>Anna:</b> Yes, MINDY, it can teach us about surfing … and sharks! Ahhh!<br>
+        <b>MINDY:</b> Anna, please wait. I need to fix <i>my navigation device</i><br>
+        <b>Anna:</b> MINDY, please fix it faster. And get me out of here … now!<br>
+        <b>Announcer:</b> Whoa! Is Anna going to be lost forever? Next week, you can watch part two of “The Time Traveling Treehouse!”<br>
+        <b>Coworker 1:</b> Aw, man! Will the shark eat her?<br>
+        <b>Coworker 2:</b> Will Anna find the answer?<br>
+        <b><b>Coworker 3:</b></b> Please tell me the ending!<br>
+        <b>Anna:</b> So, you liked it?<br>
+        <b>Coworkers:</b> Yes!<br>
+        <b>Anna:</b> Well, you can watch the ending next week!<br>
+        <b>Coworkers:</b> Noooooo!<br>
+        <b>Anna:</b> Don’t forget to watch next week!
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3469016.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3469302.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3469310.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (25) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3467912.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hello from Washington, DC! This city has many <i>monuments and memorials.</i><br>
+        <b>Anna:</b> Today I am visiting the ones built in memory of our Presidents: Washington, Jefferson, Lincoln and Roosevelt.<br>
+        <b>Anna:</b> I want to learn more about them.<br>
+        <b>Anna:</b> Hey!<i> Watch out!</i><br>
+        <b>Dan:</b> Sorry! I didn't see you.<br>
+        <b>Anna:</b> You were not looking. You should be more careful.<br>
+        <b>Dan:</b> I know I should be more careful. But this game is really fun.<br>
+        <b>Anna:</b> What kind of game?<br>
+        <b>Dan:</b> You have to find things that aren't really there.<br>
+        <b>Anna:</b> How can you find things that aren’t really there?<br>
+        <b>Dan:</b> They're in your phone. See?<br>
+        <b>Anna:</b> I see. It’s like a <i>scavenger hunt.</i><br>
+        <b>Dan:</b> That’s right!<br>
+        <b>Anna:</b> I don’t have time for games. I want to learn about U.S. <i>presidents.</i><br>
+        <b>Dan:</b> Then you should play this game! When you find an American symbol, you win points and a Fun Fact about a U.S. President.<br>
+        <b>Anna:</b> I have time for this game!<br>
+        <b>Dan:</b> Here are the symbols that I caught: the Statue of Liberty for <i>20 points,</i> Uncle Sam for 40 points and the American flag for 60 points.<br>
+        <b>Anna:</b> What symbol are you looking for now?<br>
+        <b>Dan:</b> I am looking for <i>the bald eagle.</i> That is 100 points! It should be near the Washington Monument.<br>
+        <b>Anna:</b> This game is awesome.<br>
+        <b>Dan:</b> You <i>ought to buy</i> the app right now. It’s called “Catch Americana.”<br>
+        <b>Anna:</b> Got it. Catch Americana.<br>
+        <b>Anna:</b> Thanks! Good luck!<br>
+        <b>Dan:</b> Good luck to you too!<br>
+        <b>Anna:</b> This is the Jefferson Memorial. I know that Thomas Jefferson signed the Declaration of Independence! Now, where is that symbol?<br>
+        <b>Anna:</b> Here it is! My first one. It’s an American flag! I won 60 points!<br>
+        <b>Anna:</b> An American flag works well for Thomas Jefferson*. I see lots of American flags on Independence Day!
+        <b>Anna:</b> Where is my Jefferson Fun Fact?<br>
+        <b>Voice:</b> In his lifetime, Thomas Jefferson wrote <i>about 19,000 letters!</i><br>
+        <b>Anna:</b> I did not know that. Where is the next symbol?<br>
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

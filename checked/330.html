@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+       <h2></h2> 
+    
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345694.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+
+    <h2>
+       
+    </h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3178988.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>
+       
+    </h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3178989.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3181231.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+<b>Pete:</b> Hi! <i>Are you Anna?</i><br>
+<b>Anna:</b> Yes! <i>Hi there!</i> Are you Pete?<br>
+<b>Pete:</b> I am Pete.<br>
+<b>Anna:</b> Nice to meet you.<br>
+<b>Anna:</b> <i>Let's try that again.</i> I'm Anna. Nice to meet you.<br>
+<b>Pete:</b> I'm Pete. "Anna" Is that A-N-A?<br>
+<b>Anna:</b> No. A-N-N-A<br>
+<b>Pete:</b> <i>Well, Anna with two</i> "n's" ... Welcome to ... 1400 Irving Street!<br>
+<b>Anna:</b> My <i>new apartment!</i> Yes!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

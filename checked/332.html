@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+ 
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345715.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3196071.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3196073.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3196079.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <p>
+        <b>Anna:</b> I am in my new apartment! Great!<br>
+        I live with Marsha. We’re roommates.<br>
+        I want to cook dinner. Oh! Hmmm. <i>Is there a supermarket</i> near here?<br>
+        Marsha knows. Marsha's work number is 555-8986.<br>
+        <b>Man:</b> Hello.<br>
+        <b>Anna:</b> Hello. Is this Marsha? It is Anna.<br>
+        <b>Man:</b> I am sorry. You have <i>the wrong number.</i><br>
+        <b>Anna:</b> Oh. Is this 555-8986?<br>
+        <b>Man:</b> No. This is 555-8689.<br>
+        <b>Anna:</b> Oh. Excuse me!<br>
+        <b>Man:</b> Okay. 'Bye.<br>
+        <b>Anna:</b> One more time. 555-8986. <i>Please</i> be Marsha.<br>
+        <b>Marsha:</b> Hello. This is Marsha.<br>
+        <b>Anna:</b> Yes, Marsha. I want to cook dinner.<br>
+        <b>Marsha:</b> Excuse me? Anna? Is that you?<br>
+        <b>Anna:</b> Oh, yes. <i>I am here!</i><br>
+        <b>Marsha:</b> Good. You are there.<br>
+        <b>Anna:</b> I want to find a supermarket.<br>
+        <b>Marsha:</b> Oh, okay. The supermarket is at 1500 Irving Street. It is near the apartment.<br>
+        <b>Anna:</b> Great! Goodbye!<br>
+        <b>Marsha:</b> Goodbye, Anna.<br>
+        (Later)<br>
+        <b>Anna:</b> There is a big supermarket on our street. And Marsha says I am a good cook! Until next time! Bye!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3539918.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>  
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/5209819.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3538221.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (30) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3539896.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+
+    <p>
+        <b>Anna:</b> Hi, there, <i>sports fans</i>! Baseball is America’s sport. Today, I am going to Nationals Park. It is home to Washington, D.C.’s baseball team -- the Washington Nationals!<br>
+        <b>Anna:</b> Hi, Jonathan!<br>
+       <b> Jonathan:</b> Hi, Anna! Where are you going?<br>
+        <b>Anna:</b> I am taking a bus to a <i>Nationals baseball game!</i><br>
+       <b> Jonathan:</b> Don’t take the bus. A taxi is faster than a bus.<br>
+        <b>Anna:</b> Oh, good idea. You know I love baseball.<br>
+       <b> Jonathan:</b> <i>That’s great.</i> Have fun.<br>
+        <b>Anna:</b> In fact, I wanted to be a baseball player.<br>
+       <b> Jonathan:</b> Is this one of your memories? I’m really busy.<br>
+        <b>Anna:</b> This won’t take long. I can see it now... I am at home plate. I wait for the pitch. The ball comes. I swing. It’s a hit! I run to <i>first base, second base, third base, then home plate.</i> It’s a home run! The crowd cheers! Woo hoo!<br>
+       <b> Jonathan:</b> You really love baseball. Have fun at the game, Anna.<br>
+        <b>Anna:</b> Thanks, Jonathan.Taxi!<br>
+        <b>Ashley:</b> Hi, Anna. Where are you going?<br>
+        <b>Anna:</b> Hi, Ashley. I am going to see a Nationals baseball game!<br>
+        <b>Ashley:</b> What time is the game?<br>
+        <b>Anna:</b> <i>7 o’clock.</i><br>
+        <b>Ashley:</b> Do you have a ticket?<br>
+        <b>Anna:</b> No, not yet.<br>
+        <b>Ashley:</b> Anna, you should go a lot earlier than 7 o’clock.<br>
+        <b>Anna:</b> That is why I’m taking a taxi. Taxi!<br>
+        <b>Ashley:</b> Anna, Anna, that’s not a good idea. <i>A bicycle is faster than a taxi.</i><br>
+        <b>Anna:</b> Oh, Ashley. Ashley, Ashley, Ashley. A car is faster than your bicycle.<br>
+        <b>Ashley:</b> In D.C. traffic sometimes a bicycle is faster than a car. And right now, there is a lot of traffic.<br>
+        <b>Anna:</b> Good point. But I don’t have a bicycle.<br>
+        <b>Ashley:</b> Okay, Anna, you can use my bicycle.<br>
+        <b>Anna:</b> Thanks! I really want to learn how to ride one.<br>
+        <b>Ashley:</b> What do you mean, learn <i>how to ride a bike?</i> Oh, Anna! Anna, Anna!<br>
+        <b>Ashley:</b> You know, Anna, the Metro is faster than a taxi and a bicycle. You ought to take the Metro. It’s that way.<br>
+        <b>Anna:</b> Good idea.<br>
+        <b>Ashley:</b> OK.<br>
+        <b>Anna:</b> See you later!<br>
+        <b>Ashley:</b> Bye, Anna!<br>
+        <b>Anna:</b> Bye!<br>
+        <b>Anna:</b> The Metro was <i>a lot faster than a bus</i>, taxi or bike. And now I’m at Nationals Park! Look at all these fans! So many people like to watch baseball. There’s the ticket window. What? The tickets are sold out? Nooooooo!Nooooooo! But I really want to watch a baseball game. Does anyone have an extra ticket?
+        <b>Fan:</b> Next time, you should buy your ticket online.<br>
+        <b>Anna:</b> Thanks. Thanks a lot. It is good advice. Being early is better than being late. Until next time …<br>
+        
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

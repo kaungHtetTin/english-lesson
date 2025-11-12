@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345722.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3208327.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>  
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3208318.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+   
+    <h2>Lesson (4) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3209933.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Pete, hi! Hi, <i>we are here!</i><br>
+        <b>Pete:</b> Hi, Anna! Hi, Marsha!<br>
+        <b>Anna:</b> Hi!<br>
+        <b>Pete:</b> <i>How are you two?</i><br>
+        <b>Marsha:</b> I am great!<br>
+        <b>Anna:</b> You know, Pete, I am new to D.C. The city <i>is big.</i><br>
+        <b>Pete:</b> Yeah. But you <i>learn a little more</i> every day. How's the new apartment?<br>
+        <b>Anna:</b> The new apartment is great! Let's <i>get coffee!</i><br>
+        <b>Marsha:</b> Anna, <i>do you have</i> a pen?<br>
+        <b>Anna:</b> Yes. I have a pen <i>in my bag.</i><br>
+        <b>Anna:</b> I have a …<br>
+        <b>Pete:</b> It is not a pen. It is a book. It is a big book.<br>
+        <b>Anna:</b> Yes. Yes it is, Pete. <i>I know I have a pen</i>, though…<br>
+        <b>Anna:</b> I have a ....<br>
+        <b>Marsha:</b> It is not a pen, Anna ... <i>a toy</i> ?<br>
+        <b>Anna:</b> I have a ....<br>
+        <b>Pete:</b> And it is <i>a pillow!</i><br>
+        <b>Anna:</b> Pete, Marsha, I know I have a pen.<br>
+        <b>Marsha:</b> Anna, it is <i> a map.</i><br>
+        <b>Pete:</b> Why do you have <i>a map of the world?</i><br>
+        <b>Anna:</b> Pete, Marsha. Now I know I have a pen.<br>
+        <b>Pete:</b> And now you have <i>a lamp.</i><br>
+        <b>Marsha:</b> Anna.<br>
+        <b>Anna:</b> I have a pen! Let’s get coffee!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

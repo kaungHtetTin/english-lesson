@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345760.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3249349.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3249353.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3255158.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hello, everyone. Here I am at <i>my new job!</i> Yesterday at my first day of work … Well, let’s not talk about yesterday. Today is a new day! Today I want to <i>apologize to</i> my co-workers.<Br><br>
+
+        <b>Anna:</b> Hi, Anne. Are you <i>busy?</i><br>
+        <b>Anne:</b> Hi, Anna. Yes. At 10 a.m. I am writing. Every day I do <i>my morning show.</i> Sorry!<br>
+        <b>Anna:</b> Okay. See you later, maybe.<br>
+        <b>Anne:</b> Maybe I’ll see you later.<br>
+        <b>Anna:</b> Hi, Jonathan. Are you busy?<br>
+        <b>Jonathan:</b> Yes, I’m busy. <i>When the studio light is on</i>, I am recording my evening show.<br>
+        <b>Anna:</b> Right. Sorry about yesterday.<br>
+        <b>Jonathan:</b> <i>No worries.</i><br>
+        <b>Anna:</b> May I see the studio?<br>
+        <b>Jonathan:</b> Um, maybe <i>another time</i> ? Right now I am busy.<br>
+        <b>Anna:</b> Sure. Okay, ’bye.<br>
+        <b>Jonathan:</b> ‘Bye.<br>
+        <b>Anna:</b> Hi, Amelia! Are you busy?<br>
+        <b>Amelia:</b> I’m a <i>little busy</i>.<br>
+        <b>Anna:</b> I want to say I’m sorry for yesterday.<br>
+        <b>Amelia:</b> It’s okay, Anna.<br>
+        <b>Anna:</b> Well, I am <i>sorry.</i><br>
+        <b>Amelia:</b> It’s okay, Anna. <i>Come by</i> this afternoon.<br>
+        <b>Anna:</b> Okay.<br>
+        <b>Caty:</b> Anna.<br>
+        <b>Anna:</b> Yes, Ms. Weaver.<br>
+        <b>Caty:</b> Are you busy?<br>
+        <b>Anna:</b> Yes, Ms. Weaver. I am busy.<br>
+        <b>Caty:</b> My office. 5:00 p.m.<br>
+        <b>Anna:</b> 5:00 p.m.<br>
+        <b>Caty:</b> <i>Come in</i>.<br>
+        <b>Co-Workers:</b> <i>Surprise!</i><br>
+        <b>Anna:</b> A party! Awesome! And I <i>still have</i> my job! Phew!* Until next time!<br>
+        * Phew! is a sound used to show that you are relieved, tired, or hot
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

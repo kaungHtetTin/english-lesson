@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3486635.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3490046.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3490048.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2>Lesson (25) Listening</h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3486695.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+        <b>Anna:</b> Hello! I am sure that today, in Washington, D.C,. there are a lot of great things to do. But I am not doing any of them. I am sick. Right now, I'm going to call my boss and tell her I cannot come in to work.<br>
+        <b>Caty:</b> Hello?<br>
+        <b>Anna:</b> Ms. Weaver, Hi. I can’t come to work today.<br>
+        <b>Caty:</b> Why not? <i>What is wrong?</i><br>
+        <b>Anna:</b> Well, yesterday I felt fine.<br>
+        <b>Anna:</b> In the morning, I <i>painted for hours.</i> In the afternoon, I cut wood. Then, I built a fire.<br>
+        <b>Caty:</b> Anna, what do you mean? Why can’t you come to work today?<br>
+        <b>Anna:</b> I do not feel well. I think I’m sick.<br>
+        <b>Caty:</b> I’m sorry to hear that. I was sick last week, too. I had the flu.<br>
+        <b>Anna:</b> (sneezes) What did you do?<br>
+        <b>Caty:</b> I slept a lot and I drank a lot of water. Do you have a doctor?<br>
+        <b>Anna:</b> Yes, I do.<br>
+        <b>Caty:</b> You should call your doctor. And get <i>lots of rest!</i><br>
+        <b>Anna:</b> Thanks, Ms. Weaver. I’ll call right now. I'm calling my doctor.<br>
+        <b>Dr. Bennett:</b> (to herself) Now, where does this thing go?<br>
+        <b>Dr. Bennett:</b> Hello. This is Dr. Bennett. How can I help you?<br>
+        <b>Anna:</b> Hello, Dr. Bennett. This is Anna.<br>
+        <b>Dr. Bennett:</b> Oh, Hi, Anna. How can I help you?<br>
+        <b>Anna:</b> I think <i>I’m sick.</i><br>
+        <b>Dr. Bennett:</b> Let me ask you a couple of questions. Do you have a <i>sore throat</i> ?<br>
+        <b>Anna:</b> Yes. I have a sore throat.<br>
+        <b>Dr. Bennett:</b> Do you have <i>a cough?</i><br>
+        <b>Anna:</b> Yes. I have a cough.<br>
+        <b>Dr. Bennett:</b> When did you start feeling sick?<br>
+        <b>Anna:</b> This morning. Yesterday I felt great. In the morning I painted, for hours - in the afternoon I cut wood -<br>
+        <b>Dr. Bennett:</b> Excuse me, Anna. But I don’t need to know all that. Do you have <i>a fever?</i><br>
+        <b>Anna:</b> Oh. My thermometer says <i>125 degrees?!</i> What??<br>
+        <b>Dr. Bennett:</b> Yeah, that’s not right.<br>
+        <b>Anna:</b> Oh. Wait. The thermometer was in my hot cup of coffee.<br>
+        <b>Dr. Bennett:</b> Please take it again, Anna.<br>
+        <b>Anna:</b> Okay, the thermometer says 100.5 degrees.<br>
+        <b>Dr. Bennett:</b> 100.5 degrees is not too high. I want you to drink lots of water. Rest in bed and get lots of sleep.<br>
+        <b>Anna:</b> That is what my boss said to do. Um, Dr. Bennett, when can I go to work?<br>
+        <b>Dr. Bennett:</b> Don’t go to work for a couple of days.<br>
+        <b>Anna:</b> Yes! I mean, I don’t want to make my co-workers sick.<br>
+        <b>Dr. Bennett:</b> That’s right. Call me back in <i>a couple of days.</i><br>
+        <b>Anna:</b> I will, Dr. Bennett. And thanks.<br>
+        <b>Anna:</b> Well, you heard the doctor – no work for a couple of days. I need water, sleep and um … lots of movies! Well, the doctor didn’t say anything about movies. But it can’t hurt! Until next time!
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>

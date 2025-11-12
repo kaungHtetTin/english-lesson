@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file:///android_asset/script.js"></script>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="lesson-theme">
+    <h2></h2> 
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3345754.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3242328.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3240201.html?type=video" frameborder="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>
+    <h2></h2>
+    
+    <p><b>Listen audio file and write down the answers in your text book.</b></p>
+    <iframe src="https://learningenglish.voanews.com/embed/player/0/3240442.html?type=audio" frameborder="0" scrolling="no" width="100%" height="144" allowfullscreen></iframe>
+    <p>
+<b>Caty:</b> Come in.<br>
+<b>Caty:</b> Well, Anna, welcome.<br>
+<b>Anna:</b> <i>Thank you.</i><br>
+<b>Caty:</b> I am <i>your boss</i>, Caty Weaver. But, <i>please call me</i> Caty.<br>
+<b>Anna:</b> Thank you, Ms. Weaver.<br>
+<b>Caty:</b> Just Caty.<br>
+<b>Anna:</b> Sure thing, Ms. Weaver.<br>
+<b>Caty:</b> Okay then. <i>Are you excited?</i><br>
+<b>Anna:</b> Yes, I am excited!<br>
+<b>Caty:</b> So sorry, but I am busy. Please <i>meet your co-workers</i>. But remember, they are busy working.<br>
+<b>Anna:</b> Sure. Thanks, Ms. Weaver.<br>
+<b>Anna:</b> Hi there! I’m Anna.<br>
+<b>Anne:</b> Hi, Anna. I’m Anne.<br>
+<b>Anna:</b> <i>Nice to meet you.</i> What are you doing?<br>
+<b>Anne:</b> Um, I’m writing.<br>
+<b>Anna:</b> You are writing! You are writing <i>a lot!</i><br>
+<b>Anna:</b> (Spills papers) Oh! Oh dear.<br>
+<b>Anne:</b> No! No! That's okay.<br>
+<b>Anna:</b> I am sorry!<br>
+<b>Anne:</b> That’s okay. Really.<br>
+<b>Anna:</b> I am sorry!<br>
+<b>Anne:</b> Please. Please. Please stop. Please.<br>
+<b>Anna:</b> Sorry. Sorry.<br>
+<b>Jonathan:</b> (in the studio) “and people all around the world are waiting to hear news about the next president…”<br>
+<b>Anna:</b> Jonathan, hi!<i> Remember me?</i> I live in your building.<br>
+<b>Jonathan:</b> Oh. Uh. Hi, Anna.<br>
+<b>Anna:</b> What are you doing?<br>
+<b>Jonathan:</b> I am doing <i>my show!</i><br>
+<b>Anna:</b> Oh, sorry. Are you <i>recording?</i><br>
+<b>Jonathan:</b> Yes! And, now I have to record again!<br>
+<b>Anna:</b> Sorry. Have a good show.<br>
+<b>Jonathan:</b> Thank you.<br>
+<b>Anna:</b> Sorry.<br>
+<b>Amelia:</b> The word of the day is <i> social.</i> Social -<br>
+<b>Anna:</b> Oh! Hi!<br>
+<b>Amelia:</b> - is <i>an adjective.</i><br>
+<b>Anna:</b> Hi! I’m Anna!<br>
+<b>Amelia:</b> Hi. I’m Amelia.<br>
+<b>Anna:</b> Nice to meet you!<br>
+<b>Anna:</b> What are you doing?<br>
+<b>Amelia:</b> <i>I’m reading.</i><br>
+<b>Anna:</b> Are you reading the news? Hi!<br>
+<b>Amelia:</b> No, I’m reading for my show.<br>
+<b>Amelia:</b> (to camera person) Can I read again?<br>
+<b>Anna:</b> Sorry.<br>
+<b>Anna:</b> This day is not <i>going well.</i><br>
+<b>Caty:</b> Anna! Hi! What’re you doing?<br>
+<b>Anna:</b> I am <i>bothering</i> people, Ms. Weaver.<br>
+<b>Caty:</b> Let’s go to my <i>office and talk.</i><br>
+<b>Anna:</b> I like to talk with you, Ms. Weaver.<br>
+<b>Caty:</b> It’s Caty.<br>
+<b>Anna:</b> Right. Thanks ... Ms. Weaver
+    </p>
+    <a id='buttona'>Show answers</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('buttona');
+            var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+            if (!answers.length) {
+                return;
+            }
+
+            var rootStyles = window.getComputedStyle(document.documentElement);
+            var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+            if (!themeColor) {
+                themeColor = '#2563eb';
+            }
+
+            answers.forEach(function (answer) {
+                answer.style.color = themeColor;
+                answer.style.backgroundColor = themeColor;
+            });
+
+            if (!button) {
+                return;
+            }
+
+            if (!button.getAttribute('href')) {
+                button.setAttribute('href', '#');
+            }
+
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
+
+            var revealAnswers = function (event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                button.setAttribute('aria-pressed', 'true');
+
+                answers.forEach(function (answer) {
+                    answer.style.backgroundColor = 'transparent';
+                });
+            };
+
+            button.addEventListener('click', revealAnswers);
+            button.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    revealAnswers(event);
+                }
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>
