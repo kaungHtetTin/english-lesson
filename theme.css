@@ -45,7 +45,7 @@
 body.lesson-theme {
     margin: 0;
     padding: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-    background: white url('https://www.calamuseducation.com/uploads/icons/oxfort_word_bg.jpg') center/cover no-repeat;
+    background: white url('background.png') center/cover no-repeat;
     color: var(--lesson-text);
     font-family: var(--lesson-font-sans);
     font-size: 16px;
@@ -63,9 +63,9 @@ body.lesson-theme .container,
 body.lesson-theme .card,
 body.lesson-theme .panel,
 body.lesson-theme .wrapper {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: var(--lesson-radius-lg);
-    box-shadow: var(--lesson-shadow-soft);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     padding: clamp(1.5rem, 1.5vw + 1rem, 2rem);
     margin-inline: auto;
     margin-block: clamp(1.5rem, 1.5vw + 1rem, 2.5rem);
@@ -202,7 +202,7 @@ body.lesson-theme table,
 body.lesson-theme .table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(255, 252, 230, 0.7);
+    background: transparent;
     border-radius: var(--lesson-radius-md);
     overflow: hidden;
     box-shadow: inset 0 0 0 1px var(--lesson-border);
@@ -220,7 +220,7 @@ body.lesson-theme .table td {
 
 body.lesson-theme table thead tr,
 body.lesson-theme .table thead tr {
-    background: rgba(255, 243, 180, 0.888);
+    background: transparent;
 }
 
 body.lesson-theme table th,
@@ -236,7 +236,7 @@ body.lesson-theme .table tr:last-child td {
 
 body.lesson-theme .table-striped tbody tr:nth-child(even),
 body.lesson-theme table.table-striped tbody tr:nth-child(even) {
-    background: rgba(255, 252, 235, 0.848);
+    background: transparent;
 }
 
 body.lesson-theme .table-bordered,
@@ -270,13 +270,13 @@ body.lesson-theme table.bluetable {
 
 body.lesson-theme table.blue th,
 body.lesson-theme table.bluetable th {
-    background: rgba(255, 239, 199, 0.883);
+    background: transparent;
     color: var(--lesson-primary-strong);
 }
 
 body.lesson-theme table.blue td,
 body.lesson-theme table.bluetable td {
-    background: rgba(255, 252, 230, 0.853);
+    background: transparent;
 }
 
 body.lesson-theme table.simple,
