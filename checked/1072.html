@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>Translation | Exercise 9</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h3 class="text-primary">Exercise (9)</h3>
+        <div class="">
+            <h4
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Present Participle Adj ==> Noun
+            </h4>
+        </div>
+
+        <div class="note">
+            <div style="padding: 7px;;border-radius:3px;">
+                <p>I. Ving မှဖြစ်သော Adj ကို Present participal Adj ဟုခေါ်သည်။</p>
+                <p>II. ရိုးရိုး Ving မှဖြစ်သော Adj သည် "သော" ဟု အဓိပ္ပါယ်ထွက်သည်။</p>
+                <p>III. "စေ" အဓိပ္ပါယ်ပါဝင်သည့် Ving မှဖြစ်သော adj သည် "စရာကောင်းသော" ဟု အဓိပ္ပါယ်ထွက်သည်။</p>
+            </div>
+        </div>
+        <br>
+        Eg. 
+        <table class="table table-bordered">
+            <tr>
+                <td>run(v)</td>
+                <td>ပြေးသည်</td>
+            </tr>
+            <tr>
+                <td>running(adj)</td>
+                <td>ပြေးနေသော</td>
+            </tr>
+            <tr>
+                <td>interest (v)</td>
+                <td>စိတ်ဝင်စားသည်</td>
+            </tr>
+            <tr>
+                <td>interesting(adj)</td>
+                <td>စိတ်ဝင်စားစရာကောင်းသော</td>
+            </tr>
+        </table>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မှတ်ချက်။
+        </div>
+        
+        <div style="padding: 7px;;border-radius:3px;">
+            <p>
+            Note Book ထဲက Basic Grammar ၏
+            <ul>
+                <li>Irregular Verb & Regular Verb (I)</li>
+            </ul>
+           သင်ခန်းစာကို ဖြည့်စွက်လေ့လာထားသင့်ပါသည်။
+            </p>
+        
+        </div>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'က dance နေသောမိန်းကလေး ',
+        'ပြေး run နေသော မြင်း',
+        'အပ်ချုပ် sew စက် machine တစ်လုံး',
+        'ဆူ boil နေသော ရေ',
+        'စိတ်ဝင်စားစရာကောင်းသော သင်ခန်းစာတစ်ခု',
+        'စိတ်လှုပ်ရှားစရာကောင်းသော exciting ပြိုင်ပွဲ match / contest / competition / tournament တစ်ခု',
+        'လုပ်သားပြည်သူ(အလုပ်လုပ်work သောပြည်သူ people)',
+        'သီချင်းဆိုသော sing ငှက်များ',
+        'ဝင် set နေသော နေ',
+        'ပြုံး smile နေသော မျက်နှာ'
+    ];
+
+    var answers = [
+        'the dancing girl ',
+        'the running horse',
+        'a sewing machine',
+        'boiling water',
+        'an interesting lesson',
+        'an exciting match',
+        'working people',
+        'singing birds',
+        'the setting sun',
+        'the smiling face'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

@@ -45,7 +45,9 @@
 body.lesson-theme {
     margin: 0;
     padding: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-    background: white url('background.png') center/cover no-repeat;
+    background: white url('background.png') center no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
     color: var(--lesson-text);
     font-family: var(--lesson-font-sans);
     font-size: 16px;

@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Translation | Exercise 10</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Exercise (10)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Past Participle Adj ==> Noun
+            </h5>
+        </div>
+
+        <div class="note">
+            <div style="padding: 7px;;border-radius:3px;">
+                <p>I. V.3 မှဖြစ်သော Adj ကို Past Participle Adj ဟုခေါ်သည်။</p>
+                <p>II. Adj ဖြင့် အထူးပြုလိုက်သော Noun သည် " ပြုလုပ်ခြင်း ခံရ " ပါက "Past Participle Adj" ကို သုံးလေ့ရှိသည်။</p>
+               
+            </div>
+        </div>
+        <br>
+        Eg.
+        <table class="table table-bordered">
+            <tr>
+                <td>လေ့ကျင့်ထားသော စစ်သားများ</td>
+                <td>trained soldiers</td>
+               
+            </tr>
+        </table>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မှတ်ချက်။
+        </div>
+        
+        <div style="padding: 7px;;border-radius:3px;">
+            <p>
+                Note Book ထဲက Basic Grammar ၏
+            <ul>
+                <li>Irregular Verb & Regular Verb (I)</li>
+            </ul>
+            သင်ခန်းစာကို ဖြည့်စွက်လေ့လာထားသင့်ပါသည်။
+            </p>
+        
+        </div>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'လေ့ကျင့် train ထားသော  စစ်သားများ ',
+        'ဖိတ်ကြား invite  ထားသော ဧည့်သည် guest များ',
+        'ပေး given ထားသော စကားလုံးများ',
+        'တဝက် half  ပြုတ်  boil ထားသော egg ဥ',
+        'ချက်ပြုတ် cook  ထားသော food အစားအစာ',
+        'ဆေးသုတ်  paint ထားသော wall နံရံ',
+        'ဒဏ်ရာရ wound  သော စစ်သားများ',
+        'လူမသိသော unknown  စာရေးဆရာ writer / author တစ်ဦး',
+        'ဆူပြီးသော ရေ',
+        'ကာကွယ်စောင့်ရှောက် protected ခံရသော childhood ကလေးဘဝ'
+    ];
+
+    var answers = [
+        'trained soldiers ',
+        'invited guests ',
+        'given words',
+        'the half - boiled egg',
+        'the cooked food',
+        'the painted wall',
+        'wounded soldiers',
+        'an unknown writer / author',
+        'boiled water',
+        'the protected childhood'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 1</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (1)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Sub+ Be+ Sub.Complement
+            </h5>
+        </div>
+
+        <table class="table table-bordered">
+            <tr>
+                <td>Present Tense</td>
+                <td>am,is,are</td>
+                <td>ဖြစ်သည်။</td>
+            </tr>
+            <tr>
+                <td>Past Tense</td>
+                <td>was, were </td>
+                <td>ဖြစ်ခဲ့သည်။</td>
+            </tr>
+            <tr>
+                <td>Future Tense</td>
+                <td>shall/ will + be</td>
+                <td>ဖြစ်(လိမ့်)မည်။</td>
+            </tr>
+        </table>
+
+        Eg.
+        <p>
+            ကျွန်ုပ်၏ ဝါသနာသည် စာဖတ်ခြင်းဖြစ်ပါသည်။ <br>
+            My hobby is reading.
+        </p>
+ 
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'ကျွန်ုပ်၏ ဝါသနာ hobby သည် စာဖတ်ခြင်းဖြစ်ပါသည်။',
+        'ပြည်ထောင်စု Union မြန်မာနိုင်ငံသည် ကျွန်ုပ်တို့၏တိုင်းပြည်ဖြစ်ပါသည်။',
+        'ကျွန်ုပ်သည် ဆယ်တန်း tenth standard ကျောင်းသားတစ်ယောက်ဖြစ်ပါသည်။',
+        'မြမြ၏အဖေသည် ကျွန်ုပ်တို့၏ ဦးလေးဖြစ်ပါသည်။',
+        'ကျွန်ုပ်တို့၏ဘဝ life သည် အသက်မဲ့သော lifeless စက်တစ်ခု မဟုတ်ပါ။',
+        'ဤအရာများသည် သူ၏ ဂျာကင် jerkin များဖြစ်ကြလိမ့်မည်။',
+        'ထိုအိမ်သည် ကျွန်ုပ်သူငယ်ချင်း အိမ်ဖြစ်ပါသည်။',
+        'သူသည် ထိုအိမ်၏ ပထမဆုံး ပိုင်ရှင် ဖြစ်ခဲ့ပါသည်။',
+        'သီတာသည် ထိုလူကြီး၏ သမီးဖြစ်လိမ့်မည်။',
+        'သူသည် ထူးချွန်သောကျောင်းသားများထဲက တစ်ယောက်ဖြစ်သည်။'
+    ];
+
+    var answers = [
+        'My hobby is reading. ',
+        'The Republic of the Union of Myanmar is our country.',
+        'I am a tenth standard student.',
+        'Mya Mya\'s father is our uncle.',
+        'Our life is not a lifeless machine.',
+        'These may be his jerkins.',
+        'That house is my friend\'s house.',
+        'He was the first owner of that house.',
+        'Thida may be the daughter of that man.',
+        'He is one of the outstanding students.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

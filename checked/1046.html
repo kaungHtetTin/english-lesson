@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>Exercise 4</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h1 class="text-primary">Exercise (4)</h1>
+        <div class="">
+            <h2
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Noun of Noun</h2>
+        </div>
+
+        <div class="note">
+            <div style="padding: 7px;;border-radius:3px;">
+
+                <p>
+                    I.  "of" ကို အသုံးပြုရာ၌ မြန်မာနှင့်ပြောင်းပြန်ဖြစ်သည်။ "ပိုင်ဆိုင်ခံရသောအရာ" သည် "of" ၏ အရှေ့တွင် ရှိပြီး "ပိုင်ဆိုင်သူ
+                    (သို့) ပိုင်ဆိုင်သည့်အရာသည်" သည် "of" ၏ အနောက်တွင်ရှိသည်။
+
+                </p>
+
+                <div class="card" style="padding: 7px;text-align: center; width: 90%; margin: auto;"> 
+                    ပိုင်ဆိုင်ခံ of ပိုင်သူ /ပိုင်သည့်အရာ
+                </div>
+                <br>
+                <p>II "of " ကို အသုံးပြုရာ၌ ရှေ့ Noun သည် အမြဲတိကျလေ့ရှိသည်။ သို့သော် "တစ်ခု၊ တစ်ကောင်၊ တစ်ယောက်" အဓိပ္ပါယ်ထွက်က "a (သို့) an" သုံး</p>
+
+            </div>
+
+            <br> eg.
+            <table class="table table-bordered">
+                <tr>
+                    <td>စာပို့လုလင်တစ်ယောက်၏ တာဝန်</td>
+                    <td>the duty of a postman</td>
+                </tr>
+                <tr>
+                    <td>ဦးဘ၏သားများ </td>
+                    <td>the sons of U Ba</td>
+                </tr>
+                <tr>
+                    <td>ဦးဘ၏ သားတစ်ယောက်</td>
+                    <td>a son of U Ba</td>
+                </tr>
+                <tr>
+                    <td>စာအုပ်၏ရှေ့အဖုံး</td>
+                    <td>the front cover of the book</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'ပန်းခြံ park ၏ အဝင်အဝ entrance ',
+        'ထိုကား၏ပိုင်ရှင် owner',
+        'ဒေါ်မြမြ၏ ပထမ ခင်ပွန်း husband',
+        'ည၏ ပထမ first ပိုင်း part',
+        'သစ်ပင်တစ်ပင်၏ အကိုင်း branch',
+        'နေ၏ အလင်းရောင် light',
+        'ကျွန်ုပ်တို့ကျောင်း၏ ပုံစံ shape',
+        'လူကြီးလူကောင်း gentleman ၏ အမူအရာ',
+        'ထိုခွေး၏ အရှင်သခင် master',
+        'ကျွန်ုပ်တို့ရဲ့ အိမ်၏ အနီးဆုံးသော nearest အိမ်နီးချင်း neighbour',
+        'ဦးလောဘ၏ သေဆုံးမှု death',
+        'မိသားစု နှစ်ခု၏ သမိုင်းကြောင်း history',
+        'ဦးထွန်းလှနှင့် ဒေါ်မြမေတို့၏ သမီး',
+        'ကျွန်ုပ်တို့မြို့ရဲ့ လမ်းမများ',
+        'သူ့ဖခင်၏ သေဆုံးမှု'
+    ];
+
+    var answers = [
+        'the entrance of the park ',
+        'the owner of that car',
+        'the first husband of Daw Mya Mya',
+        'the first part of the night',
+        'the branch of a tree',
+        'the light of the sun',
+        'the shape of our school',
+        'the manners of the gentleman',
+        'the master of that dog',
+        'the nearest neighbour of our house',
+        'the death of U Law Ba',
+        'the history of the two families',
+        'the daughter of U Htun Hla and Daw Mya May',
+        'the roads of our town',
+        'the death of his father'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

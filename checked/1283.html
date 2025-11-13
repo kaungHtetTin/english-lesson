@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 24</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (24)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                The Uses and Positions of Conjunctions
+            </h5>
+        </div>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မြန်မာနှင့်အထားအသိုတူသော Conj နှင့် Adv များ
+        </div>
+
+        <div style="padding: 7px;;border-radius:3px;">
+            <b> but, however, yet, still, nevertheless, therefore, so, otherwise,or else, or, and</b><br>
+            e.g.<br> ဉီးမြသည်ချမ်းသာသည်။<mark> သို့သော်</mark> သူသည်မပျော်ရွှင်ပါ။<br>
+            U Mya is rich, <mark> but</mark> he is unhappy.
+        </div>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မြန်မာအဆုံး၊အင်္ဂလိပ်အစ Conj များ
+        </div>
+        
+        <div style="padding: 7px;;border-radius:3px;">
+            when, while, as, since, though, although, after, till, until, unless, before, as soon as, as if, if</b><br>
+            e.g, <br> ဦးမြသည် ချမ်းသာ<mark>သော်ငြားလည်း </mark> သူသည် မပျော်ရွှင်ပါ။<br>
+            <mark> Although </mark>U Mya is rich, he is unhappy.<br>
+            U Mya is unhappy<mark> although</mark> he is rich.
+        </div>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+           မှတ်ချက်
+        </div>
+        <div style="padding: 7px;;border-radius:3px;">
+            <p>
+                'because' ကို 'အဘယ့်ကြောင့်ဆိုသော်' ဟု ဘာသာဖြင့်ပါက မြန်မာ နှင့် အထားအသို တူသော Conj ၊ 'သောကြောင့်' ဘာသာပြန်ပါက
+                မြန်မာအဆုံး၊ အင်္ဂလိပ်အစ Conj၊ 'so that' ကို 'သို့မှသာ'ဟုဘာသာပြန်ပါကမြန်မာနှင့်အထားအသိုတူသော Conj ၊
+                'စေရန်' ဟုဘာသာပြန်ပါကမြန်မာအဆုံး၊ အင်္ဂလိပ် အစ Conj၊
+            </p>
+
+            <p>
+                'til, until, because' နှင့် 'so that'တို့ကို ဝါကျအစ၌ ရေးခွင့်မရှိ။
+
+            </p>
+
+            <p>
+
+                မြန်မာအဆုံး၊ အင်္ဂလိပ်အစ Conj ရှေ့မှာ Comma သုံးလေ့မရှိ၊ သို့သော် ၎င်းကို ဝါကျရှေ့ဆုံး၌ ထားရေးပါက ၎င်းနှင့်တွဲသောCluase
+                တစ်ဖြတ်အဆုံးမှာ Comma သုံးလေ့ရှိသည်။<br>
+                မြန်မာနှင့်အထားအသိုတူသော Conj ရှေ့မှာမူ Comma ကိုသုံးလိုကသုံးနိုင်၍ မသုံးလိုကမသုံးဘဲရေးနိုင်သည်။
+            </p>
+        </div>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        ' သူသည်ချမ်းသာသည် ။ သို့သော် သူသည်မပျော်ပါ။ ',
+        ' သူသည် ကျွန်ုပ်၏အစ်ကိုဖြစ် သည် ။ သို့ရာတွင် သူသည် ကျွန်ုပ်ကို မကြင်နာပါ။',
+        'သူသည် ချမ်းသာသူတစ်ယောက် ဖြစ်သည်။ သို့ရာတွင် သူသည် ပိုက်ဆံကို ပို၍ အလိုရှိသည် ။',
+        ' သူသည် မချမ်းသာပါ၊ သို့ရာတွင် သူသည် အခြားသူများကို ကြင်နာသည် ။',
+        ' သူသည် ပြင်းထန်စွာ အလုပ်လုပ် ခဲ့သည်။ ထို့ကြောင့် သူသည် အောင်မြင်ခဲ့သည်။',
+        ' ဆိုင်များကိုပိတ်ထားခဲ့သည် ၊ ထို့ ကြောင့် ကျွန်ုပ်သည် မည်သည့်အရာမှ မဝယ်နိုင်ခဲ့ပါ။',
+        ' သင်၏လေ့ကျင့်ခန်းများကို ပြု လုပ်ပါ၊ သို့မဟုတ်လျှင် သင်သည် အပြစ်ပေးခံရလိမ့်မည်။',
+        ' စောစောလာပါ၊ သို့မဟုတ် လျှင် ဆရာသည် သင့်ကို စိတ်ဆိုးလိမ့်မည်။',
+        ' သင်သည် အပြင်းအထန်ကြိုးစားရမည် ။ သို့မဟုတ်လျှင် သင်သည် သင်၏စာမေးပွဲမှာ ကျရှုံးလိမ့်မည် ။',
+        'မမသည် ဈေးသို့ သွား၍ သူမအတွက် လုံချည်တစ်ထည် ဝယ်ခဲ့သည်။',
+        'သူသည် သူ၏အင်္ဂလိပ်စာလေ့ကျင့်ခန်းများကို ပြုလုပ်နေစဉ်တွင် သူသည်အိပ်ပျော်သွားခဲ့သည်။',
+        'ကျွန်ုပ်သည် သူ၏အိမ်ကို ရောက်ရှိသွားသောအခါ သူသည် သူ၏ညစာကို စားနေ ခဲ့သည် ။',
+        'သူသည် အသက်ကြီးလာသောကြောင့် သူသည် ပို၍ အားနည်းလာသည်။ ကျွန်ုပ်တို့မှာ ပိုက်ဆံမရှိ သောကြောင့် ကျွန်ုပ်တို့သည် ၎င်းကိုမဝယ်နိုင်ခဲ့ပါ။',
+        'ကျွန်ုပ်တို့မှာ ပိုက်ဆံမရှိသောကြောင့် ကျွန်ုပ်တို့သည် ၎င်းကို မဝယ်နိုင်ခဲ့ပါ။',
+        'သူအင်္ဂလိပ်စာကို မရေးနိုင်သော်လည်း သူသည် ၎င်းကို ကောင်းစွာပြောကြားနိုင်သည်။',
+        'သူထွက်ခွာသွားပြီးနောက် ကျွန်ုပ်သည် ထိုနေရာသို့ ရောက်ရှိသွားခဲ့သည်။',
+        'သင်ပြန်လာသည့်တိုင်အောင် ကျွန်ုပ်သည် ထိုနေရာမှာ သင့်ကို စောင့်မည်။',
+        'ကျွန်ုပ်သည် သူ့ကိုပြောလျှင် သူသည် ကျွန်ုပ်ကို ကူညီလိမ့်မည်။',
+        'သင်သည်ဤအရာကိုမစားလျှင် သင်သည် ဆာလောင်လိမ့်မည်။',
+        'သူသည် ထိုအိမ်မှခွေးများကိုကြောက်သောကြောင့် သူသည် ထွက်ပြေးခဲ့သည်။',
+        'ကျွန်ုပ်သည် ကျွန်ုပ်၏သင်ခန်းစာများကို မလေ့လာခင်(လေ့လာတာမတိုင်ခင်) ကျွန်ုပ်သည် ကျွန်ုပ်၏ ညစာကို စားခဲ့သည်။',
+        'ကျွန်ုပ်သည် ကျောင်းမှအိမ်သို့ ပြန်ရောက်လျှင်ရောက်ချင်း ကျွန်ုပ်သည် ကိုယ်လက်လေ့ကျင့်ခန်း ကို ပြုလုပ်ခဲ့သည်။',
+        'သူသည် နောက်ဆုံး၌ အောင်မြင်ခဲ့သည်။ အကြောင်းမှာ သူသည် ပြင်းထန်စွာ ကြိုးစားခဲ့သော ကြောင့်ဖြစ်သည်။',
+        'သူသည်ပိုက်ဆံကိုစုဆောင်းသည်၊ သို့မှသာ သူသည် ကားကိုဝယ်နိုင်မည်။',
+        'ကျွန်ုပ်မလာနိုင်ပါ အကြောင်းမှာ ကျွန်ုပ် မအားပါ။'
+    ];
+
+    var answers = [
+        'He is rich, but he is not happy.',
+        'He is my brother, but he is not kind to me.',
+        'He is a rich man, but he wants money more.',
+        'He is not rich, but he is kind to the other.',
+        'He worked hard, so he was successful.',
+        'Shops were closed, so I can buy nothing.',
+        'Do your exercises, or you will be punished.',
+        'Come early, or the teacher will be angry with you.',
+        'You must try hard, or you will fail in your exam.',
+        'Ma Ma went to the market and bought a Longyi for her.',
+        'While he was doing his English exercises, he fell asleep.',
+        'When I reached his home, he was eating his dinner.',
+        'As he grows up, he becomes weaker.',
+        'As we had no money, we could not buy it.',
+        'Although he cannot write English, he can speak it well.',
+        'After he had left, I reached there.',
+        'Until you come back, I will wait for you there.',
+        'If I tell him, he will help me.',
+        'If you do not eat this, you will be hungry.',
+        'As he was afraid of the dogs from that house, he ran away.',
+        'Before I studied my lessons, I had my dinner.',
+        'As soon as I arrived at home from school, I did physical exercises.',
+        'He was successful finally because he tried hard.',
+        'He saves money so that he will be able buy the car.',
+        'I cannot come because I am not free.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 14</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (14)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Sub. + Verb + Obj.
+            </h5>
+        </div>
+
+        <br><br>
+
+        Eg.
+        <p>
+            ကျွန်ုပ်သည် သူမ၏အမေကို တွေ့ဖူးသည်။<br>
+            I have ever seen her mother.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'ကျွန်ုပ်သည် သူမ၏အမေကို တွေ့ဖူးသည်။',
+        'ထိုလူကလေးသည် သူ၏ဖေါင်တိန် ပျောက်ဆုံးခဲ့သည်။',
+        'ဘိုဘို၏အမေသည် တံခါးကို ဖွင့်ခဲ့သည်။',
+        'မည်သူသည် ဤကုလားထိုင်ကို ဝယ်ခဲ့ပါသလဲ။',
+        'ကျွန်ုပ်အစ်ကို၏သူငယ်ချင်းသည် ကားတစ်စီးကို ဝယ်ခဲ့သည်။',
+        'သင်သည် သင်၏လက်များကို ဆေးကြောသင့်သည်။',
+        'ကျွန်ုပ်သည် ဆူညံသံတစ်ခုကို ကြားခဲ့သည်။',
+        'ချမ်းသာသူများသည် ဆင်းရဲသူများကို ကူညီ သင့်သည်။',
+        'ကြောင်သည် ကြွက်ကို စားသည်။',
+        'မည်သူသည် ဤလည်ဆွဲကို ခိုးယူခဲ့ပါသလဲ။'
+    ];
+
+    var answers = [
+        'I have ever seen her mother.',
+        'That boy lost his fountain.',
+        'Bo Bo\'s mother opened the door.',
+        'Who bought this chair ?',
+        'My brother\'s friend bought a car.',
+        'You should wash your hands.',
+        'I heard a noise.',
+        'The rich should help the poor.',
+        'The cat eats the mouse.',
+        'Who stole this necklace ?',
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

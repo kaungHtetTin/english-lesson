@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <title>Translation | Exercise 7</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h3 class="text-primary">Exercise (7)</h3>
+        <div class="">
+            <h4
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Noun ==> Phrase</h4>
+        </div>
+
+        <div class="note">
+            <div style="padding: 7px;;border-radius:3px;">
+
+                <p>I. နောက်မှ Phrase ဖြင့်အထူးပြုသောအခါ ရှေ့နာမ်သည် အမြဲတိကျသည်။ထို့ကြောင့် "the" သုံး။ (သို့သော် "တစ်" အဓိပ္ပါယ် ထွက်က "a
+                (သို့) an " သုံး)</p>
+                <p>II. နောက်မှ Phrase သည် "Prep+Noun" ဖြစ်သည်။</p>
+                <p>II. ၎င်း Phrase ဖြင့် ရှေ့မှ Noun ကို အထူးပြုလိုက်သောအခါ ထို Phrase
+                သည် "မှာ" ဟု အဓိပ္ပါယ်မထွက်ဘဲ "မှ/က" ဟု အဓိပ္ပါယ်ထွက်သည်။</p>
+            </div>
+        </div>
+
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မှတ်ချက်</div>
+
+        <div style="padding: 7px;;border-radius:3px;">
+
+            Note Book ထဲက Basic Grammar ၏
+            <ul>
+                <li>The Phrase and the Clause </li>
+            </ul>
+            အစရှိသော သင်ခန်းစာနှင့် တွဲဖက်လေ့လာသင့်ပါသည်။
+            </p>
+
+        </div>
+
+        <br>Eg.
+        <table class="table table-bordered">
+            <tr>
+                <td width="50%">ကျွန်ုပ်တို့၏ရွာမှ</td>
+                <td>ရွှာသူကြီး</td>
+            </tr>
+            <tr>
+                <td>Phrase</td>
+                <td>Noun</td>
+            </tr>
+
+        </table>
+
+        <table class="table table-bordered"></tableclass>
+            <tr>
+                <td width="50%">The headman</td>
+                <td>in our village</td>
+            </tr>
+            <tr>
+                <td>Noun</td>
+                <td>Phrase</td>
+            </tr>
+        </table>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'အိမ်အောက်ကခွေး ',
+        'ကျွန်ုပ်တို့ကျောင်းအနီးက စျေးဆိုင်တစ်ဆိုင်',
+        'ဘုရားသို့(သွားရာ)လမ်း',
+        'ရွာဟိုဘက်က သစ်တော forest',
+        'ကျွန်ုပ်တို့ကျောင်းက တော်သော ဘောလုံးသမား footballer / football - player များ',
+        'ရွာတစ်ရွာသို့ အလည်တစ်ခေါက်',
+        'မောင်မောင်နှင့် မောင်ဘ တို့ကြား ပြသနာ problem',
+        'စားပွဲကလူ',
+        'အခန်းထဲကစာရေးစားပွဲ desk',
+        'အိပ်ယာ bed ပေါ်က ကလေး',
+        'ကျွန်ုပ်တို့ရွာက ရွာသူရွာသားများ',
+        'အပြာရောင်နှင့် အမျိုးသမီး',
+        'ကမ္ဘာပေါ်က အလှဆုံးနေရာများ',
+        'အိမ်ဘေးကသစ်ပင်',
+        'စက်ဘီး bicycle ပေါ်က လူငယ်',
+        'ရေထဲက ငါးများ',
+        'စနေနေ့က အဖြစ်အပျက် event / incident',
+        '၁၉၉၂ ခုနှစ်က မေးခွန်း',
+        'မန္တလေးက ဘူတာ station',
+        'စားပွဲပေါ်က အိုး'
+    ];
+
+    var answers = [
+        'the dog under the house ',
+        'a shop near our school',
+        'the road to the Pagoda',
+        'the forest beyond the village',
+        'the good footballers in our school',
+        'a visit to a small village',
+        'the problem between Mg Mg and Mg Ba',
+        'the man at the table',
+        'the desk in the class',
+        'the baby on the bed',
+        'the villagers in our village',
+        'the lady in blue',
+        'the most beautiful places in the world',
+        'the tree beside the house',
+        'the boy on the bicycle',
+        'the fishes in the water',
+        'the event on Saturday',
+        'the question in 1992',
+        'the station in Mandalay',
+        'the pot on the table'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

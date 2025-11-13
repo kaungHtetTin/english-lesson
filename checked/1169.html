@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 8</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (8)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Sub + Be +neither too Adj. nor too Adj.
+            </h5>
+        </div>
+
+        Sub + Be +neither too Adj. nor too Adj. <br><br>
+        Eg.
+        <p>
+            သူမသည် အရပ်လည်းမပုအရပ်လည်းမရှည်ပါ။<br>
+            She is neihter too short nor too tall.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'သူမသည် အရပ်လည်းမပုအရပ်လည်းမရှည်ပါ။ ',
+        'ယနေ့သည် အေးလည်းမအေးပူလည်းမပူပါ။',
+        'သူ၏မိဘများသည် ဆင်းလည်းမဆင်းရဲ ချမ်းလည်းမချမ်းသာပါ။',
+        'သူသည် ပိန်လည်းမပိန် ဝလည်းမပါ။',
+        'ကျွန်ုပ်၏အိမ်သည် ကြီးလည်းမကြီး သေး လည်းမသေးပါ။',
+        'ဤလမ်းသည်ကျယ်လည်းမကျယ်ကျဉ်းnarrow လည်းမကျဉ်းပါ။',
+        'ဤစာအုပ်သည်ထူ thick လည်းမထူ ၊ ပါး thin လည်းမပါးပါ။',
+        'ဆန် rice ဈေး price သည် မြင့်လည်းမမြင့် နိမ့် low လည်းမနိမ့်ပါ။',
+        'ရွှေသည် ပေါ plentiful လည်းမပေါ ရှား rare / scarce လည်းမရှားပါ။',
+        'ထိုတောင် mountain သည် နိမ့် လည်းမနိမ့်မြင့်လည်းမမြင့်ပါ။'
+    ];
+
+    var answers = [
+        'She is neihter too short nor too tall.',
+        'Today is neihter too cool nor too hot.',
+        'His parents are neihter too rich nor too poor.',
+        'He is neighter too thin nor too fat.',
+        'My house is neihter too big nor too small.',
+        'This road is neihter too wide nor too narrow.',
+        'This book is neihter too thick nor too thin.',
+        'The rice - price is neihter too high nor too low.',
+        'Gold is neihter too plentiful nor too rare.',
+        'That mountain is neihter too low nor too high.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 23</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (23)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                The + Superlative Degree Adj + (Noun)
+            </h5>
+        </div>
+
+        Eg.
+        <p>
+            ကောင်းကင်သည် ယနေ့အကြည်လင် clear ဆုံး ဖြစ်သည်။<br>
+            The sky is the clearest today.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'ကောင်းကင်သည် ယနေ့အကြည်လင် clear ဆုံး ဖြစ်သည်။',
+        'ရွှေတိဂုံသည်မြန်မာပြည်တွင် အကြီးကျယ် great ဆုံးဘုရား ဖြစ်သည်။',
+        'ဤလမ်းသည် ကျွန်ုပ်မြို့တွင် ဖုံအထူ dusty ဆုံး ဖြစ်သည်။',
+        'သူသည် ကျွန်ုပ်တို့အသင်း team ၏အကောင်းဆုံး ကစားသမား player ဖြစ်သည်။',
+        'မောင်မောင်သည်ကျွန်ုပ်တို့လမ်းထဲတွင် အရပ်အရှည်ဆုံးသောယောက်ျားလေး ဖြစ်သည်။',
+        'သူသည်အတန်းထဲတွင် အတော်ဆုံးကျောင်းသား ဖြစ်သည်။',
+        'မြန်မာပြည်သည် ကမ္ဘာပေါ်တွင်အဆင်းရဲဆုံးတိုင်းပြည် မဟုတ်ပါ။',
+        'ထိုလူသည် ကျွန်ုပ်တို့မြို့တွင် အချမ်းသာဆုံးလူများထဲကတစ်ယောက် ဖြစ်သည်။',
+        'ကျွန်ုပ်၏ညီသည် ကျွန်ုပ်တို့မိသားစုတွင်အလိမ္မာဆုံး ဖြစ်သည်။',
+        'ကျွန်ုပ်သည် ဦးဘနှင့်ဒေါ်မြတို့၏ အကြီးဆုံးသောသား ဖြစ်သည်။'
+    ];
+
+    var answers = [
+        'The sky is the clearest today.',
+        'The Shwedagon is the greatest pagoda in Myanmar.',
+        'This road is the dustiest in our town.',
+        'He is the best player of our team.',
+        'Mg Mg is the tallest boy in our street.',
+        'He is the cleverest student in the class.',
+        'Myanmar is not the poorest country in the world.',
+        'That man is one of the richest people in our town.',
+        'My brother is the cleverest in our family.',
+        'I am the eldest son of U Ba and Daw Mya.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 11</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (11)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Sub + Continuous Verb +……….
+            </h5>
+        </div>
+
+        <table class="table table-bordered">
+            <tr>
+                <td>Present Cont:</td>
+                <td>am,is,are +Ving</td>
+                <td>နေသည်။</td>
+            </tr>
+            <tr>
+                <td>Past Cont:</td>
+                <td>was,were + Ving</td>
+                <td>နေခဲ့သည်။</td>
+            </tr>
+            <tr>
+                <td>Future Cont </td>
+                <td>shall,will + be +Ving</td>
+                <td>နေလိမ့်မည်။</td>
+            </tr>
+        </table>
+
+        <div style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            မှတ်ချက်
+        </div>
+        <div style="padding: 7px;;border-radius:3px;">
+            <p>ကြံရွယ်ခြင်းသဘောဖြင့် အနာဂတ်ကာလအတွက် “shall,will + Vinf”ကိုယ်စား “am,is,are +Ving”ကို
+            သုံးနိုင်သည်။”မလို့”ဟု အဓိပ္ပာယ်ထွက်သည်။</p>
+        </div>
+
+        Eg.
+        <p>
+            သူတို့သည် အစည်းအဝေးပွဲတစ်ခုကို ကျင်းပခဲ့ကြသည်။<br>
+            They held a meeting.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'ကျွန်ုပ်တို့သည် ကျွန်ုပ်တို့၏အလုပ်ကို ပြုလုပ် do နေကြသည်။ ',
+        'အမေသည် ကျွန်ုပ်၏ညီကို ကျွေးမွေးနေသည်။',
+        'ကျွန်ုပ်သည် ကျွန်ုပ်၏အိမ်လေ့ကျင့် ခန်း homework များကို ပြုလုပ်နေခဲ့သည်။',
+        'သူမသည် လုံချည် longyiများကို ချုပ် sew နေလိမ့်မည်။',
+        'ကျွန်ုပ်သည် စာတစ်စောင်ကို ရေးနေပါသည်။',
+        'ခလေးသည် ငိုနေသည်။',
+        'သူသည် နောက်တစ်ပတ်မှာ နိုင်ငံခြားသို့ abroad သွားမလို့။',
+        'ကျွန်ုပ်သည် မွေးနေ့ပါတီပွဲတစ်ခုကို ကျင်းပ hold မလို့။',
+        'အစေခံ servant သည် ကြမ်းပြင် floor ကို တံမြက်စည်းလှည်းနေသည်။',
+        'လူနာ patient သည်အိပ်နေသည်။',
+        'အပြင်ဘက်မှာ outside မိုးရွာနေသည်။',
+        'ကလေးများသည် လမ်းမပေါ်မှာကစားနေကြသည်။',
+        'သူသည်ကျွန်ုပ်ကို အင်္ဂလိပ်စာသင်ကြားနေသည်။',
+        'အဖေသည်ဥယျာဉ်ထဲမှာ ပန်းများကိုရေလောင်းနေသည်။',
+        'သူ အိပ်နေသလား။'
+    ];
+
+    var answers = [
+        'We are doing our work.',
+        'Mother is feeding my younger brother.',
+        'I was doing my homework.',
+        'She will be sewing the longyis.',
+        'I am writing a letter.',
+        'The  baby is crying.',
+        'He is going to go to abroad next week.',
+        'I am going to hold a birthday party.',
+        'The servant is sweeping the floor.',
+        'The patient is sleeping.',
+        'It is raining outside.',
+        'The children are playing on the road.',
+        'He is teaching English to me.',
+        'Father is watering the flowers in the garden.',
+        'Is he sleeping?'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>

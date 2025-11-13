@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Translation | Pattern 15</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="lesson-theme">
+    <div class="container">
+
+        <br>
+        <h4 class="text-primary">Pattern (15)</h4>
+        <div class="">
+            <h5
+                style="background-color: var(--secondary-color); border-radius: 3px; padding: 7px; text-align: center; color: var(--light-color);">
+                Sub.+ Verb + I.0, + D.0.
+            </h5>
+        </div>
+
+        <div style="padding: 7px;;border-radius:3px;">
+            <p>I. Indirect Object သည် “လူပုဂ္ဂိုလ် ” ဖြစ်လေ့ရှိပြီး Direct Object သည် “သက်မဲ့
+            (သို့) တိရစ္ဆာန်" ဖြစ်လေ့ရှိသည်။</p>
+
+            <p>II. Sub + Verb အနောက်၌ Obj နှစ်ခုပါလာပါက “လူပုဂ္ဂိုလ် ဖြစ်သော I.O. ကို အရင်ရေးပြီးမှ “သက်မဲ့ (သို့)
+            တိရစ္ဆာန်ဖြစ်သော D.0. ကိုရေးသည် ။</p>
+        </div>
+
+        <br><br>
+
+        Eg.
+        <p>
+            မောင်မောင်သည် ကျွန်ုပ်အား စာအုပ်တစ်အုပ် ပေးခဲ့သည်။<br>
+            Mg Mg gave me a book.
+        </p>
+
+        <br>
+        <div
+            style="padding: 7px; background-color:var(--secondary-color);border-radius:3px;margin-bottom: 7px; color:var(--light-color)">
+            Exercise
+        </div>
+        <form>
+            <div id="exContainer">
+
+            </div>
+        </form>
+        <br><br>
+        <button id="showbtn" type="button" class="btn btn-primary" onclick="showAnswer();" style="width: 100%">Show
+            answer</button>
+        <br><br>
+    </div>
+
+</body>
+
+<script>
+    var question = [
+        'မောင်မောင်သည် ကျွန်ုပ်အား စာအုပ်တစ်အုပ် ပေးခဲ့သည်။',
+        'ညီညီနှင့်ကျွန်ုပ်သည် သူ၏အစ်မအား လက်ဆောင် present / gift တစ်ခု ပေးခဲ့သည်။',
+        'ကျောင်းသားများကို အဖြေပြောပါ။',
+        'ကျွန်ုပ်သည် ကျွန်ုပ်၏ဖောင်တိန်အသစ်ကို ကျွန်ုပ်အစ်ကိုအား ပြခဲ့သည်။',
+        'ဤလူကြီးသည် လယ်သမားတစ်ယောက်ကို ပိုက်ဆံအချို့ ချေးခဲ့သည်။',
+        'ဤလယ်သမားသည် ကျွန်ုပ်၏အမေကို နွားတစ်ကောင် ရောင်းခဲ့သည်။',
+        'ကလေးကို ဤအရုပ် toy ပေးလိုက်ပါ။',
+        'သင်နှင့်ကျွန်ုပ်သည် သူ့ကို လက်ဆောင်တစ်ခု ပေးရမည်။',
+        'ကျေးဇူးပြု၍ ကျွန်ုပ်ကို ရေတစ်ခွက် ပေးပါ။',
+        ' ဆရာသည် ကျွန်ုပ်တို့ကို အိမ်စာ ပေးလိမ့်မည်။'
+    ];
+
+    var answers = [
+        'Mg Mg gave me a book.',
+        'Nyi Nyi and I gave his sister a gift.',
+        'Tell the students the answer.',
+        'I showed my brother my new fountain.',
+        'This man lent a farmer some money.',
+        'This farmer sold my mother a cow.',
+        'Give the baby this toy.',
+        'You and I must give him a present.',
+        'Please, give me a glass of water.',
+        'The teacher will give us homework.'
+    ];
+
+    var exContainer = document.getElementById("exContainer");
+
+    var exStr = "";
+
+    for (var i = 0; i < question.length; i++) {
+        var no = i + 1;
+        exStr += "<div class='form-group'>" +
+            "<label for=''>" + no + ". " + question[i] + "</label>" +
+            "<input type='text' class='form-control' placeholder='Enter your answer'>" +
+            "<div class='ansDiv' style='display:none;'><span class='form-text text-success' >" + answers[i] + "</span></div>" +
+            "</div>";
+    }
+
+    exContainer.innerHTML = exStr;
+
+    function showAnswer() {
+        var ansDivs = document.getElementsByClassName('ansDiv');
+        for (var i = 0; i < ansDivs.length; i++) {
+            ansDivs[i].setAttribute('style', '');
+        }
+    }
+
+</script>
+
+</html>
