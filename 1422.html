@@ -79,17 +79,58 @@
         of Woody Guthrie and Pete Seeger and Bruce Springsteen performing the song.
 
     </p>
-    <a id='buttona' onclick="showAnswer()">Show answers</a>
+    <a id='buttona'>Show answers</a>
     <script>
-        var btn = document.getElementById('buttona');
-        function showAnswer() {
-            var answers = document.getElementsByTagName('i');
-            for (var i = 0; i < answers.length; i++) {
-                var ans = answers[i];
-                ans.setAttribute('style', 'color:var(--success-color)');
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+        var button = document.getElementById('buttona');
+        var answers = Array.prototype.slice.call(document.getElementsByTagName('i'));
+
+        if (!answers.length) {
+            return;
         }
-    </script>
+
+        var rootStyles = window.getComputedStyle(document.documentElement);
+        var themeColor = rootStyles.getPropertyValue('--success-color').trim();
+        if (!themeColor) {
+            themeColor = '#2563eb';
+        }
+
+        answers.forEach(function (answer) {
+            answer.style.color = themeColor;
+            answer.style.backgroundColor = themeColor;
+        });
+
+        if (!button) {
+            return;
+        }
+
+        if (!button.getAttribute('href')) {
+            button.setAttribute('href', '#');
+        }
+
+        button.setAttribute('role', 'button');
+        button.setAttribute('tabindex', '0');
+
+        var revealAnswers = function (event) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            button.setAttribute('aria-pressed', 'true');
+
+            answers.forEach(function (answer) {
+                answer.style.backgroundColor = 'transparent';
+            });
+        };
+
+        button.addEventListener('click', revealAnswers);
+        button.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                revealAnswers(event);
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
